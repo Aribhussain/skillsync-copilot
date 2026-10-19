@@ -9,9 +9,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import Session
 
 from app import __version__
-from app.api import audit, auth, health, lexicon, qps
+from app.api import audit, auth, declarations, health, lexicon, packs, qps
 from app.core.config import Settings, get_settings
 from app.core.db import make_engine, run_migrations
+from app.services.mapping_service import MappingService
 from app.services.users import seed_demo_users
 
 
@@ -23,6 +24,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         run_migrations(settings.resolved_database_url)
         with Session(app.state.engine) as session:
             seed_demo_users(session, settings)
+        app.state.mapping.warm_up()  # loads the embedding model in a background thread
         yield
         app.state.engine.dispose()
 
@@ -37,6 +39,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     app.state.settings = settings
     app.state.engine = make_engine(settings)
+    app.state.mapping = MappingService(settings, app.state.engine)
 
     app.add_middleware(
         CORSMiddleware,
@@ -52,6 +55,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(audit.router)
     app.include_router(qps.router)
     app.include_router(lexicon.router)
+    app.include_router(declarations.router)
+    app.include_router(packs.router)
     return app
 
 

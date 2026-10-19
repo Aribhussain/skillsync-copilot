@@ -3,7 +3,10 @@ with each consent so we can prove exactly which text the worker agreed to."""
 
 from __future__ import annotations
 
-from app.core.security import sha256_hex
+from sqlmodel import Session, select
+
+from app.core.security import canonical_json, sha256_hex
+from app.models.audit import ConsentRecord
 
 NOTICE_VERSION = "2026-10"
 
@@ -71,6 +74,15 @@ def get_notice(lang: str) -> dict:
 
 
 def notice_hash(lang: str) -> str:
-    from app.core.security import canonical_json
-
     return sha256_hex(canonical_json({"version": NOTICE_VERSION, **NOTICES[lang]}))
+
+
+def has_consent(session: Session, user_id: int, purpose: str) -> bool:
+    """The latest consent row for this purpose wins (withdrawals are new rows)."""
+    row = session.exec(
+        select(ConsentRecord)
+        .where(ConsentRecord.user_id == user_id, ConsentRecord.purpose == purpose)
+        .order_by(ConsentRecord.id.desc())
+        .limit(1)
+    ).first()
+    return bool(row and row.granted)

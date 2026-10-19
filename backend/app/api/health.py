@@ -22,4 +22,5 @@ def health(request: Request, session: Session = Depends(get_session)) -> dict:
         "mode": "full" if settings.queue_backend == "celery" else "lite",
         "database": settings.db_dialect,
         "db_ok": db_ok,
+        "embeddings": request.app.state.mapping.embedder.describe(),
     }

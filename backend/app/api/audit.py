@@ -101,13 +101,3 @@ def my_consents(session: Session = Depends(get_session), user: User = Depends(ge
     for r in rows:
         state[r.purpose] = r.granted
     return {"state": state, "history": rows}
-
-
-def has_consent(session: Session, user_id: int, purpose: str) -> bool:
-    row = session.exec(
-        select(ConsentRecord)
-        .where(ConsentRecord.user_id == user_id, ConsentRecord.purpose == purpose)
-        .order_by(ConsentRecord.id.desc())
-        .limit(1)
-    ).first()
-    return bool(row and row.granted)
