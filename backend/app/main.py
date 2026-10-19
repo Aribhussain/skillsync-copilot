@@ -13,6 +13,7 @@ from app.api import (
     assessments,
     audit,
     auth,
+    calibration,
     declarations,
     evidence,
     health,
@@ -78,6 +79,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(speech.router)
     app.include_router(evidence.router)
     app.include_router(scoring.router)
+    app.include_router(calibration.router)
     return app
 
 
