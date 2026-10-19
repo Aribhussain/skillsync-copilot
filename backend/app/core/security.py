@@ -46,7 +46,7 @@ def sha256_hex(data: str | bytes) -> str:
 
 
 def utcnow() -> datetime:
-    return datetime.now(UTC).replace(tzinfo=None)
+    return datetime.now(UTC)
 
 
 def utcnow_iso() -> str:
