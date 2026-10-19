@@ -1,0 +1,69 @@
+{
+ "train_size": 420,
+ "test_size": 180,
+ "defect_accuracy_holdout": 0.95,
+ "level_accuracy_holdout": 0.9,
+ "level_within_one_holdout": 0.9889,
+ "defect_accuracy_new_seed": 0.95,
+ "level_accuracy_new_seed": 0.905,
+ "defect_confusion_holdout": {
+  "labels": [
+   "good",
+   "porosity",
+   "undercut",
+   "spatter",
+   "incomplete"
+  ],
+  "matrix": [
+   [
+    33,
+    0,
+    0,
+    0,
+    3
+   ],
+   [
+    1,
+    33,
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    35,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    0,
+    34,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    36
+   ]
+  ]
+ },
+ "feature_importance": {
+  "spatter": 0.1828,
+  "pore_area": 0.1367,
+  "toe_dark_run": 0.1055,
+  "pores": 0.1052,
+  "coverage": 0.1038,
+  "toe_dark": 0.0928,
+  "lap_var": 0.0687,
+  "gaps": 0.0649,
+  "width_cv": 0.058,
+  "bead_area": 0.0449,
+  "bead_contrast": 0.0367
+ },
+ "samples_accuracy": 1.0
+}
