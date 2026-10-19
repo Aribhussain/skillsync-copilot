@@ -1,0 +1,2 @@
+# Optional: multilingual embedding re-rank for the QP mapper (large download: torch + model).
+sentence-transformers>=3.0
