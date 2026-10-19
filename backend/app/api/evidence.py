@@ -5,7 +5,17 @@ from __future__ import annotations
 import hashlib
 import json
 
-from fastapi import APIRouter, Depends, File, Form, HTTPException, Request, Response, UploadFile
+from fastapi import (
+    APIRouter,
+    BackgroundTasks,
+    Depends,
+    File,
+    Form,
+    HTTPException,
+    Request,
+    Response,
+    UploadFile,
+)
 from pydantic import BaseModel, Field, ValidationError
 from sqlmodel import Session, select
 
@@ -15,6 +25,7 @@ from app.core.deps import get_current_user, require_roles
 from app.models.evidence import DeviceKey, Evidence
 from app.models.user import Role, User
 from app.services import audit
+from app.services.ai_service import analyse_evidence
 from app.services.integrity import check_evidence
 from app.services.signing import load_public_key, verify_packet
 
@@ -86,6 +97,7 @@ def evidence_view(e: Evidence) -> dict:
 async def upload_evidence(
     assessment_id: int,
     request: Request,
+    background: BackgroundTasks,
     packet: str = Form(...),
     signature: str = Form(...),
     file: UploadFile = File(...),
@@ -186,6 +198,10 @@ async def upload_evidence(
     )
     session.commit()
     session.refresh(ev)
+    if ev.shot == "product":
+        # M5: shadow-rater analysis runs after the response (BackgroundTasks; Celery in full mode)
+        st = request.app.state
+        background.add_task(analyse_evidence, st.engine, st.storage, st.rater, ev.id)
     return evidence_view(ev)
 
 

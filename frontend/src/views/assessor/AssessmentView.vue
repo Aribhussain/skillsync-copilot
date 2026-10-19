@@ -94,6 +94,14 @@ async function saveOverride(pc: PlanPC) {
         >
           📷 {{ t('capture.goCapture') }}
         </RouterLink>
+        <RouterLink
+          v-if="card.challenge_code"
+          :to="`/assessor/assessment/${id}/score`"
+          class="btn-primary"
+          data-testid="go-score"
+        >
+          ✍ {{ t('scoring.go') }}
+        </RouterLink>
       </div>
     </section>
 

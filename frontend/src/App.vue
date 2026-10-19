@@ -6,6 +6,7 @@ import AppHeader from './components/AppHeader.vue'
 import { loadPack, refreshPack } from './lib/pack'
 import { flush, onSyncChange, wakeAll } from './lib/sync'
 import './lib/evidence' // registers the device + evidence outbox handlers at start-up
+import './lib/scoring' // registers the offline blind-score handler
 import './lib/worker' // registers the worker outbox handlers at start-up
 import { useAuthStore } from './stores/auth'
 import { useNetworkStore } from './stores/network'

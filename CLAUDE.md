@@ -51,7 +51,7 @@ make test         # backend + frontend tests
 - [x] 6 Worker declaration + mapper-lite + outbox
 - [x] 7 Evidence plan + assessor checklist
 - [x] 8 Signed P-P-P capture + integrity → v0.5.0
-- [ ] 9 Blind-first shadow rater
+- [x] 9 Blind-first shadow rater
 - [ ] 10 Calibration, profile, sign-off, credential → v0.8.0
 - [ ] 11 Consistency study
 - [ ] 12 Offline hardening + sync

@@ -9,9 +9,22 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import Session
 
 from app import __version__
-from app.api import assessments, audit, auth, declarations, evidence, health, lexicon, packs, qps, speech
+from app.api import (
+    assessments,
+    audit,
+    auth,
+    declarations,
+    evidence,
+    health,
+    lexicon,
+    packs,
+    qps,
+    scoring,
+    speech,
+)
 from app.core.config import Settings, get_settings
 from app.core.db import make_engine, run_migrations
+from app.ml.shadow_rater import load_rater
 from app.services.mapping_service import MappingService
 from app.services.storage import LocalStorage
 from app.services.users import seed_demo_users
@@ -26,6 +39,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         with Session(app.state.engine) as session:
             seed_demo_users(session, settings)
         app.state.mapping.warm_up()  # loads the embedding model in a background thread
+        app.state.rater = load_rater()  # demo shadow rater (trains on first run if missing)
         yield
         app.state.engine.dispose()
 
@@ -63,6 +77,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(assessments.assessor_router)
     app.include_router(speech.router)
     app.include_router(evidence.router)
+    app.include_router(scoring.router)
     return app
 
 

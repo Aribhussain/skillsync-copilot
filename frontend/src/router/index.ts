@@ -44,6 +44,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../views/assessor/CaptureView.vue'),
     meta: { roles: ['assessor'] },
   },
+  {
+    path: '/assessor/assessment/:id/score',
+    component: () => import('../views/assessor/ScoringView.vue'),
+    meta: { roles: ['assessor'] },
+  },
   { path: '/qa', component: () => import('../views/QaHome.vue'), meta: { roles: ['qa_lead', 'admin'] } },
   { path: '/:pathMatch(.*)*', redirect: '/login' },
 ]
@@ -62,6 +67,7 @@ const ROLE_VIEWS: Partial<Record<Role, (() => Promise<unknown>)[]>> = {
     () => import('../views/AssessorHome.vue'),
     () => import('../views/assessor/AssessmentView.vue'),
     () => import('../views/assessor/CaptureView.vue'),
+    () => import('../views/assessor/ScoringView.vue'),
   ],
 }
 const prefetched = new Set<Role>()
