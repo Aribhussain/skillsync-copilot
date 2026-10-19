@@ -168,12 +168,12 @@ def write_report(results: dict, temperature: float, calibrated: float | None) ->
         "",
         "Two datasets:",
         "",
-        "- **synthetic**: 60 template-generated narratives. This set is *easy* because the templates and the "
-        "lexicon were written by the same team. Treat it as a sanity check, not as evidence.",
-        "- **hard**: 30 held-out, hand-written narratives (`data/eval/hard_narratives.json`). They are short, "
-        "vague or misspelled, use brand names and include cross-trade traps. They were written before the first "
-        "evaluation run and **not** used for tuning. Ground truth is the team's judgement, and some items are "
-        "genuinely ambiguous between the four welding QPs.",
+        "- **synthetic**: 60 template-generated narratives. This set is *easy* because the templates "
+        "and the lexicon were written by the same team. Treat it as a sanity check, not as evidence.",
+        "- **hard**: 30 held-out, hand-written narratives (`data/eval/hard_narratives.json`). They are "
+        "short, vague or misspelled, use brand names and include cross-trade traps. They were written "
+        "before the first evaluation run and **not** used for tuning. Ground truth is the team's "
+        "judgement, and some items are genuinely ambiguous between the four welding QPs.",
         "",
         f"Confidence is a softmax over the top-{mapping_mod.TOP_K_SOFTMAX} scores with T = {temperature}.",
     ]
@@ -194,7 +194,8 @@ def write_report(results: dict, temperature: float, calibrated: float | None) ->
             )
     lines += [
         "",
-        "**Target:** at least 85% top-3. ECE is the expected calibration error of the top-1 confidence; lower is better.",
+        "**Target:** at least 85% top-3. ECE is the expected calibration error of the top-1 "
+        "confidence; lower is better.",
         "",
     ]
     lines += [
@@ -231,17 +232,18 @@ def write_report(results: dict, temperature: float, calibrated: float | None) ->
         "",
         "## Honest reading",
         "",
-        "- The synthetic score is inflated by construction. The hard set is the better indicator, but it is small "
-        "(n = 30) and also synthetic.",
-        f"- The trade-vernacular lexicon adds {100 * lex:+.1f} points of top-3 accuracy on the hard set (ablation).",
-        f"- Hard-set misses for the default engine: {len(default['errors'])}. Of these, {len(no_match)} had no "
-        f"lexical match at all, {len(welding_family)} were confusions within the welding family, and "
-        f"{len(other)} were cross-trade errors.",
-        "- With no lexical match the mapper sets `no_match: true` and reports 0 confidence. The UI then asks the "
-        "worker to say more or pick icon cards instead of showing arbitrary QPs.",
-        "- Cross-trade errors come from shared words (e.g. 'पाइपलाइन' in a plumber's narrative) or slang the "
-        "lexicon doesn't know yet (e.g. 'scooty', 'self start'). Assessor-confirmed lexicon additions are the "
-        "intended fix.",
+        "- The synthetic score is inflated by construction. The hard set is the better indicator, "
+        "but it is small (n = 30) and also synthetic.",
+        f"- The trade-vernacular lexicon adds {100 * lex:+.1f} points of top-3 accuracy on the hard "
+        "set (ablation).",
+        f"- Hard-set misses for the default engine: {len(default['errors'])}. Of these, "
+        f"{len(no_match)} had no lexical match at all, {len(welding_family)} were confusions within "
+        f"the welding family, and {len(other)} were cross-trade errors.",
+        "- With no lexical match the mapper sets `no_match: true` and reports 0 confidence. The UI "
+        "then asks the worker to say more or pick icon cards instead of showing arbitrary QPs.",
+        "- Cross-trade errors come from shared words (e.g. 'पाइपलाइन' in a plumber's narrative) or "
+        "slang the lexicon doesn't know yet (e.g. 'scooty', 'self start'). Assessor-confirmed "
+        "lexicon additions are the intended fix.",
         "- The worker and the assessor always confirm the QP, so the top-3 list matters more than top-1.",
         "- A real evaluation needs narratives from actual RPL candidates, transcribed from speech.",
         "",
@@ -250,10 +252,10 @@ def write_report(results: dict, temperature: float, calibrated: float | None) ->
         lines += [
             "## About the temperature",
             "",
-            f"Fitting T on the calibration split gives T = {calibrated}. That split is template-generated and "
-            "almost perfectly separable, so the likelihood keeps improving as T shrinks, which means maximum "
-            f"over-confidence. We therefore keep the pre-set T = {temperature}, chosen before any evaluation. "
-            "Proper calibration needs real narratives.",
+            f"Fitting T on the calibration split gives T = {calibrated}. That split is "
+            "template-generated and almost perfectly separable, so the likelihood keeps improving as T "
+            f"shrinks, which means maximum over-confidence. We therefore keep the pre-set T = {temperature}, "
+            "chosen before any evaluation. Proper calibration needs real narratives.",
             "",
         ]
     OUT_MD.write_text("\n".join(lines), encoding="utf-8")
