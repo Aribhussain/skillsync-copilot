@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "SkillSync Co-Pilot",
+    "tagline": "AI-assisted, assessor-calibrated, offline-first RPL assessment",
+    "syntheticBadge": "Synthetic demo data",
+    "syntheticNote": "All workers, welds and scores in this prototype are synthetic. Not for certification.",
+    "logout": "Log out",
+    "language": "हिंदी"
+  },
+  "net": {
+    "online": "Online",
+    "offline": "Offline",
+    "serverDown": "Server unreachable",
+    "outbox": "{n} waiting to sync | {n} waiting to sync",
+    "outboxEmpty": "All synced"
+  },
+  "login": {
+    "title": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "demoAccounts": "Demo accounts",
+    "demoHint": "Tap an account to fill it in. These accounts exist only in this prototype.",
+    "failed": "Wrong username or password",
+    "offline": "You are offline. Sign in once while online; after that the app works offline."
+  },
+  "roles": {
+    "worker": "Worker",
+    "assessor": "Assessor",
+    "qa_lead": "QA lead",
+    "admin": "Admin"
+  },
+  "home": {
+    "workerTitle": "Namaste, {name}",
+    "workerLead": "Tell us about your work. We will match it to an NSQF qualification.",
+    "assessorTitle": "Assessment queue",
+    "qaTitle": "Calibration dashboard",
+    "comingSoon": "This screen is built in a later phase."
+  },
+  "about": {
+    "title": "Where the AI helps — and where it doesn't",
+    "lead": "SkillSync supports the assessor. It never replaces their judgement.",
+    "decision": "Decision",
+    "aiRole": "AI role",
+    "finalSay": "Final say"
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading…",
+    "retry": "Retry",
+    "error": "Something went wrong"
+  }
+}

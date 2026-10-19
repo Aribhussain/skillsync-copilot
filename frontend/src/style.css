@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Saffron / green / navy accents, high contrast, mobile-first. */
+@theme {
+  --color-navy-950: #071533;
+  --color-navy-900: #0b1f4d;
+  --color-navy-800: #142d6b;
+  --color-navy-700: #1f3d8a;
+  --color-navy-100: #e3e9f7;
+  --color-navy-50: #f2f5fc;
+  --color-saffron-600: #e07b00;
+  --color-saffron-500: #ff9933;
+  --color-saffron-100: #ffe9d1;
+  --color-green-india-700: #0d6b05;
+  --color-green-india-600: #138808;
+  --color-green-india-100: #dcf3d6;
+  --font-sans: "Noto Sans", "Noto Sans Devanagari", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-navy-50 text-navy-950 antialiased;
+  min-width: 320px;
+}
+
+/* Tailwind v4: reusable classes are declared with @utility so they can be @apply-ed and composed. */
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-5 text-base font-semibold transition;
+  @apply focus:outline-none focus-visible:ring-4 focus-visible:ring-saffron-500/60;
+  @apply disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-navy-900 text-white hover:bg-navy-800;
+}
+@utility btn-saffron {
+  @apply btn bg-saffron-500 text-navy-950 hover:bg-saffron-600;
+}
+@utility btn-green {
+  @apply btn bg-green-india-600 text-white hover:bg-green-india-700;
+}
+@utility btn-ghost {
+  @apply btn border-2 border-navy-900 bg-white text-navy-900 hover:bg-navy-100;
+}
+@utility card {
+  @apply rounded-2xl border border-navy-100 bg-white p-4 shadow-sm sm:p-5;
+}
+@utility chip {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold;
+}
+@utility input {
+  @apply min-h-12 w-full rounded-xl border-2 border-navy-100 bg-white px-4 text-base focus:border-navy-700 focus:outline-none;
+}
