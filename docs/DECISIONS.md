@@ -9,3 +9,10 @@ Each entry: date · decision · why.
 - **Docker:** Docker 29.8 is installed and running, but it is used only for Phase 13 full mode. Lite mode never needs it.
 - **Playwright:** browsers are **not downloaded locally**. Playwright drives the installed **Brave** browser through `PLAYWRIGHT_BROWSER_PATH` with a fresh temp profile. Brave is installed per-user at `%LOCALAPPDATA%\BraveSoftware\Brave-Browser\Application\brave.exe`, not under Program Files. The config tries the env var first, then the Program Files path, then the per-user path. `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` is set. CI uses `npx playwright install chromium` on GitHub's runners.
 - **Location:** the repo lives under a OneDrive-synced Desktop. `node_modules/`, `.venv/` and `storage/` are git-ignored. If OneDrive sync causes file locks, pause sync during installs.
+
+## 2026-10-19 · Backend core
+
+- **Krippendorff's α is implemented in-house.** The `krippendorff` PyPI package is GPL-3.0-or-later, which conflicts with our MIT/Apache/BSD-only rule. We implement the coincidence-matrix formulation (nominal / ordinal / interval) in numpy and test it against published reference values.
+- **Passwords use `bcrypt` directly instead of passlib.** passlib is unmaintained and warns with bcrypt ≥ 4. JWTs use **PyJWT** (MIT).
+- **Audit timestamps are stored as ISO strings** inside the hash chain, so the hash recomputes identically on SQLite, MySQL and SQL Server, whatever their datetime precision.
+- **Datetimes are timezone-aware UTC.** SQLModel's `UTCDateTime` stores UTC portably.

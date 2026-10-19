@@ -9,6 +9,7 @@ from app.core.db import get_session
 from app.core.deps import get_current_user, require_roles
 from app.core.security import create_access_token, verify_password
 from app.models.user import Role, User, UserPublic
+from app.services import audit
 from app.services.users import DEMO_USERS, demo_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -29,6 +30,8 @@ def _authenticate(session: Session, request: Request, username: str, password: s
     user = session.exec(select(User).where(User.username == username)).first()
     if not user or not user.is_active or not verify_password(password, user.password_hash):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid username or password")
+    audit.record(session, user.username, "auth.login", {"role": user.role})
+    session.commit()
     settings = request.app.state.settings
     token = create_access_token(user.username, user.role, settings.jwt_secret, settings.jwt_expire_minutes)
     return TokenOut(access_token=token, user=UserPublic.model_validate(user, from_attributes=True))

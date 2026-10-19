@@ -7,6 +7,7 @@ from sqlmodel import Session, select
 from app.core.config import Settings
 from app.core.security import hash_password
 from app.models.user import Role, User
+from app.services import audit
 
 DEMO_USERS: list[dict] = [
     {"username": "worker1", "full_name": "Ramesh Kumar", "role": Role.worker, "centre": "Faridabad cluster"},
@@ -45,5 +46,8 @@ def seed_demo_users(session: Session, settings: Settings) -> int:
             )
         )
         created += 1
+        audit.record(
+            session, "system", "user.seeded", {"username": spec["username"], "role": str(spec["role"])}
+        )
     session.commit()
     return created
