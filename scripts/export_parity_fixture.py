@@ -40,7 +40,13 @@ def narratives() -> list[str]:
     spec.loader.exec_module(gen)
     synthetic = [w["narrative"] for w in gen.generate_workers(random.Random(26242))][:30]
     hard = json.loads((ROOT / "data" / "eval" / "hard_narratives.json").read_text(encoding="utf-8"))["items"]
-    edge = ["", "hoon karta", "वेल्डिंग।", "TIG_welding on SS sheets", "Welding!!! CO2, MIG; argon-TIG."]
+    edge = [
+        "",
+        "hoon karta",
+        "वेल्डिंग।",
+        "TIG_welding on SS sheets",
+        "Welding!!! CO2, MIG; argon-TIG.",
+    ]
     return [GOLDEN, *synthetic, *[h["text"] for h in hard], *edge]
 
 
@@ -56,7 +62,12 @@ def build() -> tuple[dict, dict]:
                 "text": text,
                 "no_match": r["no_match"],
                 "top": [
-                    {"qp_id": t["qp_id"], "bm25": t["bm25"], "confidence": t["confidence"]} for t in r["top"]
+                    {
+                        "qp_id": t["qp_id"],
+                        "bm25": t["bm25"],
+                        "confidence": t["confidence"],
+                    }
+                    for t in r["top"]
                 ],
                 "lexicon_terms": [m["term"] for m in r["lexicon_matches"]],
                 "claimed_pc_ids": sorted(

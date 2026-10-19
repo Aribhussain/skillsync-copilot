@@ -142,5 +142,40 @@
     "photo": "Signed photo",
     "viva": "Viva (oral)",
     "declaration+spot-check": "Declaration + spot-check"
+  },
+  "capture": {
+    "title": "Evidence capture (Process · Product · Person)",
+    "shot": {
+      "process": "Process",
+      "product": "Product",
+      "person": "Person"
+    },
+    "guide": {
+      "process": "Show the work set-up: machine, workpiece and the worker's PPE (helmet, gloves, apron).",
+      "product": "Photograph the finished weld close up, filling the dashed frame. Good light, no shadow.",
+      "person": "The worker holds the slate with the challenge code below, next to the workpiece. The code must be readable."
+    },
+    "startFirst": "Start the assessment first to get the code.",
+    "camera": "Use camera",
+    "upload": "Upload photo",
+    "simulate": "Simulated sample (demo)",
+    "pickSample": "Pick a synthetic sample weld:",
+    "snap": "Capture",
+    "qcOk": "Photo quality OK",
+    "qcIssues": "Please check the photo:",
+    "qc": {
+      "blur": "Too blurry — hold steady and retake.",
+      "dark": "Too dark — move to better light.",
+      "bright": "Too bright / glare — avoid direct light.",
+      "framing": "Subject not centred — fill the dashed frame.",
+      "small": "Resolution too low — move closer or use the main camera."
+    },
+    "retake": "Retake",
+    "accept": "Use this photo",
+    "acceptAnyway": "Use anyway (warning recorded)",
+    "simulatedTag": "SIMULATED",
+    "review": "All three shots captured",
+    "cameraError": "Camera unavailable: {msg}",
+    "goCapture": "Capture evidence"
   }
 }

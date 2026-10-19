@@ -52,7 +52,12 @@ def _generator():
 def load_sets() -> dict[str, list[dict]]:
     gen = _generator()
     synthetic = [
-        {"id": w["id"], "lang": w["language"], "qp": w["ground_truth_qp"], "text": w["narrative"]}
+        {
+            "id": w["id"],
+            "lang": w["language"],
+            "qp": w["ground_truth_qp"],
+            "text": w["narrative"],
+        }
         for w in gen.generate_workers(random.Random(26242))
     ]
     hard = json.loads((ROOT / "data" / "eval" / "hard_narratives.json").read_text(encoding="utf-8"))["items"]
@@ -276,7 +281,11 @@ def main() -> int:
         print(f"fitted temperature on calibration split: {calibrated} (shipped: {shipped_t})")
     # Always evaluate with the temperature that ships in app/services/mapping.py.
     temperature = mapping_mod.SOFTMAX_TEMPERATURE = shipped_t
-    results = {"temperature": temperature, "calibrated_temperature": calibrated, "engines": {}}
+    results = {
+        "temperature": temperature,
+        "calibrated_temperature": calibrated,
+        "engines": {},
+    }
     for name, m in mappers.items():
         results["engines"][name] = {ds: evaluate(m, items) for ds, items in sets.items()}
         for ds, r in results["engines"][name].items():

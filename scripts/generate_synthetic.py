@@ -110,7 +110,11 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "stud ka bend test karke check karta hoon",
             "car body pe stud aur nut welding karta hoon",
         ],
-        "hi": ["स्टड गन से स्टड वेल्डिंग करता हूँ", "डेक शीट पर स्टड लगाता हूँ", "स्टड का बेंड टेस्ट करता हूँ"],
+        "hi": [
+            "स्टड गन से स्टड वेल्डिंग करता हूँ",
+            "डेक शीट पर स्टड लगाता हूँ",
+            "स्टड का बेंड टेस्ट करता हूँ",
+        ],
     },
     "DEMO-CG-SR-WELDER-PIPE-L5": {
         "en": [
@@ -128,7 +132,11 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "refinery pipeline aur IBR ka kaam kiya hai",
             "WPS ke hisaab se kaam karta hoon",
         ],
-        "hi": ["6G पाइप वेल्डिंग करता हूँ", "बॉयलर और पाइपलाइन पर काम किया है", "रेडियोग्राफी टेस्ट पास होता है"],
+        "hi": [
+            "6G पाइप वेल्डिंग करता हूँ",
+            "बॉयलर और पाइपलाइन पर काम किया है",
+            "रेडियोग्राफी टेस्ट पास होता है",
+        ],
     },
     "DEMO-CG-FITTER-FAB-L4": {
         "en": [
@@ -146,7 +154,11 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "frame ki fitting karke tack lagata hoon",
             "fitter ka kaam karta hoon",
         ],
-        "hi": ["फैब्रिकेशन में गेट और ग्रिल बनाता हूँ", "फिटर का काम करता हूँ", "एंगल की मार्किंग और कटिंग करता हूँ"],
+        "hi": [
+            "फैब्रिकेशन में गेट और ग्रिल बनाता हूँ",
+            "फिटर का काम करता हूँ",
+            "एंगल की मार्किंग और कटिंग करता हूँ",
+        ],
     },
     "DEMO-EL-DOMESTIC-L3": {
         "en": [
@@ -163,7 +175,12 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "pankha aur light fitting karta hoon",
             "bijli ka kaam aata hai",
         ],
-        "hi": ["घर की वायरिंग करता हूँ", "बिजली का काम करता हूँ", "पंखा और स्विच लगाता हूँ", "अर्थिंग करता हूँ"],
+        "hi": [
+            "घर की वायरिंग करता हूँ",
+            "बिजली का काम करता हूँ",
+            "पंखा और स्विच लगाता हूँ",
+            "अर्थिंग करता हूँ",
+        ],
     },
     "DEMO-PL-GENERAL-L3": {
         "en": [
@@ -180,7 +197,12 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "tanki ka connection karta hoon",
             "toilet aur sink lagata hoon",
         ],
-        "hi": ["नल और टोंटी लगाता हूँ", "प्लंबर का काम करता हूँ", "पाइप की लीकेज ठीक करता हूँ", "टंकी का कनेक्शन करता हूँ"],
+        "hi": [
+            "नल और टोंटी लगाता हूँ",
+            "प्लंबर का काम करता हूँ",
+            "पाइप की लीकेज ठीक करता हूँ",
+            "टंकी का कनेक्शन करता हूँ",
+        ],
     },
     "DEMO-AMH-SMO-L4": {
         "en": [
@@ -195,7 +217,12 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "kapde ki stitching karti hoon",
             "factory mein kurta aur shirt silti hoon",
         ],
-        "hi": ["सिलाई का काम करती हूँ", "ओवरलॉक मशीन चलाती हूँ", "कपड़े की सिलाई करती हूँ", "दर्जी का काम आता है"],
+        "hi": [
+            "सिलाई का काम करती हूँ",
+            "ओवरलॉक मशीन चलाती हूँ",
+            "कपड़े की सिलाई करती हूँ",
+            "दर्जी का काम आता है",
+        ],
     },
     "DEMO-BWS-ABT-L3": {
         "en": [
@@ -224,7 +251,11 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "brake aur clutch theek karta hoon",
             "gaadi ka engine ka kaam aata hai",
         ],
-        "hi": ["बाइक और स्कूटर की सर्विसिंग करता हूँ", "इंजन और ब्रेक ठीक करता हूँ", "कार्बोरेटर साफ़ करता हूँ"],
+        "hi": [
+            "बाइक और स्कूटर की सर्विसिंग करता हूँ",
+            "इंजन और ब्रेक ठीक करता हूँ",
+            "कार्बोरेटर साफ़ करता हूँ",
+        ],
     },
     "DEMO-CON-MASON-L3": {
         "en": [
@@ -239,7 +270,12 @@ FACTS: dict[str, dict[str, list[str]]] = {
             "sahul aur level se deewar seedhi rakhta hoon",
             "raj mistri ka kaam karta hoon",
         ],
-        "hi": ["ईंट की चिनाई करता हूँ", "दीवार पर प्लास्टर करता हूँ", "राजमिस्त्री का काम करता हूँ", "टाइल लगाता हूँ"],
+        "hi": [
+            "ईंट की चिनाई करता हूँ",
+            "दीवार पर प्लास्टर करता हूँ",
+            "राजमिस्त्री का काम करता हूँ",
+            "टाइल लगाता हूँ",
+        ],
     },
 }
 
@@ -262,8 +298,16 @@ PLACES = {
     "hi": ["वर्कशॉप", "फैक्ट्री", "दुकान"],
 }
 NOISE = {
-    "en": ["I learned from my ustad.", "I want a certificate for a better job.", "I did not go to ITI."],
-    "hinglish": ["Ustad se seekha hai.", "Certificate chahiye achhi naukri ke liye.", "ITI nahi kiya."],
+    "en": [
+        "I learned from my ustad.",
+        "I want a certificate for a better job.",
+        "I did not go to ITI.",
+    ],
+    "hinglish": [
+        "Ustad se seekha hai.",
+        "Certificate chahiye achhi naukri ke liye.",
+        "ITI nahi kiya.",
+    ],
     "hi": ["उस्ताद से सीखा है।", "अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।"],
 }
 # Realistic overlap: some non-welders mention a bit of welding and vice versa.
@@ -427,8 +471,26 @@ def draw_weld(rng: np.random.Generator, defect: str, severity: int) -> np.ndarra
             y, w = ys[i], widths[i]
             # fill first, then the darker leading-edge arc; the next pool covers the
             # back half of this arc, leaving the characteristic chevron ripples
-            cv2.ellipse(img, (int(x), int(y)), (int(w * 0.30), int(w / 2) - 1), 0, -90, 90, bright, -1)
-            cv2.ellipse(img, (int(x), int(y)), (int(w * 0.30), int(w / 2) - 1), 0, -90, 90, bright - 60, 2)
+            cv2.ellipse(
+                img,
+                (int(x), int(y)),
+                (int(w * 0.30), int(w / 2) - 1),
+                0,
+                -90,
+                90,
+                bright,
+                -1,
+            )
+            cv2.ellipse(
+                img,
+                (int(x), int(y)),
+                (int(w * 0.30), int(w / 2) - 1),
+                0,
+                -90,
+                90,
+                bright - 60,
+                2,
+            )
         x += spacing
     # toes of the bead
     for x, y, w, p in zip(xs, ys, widths, present, strict=True):
@@ -442,7 +504,13 @@ def draw_weld(rng: np.random.Generator, defect: str, severity: int) -> np.ndarra
             i = rng.integers(5, len(xs) - 5)
             cy = ys[i] + rng.uniform(-widths[i] * 0.3, widths[i] * 0.3)
             r = rng.uniform(1.5, 2.6 if severity == 1 else 4.0)
-            cv2.circle(img, (int(xs[i]), int(cy)), int(round(r)), float(rng.uniform(25, 55)), -1)
+            cv2.circle(
+                img,
+                (int(xs[i]), int(cy)),
+                int(round(r)),
+                float(rng.uniform(25, 55)),
+                -1,
+            )
     elif defect == "undercut":
         frac = {1: 0.35, 2: 0.8}[severity]
         start = rng.integers(0, int(len(xs) * (1 - frac)) + 1)
@@ -458,7 +526,11 @@ def draw_weld(rng: np.random.Generator, defect: str, severity: int) -> np.ndarra
             off = rng.choice([-1, 1]) * rng.uniform(widths[i] * 0.7, widths[i] * 2.5)
             col = float(rng.choice([rng.uniform(200, 240), rng.uniform(40, 70)]))
             cv2.circle(
-                img, (int(xs[i] + rng.normal(0, 4)), int(ys[i] + off)), int(rng.integers(1, 4)), col, -1
+                img,
+                (int(xs[i] + rng.normal(0, 4)), int(ys[i] + off)),
+                int(rng.integers(1, 4)),
+                col,
+                -1,
             )
 
     img = cv2.GaussianBlur(img, (3, 3), 0)
@@ -513,7 +585,11 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     workers = generate_workers(random.Random(args.seed))
     (args.out / "workers.json").write_text(
-        json.dumps({"synthetic": True, "seed": args.seed, "workers": workers}, ensure_ascii=False, indent=1)
+        json.dumps(
+            {"synthetic": True, "seed": args.seed, "workers": workers},
+            ensure_ascii=False,
+            indent=1,
+        )
         + "\n",
         encoding="utf-8",
     )

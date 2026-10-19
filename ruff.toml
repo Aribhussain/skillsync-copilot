@@ -1,0 +1,17 @@
+# Repo-wide ruff settings (backend/, scripts/, ml/). backend/pyproject.toml mirrors these.
+line-length = 110
+target-version = "py311"
+extend-exclude = ["backend/alembic/versions", "frontend", "**/node_modules", "**/.venv"]
+
+[lint]
+select = ["E", "F", "I", "B", "UP", "W"]
+ignore = ["B008"]  # FastAPI Depends() in defaults
+
+[lint.per-file-ignores]
+# scripts put backend/ on sys.path before importing app.*
+"scripts/*.py" = ["E402"]
+"ml/*.py" = ["E402"]
+
+[lint.isort]
+known-third-party = ["alembic"]
+known-first-party = ["app"]

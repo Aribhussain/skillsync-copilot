@@ -1,0 +1,62 @@
+[
+ {
+  "file": "/samples/weld_00_good.jpg",
+  "defect": "good",
+  "severity": 0
+ },
+ {
+  "file": "/samples/weld_01_good.jpg",
+  "defect": "good",
+  "severity": 0
+ },
+ {
+  "file": "/samples/weld_02_good.jpg",
+  "defect": "good",
+  "severity": 0
+ },
+ {
+  "file": "/samples/weld_03_good.jpg",
+  "defect": "good",
+  "severity": 0
+ },
+ {
+  "file": "/samples/weld_04_porosity.jpg",
+  "defect": "porosity",
+  "severity": 2
+ },
+ {
+  "file": "/samples/weld_05_porosity.jpg",
+  "defect": "porosity",
+  "severity": 1
+ },
+ {
+  "file": "/samples/weld_06_undercut.jpg",
+  "defect": "undercut",
+  "severity": 2
+ },
+ {
+  "file": "/samples/weld_07_undercut.jpg",
+  "defect": "undercut",
+  "severity": 1
+ },
+ {
+  "file": "/samples/weld_08_spatter.jpg",
+  "defect": "spatter",
+  "severity": 2
+ },
+ {
+  "file": "/samples/weld_09_spatter.jpg",
+  "defect": "spatter",
+  "severity": 1
+ },
+ {
+  "file": "/samples/weld_10_incomplete.jpg",
+  "defect": "incomplete",
+  "severity": 2
+ },
+ {
+  "file": "/samples/weld_11_incomplete.jpg",
+  "defect": "incomplete",
+  "severity": 1
+ }
+]
