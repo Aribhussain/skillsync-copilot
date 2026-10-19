@@ -1,0 +1,50 @@
+# Environment / secrets
+.env
+.env.local
+*.pem
+backend/keys/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+dev-dist/
+.vite/
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# Runtime data
+storage/
+*.db
+*.db-journal
+*.sqlite3
+
+# Models (downloaded / large)
+models/hf/
+ml/models/*.joblib
+!ml/models/.gitkeep
+vosk-models/
+
+# Generated synthetic data (reproducible via scripts/generate_synthetic.py)
+data/synthetic/*
+!data/synthetic/.gitkeep
+!data/synthetic/README.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
