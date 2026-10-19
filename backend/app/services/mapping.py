@@ -241,11 +241,10 @@ class QPMapper:
 
         order = sorted(range(len(self.qp_ids)), key=lambda i: combined[i], reverse=True)
         k = order[:TOP_K_SOFTMAX]
-        conf = (
-            softmax([float(combined[i]) for i in k], SOFTMAX_TEMPERATURE)
-            if bm25_max > 0 or cosine is not None
-            else []
-        )
+        # No lexical evidence at all (e.g. a misspelled one-liner): the ranking is not
+        # meaningful, so report zero confidence and flag it instead of guessing.
+        no_match = bm25_max <= 0
+        conf = [] if no_match else softmax([float(combined[i]) for i in k], SOFTMAX_TEMPERATURE)
         idf = self.bm25.idf
         top = []
         for rank, i in enumerate(order[:top_n]):
@@ -263,12 +262,14 @@ class QPMapper:
                     "score": round(float(combined[i]), 4),
                     "bm25": round(float(bm25[i]), 4),
                     "cosine": None if cosine is None else round(float(cosine[i]), 4),
-                    "confidence": round(conf[rank], 4) if conf else 0.0,
+                    # ranks outside the softmax window get 0 confidence
+                    "confidence": round(conf[rank], 4) if rank < len(conf) else 0.0,
                     "matched_terms": matched[:10],
                 }
             )
         return {
             "engine": engine,
+            "no_match": no_match,
             "language_detected": detect_language(narrative),
             "query_terms": sorted(set(query_tokens)),
             "lexicon_matches": [{k2: v for k2, v in m.items() if k2 != "expand"} for m in matches],

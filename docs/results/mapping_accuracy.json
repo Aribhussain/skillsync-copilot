@@ -1,0 +1,495 @@
+{
+ "temperature": 0.12,
+ "calibrated_temperature": 0.03,
+ "engines": {
+  "bm25+lexicon": {
+   "synthetic": {
+    "n": 60,
+    "top1": 1.0,
+    "top3": 1.0,
+    "mrr": 1.0,
+    "ece": 0.0061466666666661895,
+    "mean_top1_confidence": 0.9938533333333338,
+    "by_language": {
+     "en": {
+      "top1": 1.0,
+      "n": 20
+     },
+     "hi": {
+      "top1": 1.0,
+      "n": 20
+     },
+     "hinglish": {
+      "top1": 1.0,
+      "n": 20
+     }
+    },
+    "errors": []
+   },
+   "hard": {
+    "n": 30,
+    "top1": 0.9,
+    "top3": 0.9333333333333333,
+    "mrr": 0.9171717171717171,
+    "ece": 0.07470666666666655,
+    "mean_top1_confidence": 0.9502933333333331,
+    "by_language": {
+     "en": {
+      "top1": 1.0,
+      "n": 5
+     },
+     "hi": {
+      "top1": 0.8333333333333334,
+      "n": 6
+     },
+     "hinglish": {
+      "top1": 0.8947368421052632,
+      "n": 19
+     }
+    },
+    "errors": [
+     {
+      "id": "H07",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "weldin karta hu 5 saal se",
+      "no_match": true
+     },
+     {
+      "id": "H22",
+      "expected": "DEMO-PL-GENERAL-L3",
+      "got": [
+       "DEMO-CG-SR-WELDER-PIPE-L5",
+       "QG-4.5-AU-01811-2024-V1-ASDC",
+       "DEMO-PL-GENERAL-L3"
+      ],
+      "text": "पानी की पाइपलाइन और टॉयलेट फिटिंग",
+      "no_match": false
+     },
+     {
+      "id": "H28",
+      "expected": "DEMO-AU-2W-TECH-L4",
+      "got": [
+       "QG-4.5-AU-01811-2024-V1-ASDC",
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4"
+      ],
+      "text": "scooty ka self start kharab ho to theek karta hu",
+      "no_match": false
+     }
+    ]
+   }
+  },
+  "bm25 (no lexicon)": {
+   "synthetic": {
+    "n": 60,
+    "top1": 0.7,
+    "top3": 0.7333333333333333,
+    "mrr": 0.7501220538720541,
+    "ece": 0.003823333333333267,
+    "mean_top1_confidence": 0.6961766666666667,
+    "by_language": {
+     "en": {
+      "top1": 1.0,
+      "n": 20
+     },
+     "hi": {
+      "top1": 0.1,
+      "n": 20
+     },
+     "hinglish": {
+      "top1": 1.0,
+      "n": 20
+     }
+    },
+    "errors": [
+     {
+      "id": "SYN-W001",
+      "expected": "DEMO-AU-STUD-WELD-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 4 साल का अनुभव है। डेक शीट पर स्टड लगाता हूँ। स्टड का बेंड टेस्ट करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W007",
+      "expected": "DEMO-PL-GENERAL-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 14 साल का अनुभव है। प्लंबर का काम करता हूँ। नल और टोंटी लगाता हूँ। पाइप की लीकेज ठीक करता हूँ। टंकी का कनेक्शन करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W010",
+      "expected": "DEMO-CON-MASON-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 9 साल से फैक्ट्री में काम करता हूँ। टाइल लगाता हूँ। ईंट की चिनाई करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W013",
+      "expected": "DEMO-PL-GENERAL-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 9 साल का अनुभव है। नल और टोंटी लगाता हूँ। प्लंबर का काम करता हूँ। पाइप की लीकेज ठीक करता हूँ। ग्राइंडर से पाइप काटता हूँ। उस्ताद से सीखा है।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W016",
+      "expected": "DEMO-CG-FITTER-FAB-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 10 साल से वर्कशॉप में काम करता हूँ। एंगल की मार्किंग और कटिंग करता हूँ। फैब्रिकेशन में गेट और ग्रिल बनाता हूँ। उस्ताद से सीखा है।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W019",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 5 साल का अनुभव है। वेल्डिंग में छेद या छींटे हों तो ठीक करता हूँ। इलेक्ट्रोड से पाइप पर वेल्डिंग करता हूँ। आर्गन वेल्डिंग से स्टेनलेस की चादर जोड़ता हूँ। उस्ताद से सीखा है।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W022",
+      "expected": "DEMO-EL-DOMESTIC-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 9 साल का अनुभव है। पंखा और स्विच लगाता हूँ। बिजली का काम करता हूँ। अर्थिंग करता हूँ। घर की वायरिंग करता हूँ।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W025",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 12 साल से दुकान में काम करता हूँ। प्लेट और पाइप के जोड़ बनाता हूँ। वेल्डिंग के बाद ग्राइंडर से घिसाई और फिनिशिंग करता हूँ। आर्गन वेल्डिंग से स्टेनलेस की चादर जोड़ता हूँ। वेल्डिंग में छेद या छींटे हों तो ठीक करता हूँ। उस्ताद से सीखा है।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W028",
+      "expected": "DEMO-AMH-SMO-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 5 साल से फैक्ट्री में काम करता हूँ। कपड़े की सिलाई करती हूँ। सिलाई का काम करती हूँ। ओवरलॉक मशीन चलाती हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W031",
+      "expected": "DEMO-PL-GENERAL-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 13 साल से वर्कशॉप में काम करता हूँ। पाइप की लीकेज ठीक करता हूँ। टंकी का कनेक्शन करता हूँ। ग्राइंडर से पाइप काटता हूँ।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W034",
+      "expected": "DEMO-CG-FITTER-FAB-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 3 साल का अनुभव है। फैब्रिकेशन में गेट और ग्रिल बनाता हूँ। एंगल की मार्किंग और कटिंग करता हूँ।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W037",
+      "expected": "DEMO-AMH-SMO-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 8 साल से दुकान में काम करता हूँ। सिलाई का काम करती हूँ। दर्जी का काम आता है। कपड़े की सिलाई करती हूँ। ओवरलॉक मशीन चलाती हूँ।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W040",
+      "expected": "DEMO-EL-DOMESTIC-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 14 साल से वर्कशॉप में काम करता हूँ। पंखा और स्विच लगाता हूँ। घर की वायरिंग करता हूँ। बिजली का काम करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W046",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 13 साल से वर्कशॉप में काम करता हूँ। मशीन का करंट खुद सेट करता हूँ। हेलमेट, चश्मा और दस्ताने पहनता हूँ। उस्ताद से सीखा है।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W049",
+      "expected": "DEMO-AMH-SMO-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 3 साल का अनुभव है। ओवरलॉक मशीन चलाती हूँ। दर्जी का काम आता है। सिलाई का काम करती हूँ। कपड़े की सिलाई करती हूँ। उस्ताद से सीखा है।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W052",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 5 साल से वर्कशॉप में काम करता हूँ। वेल्डिंग के बाद ग्राइंडर से घिसाई और फिनिशिंग करता हूँ। प्लेट और पाइप के जोड़ बनाता हूँ। आर्गन वेल्डिंग से स्टेनलेस की चादर जोड़ता हूँ। इलेक्ट्रोड से पाइप पर वेल्डिंग करता हूँ।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W055",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मुझे 11 साल का अनुभव है। वेल्डिंग में छेद या छींटे हों तो ठीक करता हूँ। प्लेट और पाइप के जोड़ बनाता हूँ। आर्गन वेल्डिंग से स्टेनलेस की चादर जोड़ता हूँ। नक्शा देखकर काम करता हूँ।",
+      "no_match": true
+     },
+     {
+      "id": "SYN-W058",
+      "expected": "DEMO-CON-MASON-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं 7 साल से फैक्ट्री में काम करता हूँ। राजमिस्त्री का काम करता हूँ। टाइल लगाता हूँ। ईंट की चिनाई करता हूँ।",
+      "no_match": true
+     }
+    ]
+   },
+   "hard": {
+    "n": 30,
+    "top1": 0.7666666666666667,
+    "top3": 0.8,
+    "mrr": 0.810479797979798,
+    "ece": 0.05313,
+    "mean_top1_confidence": 0.769483333333333,
+    "by_language": {
+     "en": {
+      "top1": 1.0,
+      "n": 5
+     },
+     "hi": {
+      "top1": 0.16666666666666666,
+      "n": 6
+     },
+     "hinglish": {
+      "top1": 0.8947368421052632,
+      "n": 19
+     }
+    },
+    "errors": [
+     {
+      "id": "H03",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "मैं वेल्डर हूँ, आर्गन और कार्बन दोनों मशीन चलाता हूँ",
+      "no_match": true
+     },
+     {
+      "id": "H07",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "weldin karta hu 5 saal se",
+      "no_match": true
+     },
+     {
+      "id": "H10",
+      "expected": "DEMO-CON-WELDER-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "बिल्डिंग साइट पर लोहे के ढांचे की वेल्डिंग करता हूँ",
+      "no_match": true
+     },
+     {
+      "id": "H18",
+      "expected": "DEMO-CG-FITTER-FAB-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "शटर और ग्रिल बनाने का काम, कटिंग और ड्रिलिंग",
+      "no_match": true
+     },
+     {
+      "id": "H22",
+      "expected": "DEMO-PL-GENERAL-L3",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "पानी की पाइपलाइन और टॉयलेट फिटिंग",
+      "no_match": true
+     },
+     {
+      "id": "H24",
+      "expected": "DEMO-AMH-SMO-L4",
+      "got": [
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4",
+       "DEMO-EL-DOMESTIC-L3"
+      ],
+      "text": "ब्लाउज़ और सूट की सिलाई",
+      "no_match": true
+     },
+     {
+      "id": "H28",
+      "expected": "DEMO-AU-2W-TECH-L4",
+      "got": [
+       "QG-4.5-AU-01811-2024-V1-ASDC",
+       "DEMO-BWS-ABT-L3",
+       "DEMO-CON-WELDER-L4"
+      ],
+      "text": "scooty ka self start kharab ho to theek karta hu",
+      "no_match": false
+     }
+    ]
+   }
+  },
+  "hybrid (bm25+lexicon+embeddings)": {
+   "synthetic": {
+    "n": 60,
+    "top1": 1.0,
+    "top3": 1.0,
+    "mrr": 1.0,
+    "ece": 0.04766499999999994,
+    "mean_top1_confidence": 0.9523349999999999,
+    "by_language": {
+     "en": {
+      "top1": 1.0,
+      "n": 20
+     },
+     "hi": {
+      "top1": 1.0,
+      "n": 20
+     },
+     "hinglish": {
+      "top1": 1.0,
+      "n": 20
+     }
+    },
+    "errors": []
+   },
+   "hard": {
+    "n": 30,
+    "top1": 0.9,
+    "top3": 0.9666666666666667,
+    "mrr": 0.9361111111111111,
+    "ece": 0.07752666666666691,
+    "mean_top1_confidence": 0.9011666666666668,
+    "by_language": {
+     "en": {
+      "top1": 1.0,
+      "n": 5
+     },
+     "hi": {
+      "top1": 0.8333333333333334,
+      "n": 6
+     },
+     "hinglish": {
+      "top1": 0.8947368421052632,
+      "n": 19
+     }
+    },
+    "errors": [
+     {
+      "id": "H07",
+      "expected": "QG-4.5-AU-01811-2024-V1-ASDC",
+      "got": [
+       "DEMO-CG-SR-WELDER-PIPE-L5",
+       "DEMO-AU-STUD-WELD-L3",
+       "QG-4.5-AU-01811-2024-V1-ASDC"
+      ],
+      "text": "weldin karta hu 5 saal se",
+      "no_match": true
+     },
+     {
+      "id": "H22",
+      "expected": "DEMO-PL-GENERAL-L3",
+      "got": [
+       "DEMO-CG-SR-WELDER-PIPE-L5",
+       "DEMO-PL-GENERAL-L3",
+       "QG-4.5-AU-01811-2024-V1-ASDC"
+      ],
+      "text": "पानी की पाइपलाइन और टॉयलेट फिटिंग",
+      "no_match": false
+     },
+     {
+      "id": "H28",
+      "expected": "DEMO-AU-2W-TECH-L4",
+      "got": [
+       "QG-4.5-AU-01811-2024-V1-ASDC",
+       "DEMO-CG-SR-WELDER-PIPE-L5",
+       "DEMO-CON-WELDER-L4"
+      ],
+      "text": "scooty ka self start kharab ho to theek karta hu",
+      "no_match": false
+     }
+    ]
+   }
+  }
+ }
+}

@@ -166,3 +166,22 @@ def test_pack_is_versioned_and_complete(client, auth):
         headers=auth("assessor1"),
     )
     assert client.get("/packs/version").json()["pack_version"] != p1["pack_version"]
+
+
+def test_full_ranking_beyond_softmax_window(mapper):
+    """Regression: asking for more results than the softmax window must not crash."""
+    r = mapper.map(GOLDEN, top_n=len(mapper.qp_ids))
+    assert len(r["top"]) == len(mapper.qp_ids)
+    assert all(t["confidence"] == 0.0 for t in r["top"][5:])
+
+
+def test_empty_narrative_has_zero_confidence(mapper):
+    r = mapper.map("hoon karta")
+    assert all(t["confidence"] == 0.0 for t in r["top"])
+
+
+def test_no_lexical_match_is_flagged_not_guessed(mapper):
+    r = mapper.map("weldin karta hu 5 saal se")
+    assert r["no_match"] is True
+    assert all(t["confidence"] == 0.0 for t in r["top"])
+    assert mapper.map(GOLDEN)["no_match"] is False
