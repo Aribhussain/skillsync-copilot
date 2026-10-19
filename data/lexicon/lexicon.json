@@ -1,0 +1,4783 @@
+{
+ "version": "2026.10.1",
+ "description": "Trade-vernacular lexicon: shop-floor Hindi / Hinglish / English terms mapped to canonical NSQF terms. 'expand' terms are appended to the query for retrieval.",
+ "entries": [
+  {
+   "term": "argon",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "argon ka kaam",
+   "lang": "hinglish",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "argon welding",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "argon gas",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "argan",
+   "lang": "hinglish",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aragon",
+   "lang": "hinglish",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tig",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tig welding",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tig ka kaam",
+   "lang": "hinglish",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टिग",
+   "lang": "hi",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टिग वेल्डिंग",
+   "lang": "hi",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "आर्गन",
+   "lang": "hi",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "आर्गन वेल्डिंग",
+   "lang": "hi",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "आरगन",
+   "lang": "hi",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tungsten",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टंगस्टन",
+   "lang": "hi",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tig torch",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gtaw",
+   "lang": "en",
+   "canonical": "GTAW (141)",
+   "category": "process",
+   "expand": [
+    "gtaw",
+    "tig",
+    "141",
+    "argon",
+    "tungsten"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "co2",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "co2 welding",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "co2 ka kaam",
+   "lang": "hinglish",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "co2 wali welding",
+   "lang": "hinglish",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सीओ2",
+   "lang": "hi",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सीओटू",
+   "lang": "hi",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mig",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mig welding",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "मिग",
+   "lang": "hi",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "मिग वेल्डिंग",
+   "lang": "hi",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mag welding",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "wire wali welding",
+   "lang": "hinglish",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "wire welding",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "carbon gas welding",
+   "lang": "hinglish",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gmaw",
+   "lang": "en",
+   "canonical": "GMAW (135)",
+   "category": "process",
+   "expand": [
+    "gmaw",
+    "mig",
+    "mag",
+    "135",
+    "co2",
+    "wire feed"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "electrode",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "इलेक्ट्रोड",
+   "lang": "hi",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stick",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stick welding",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "rod wali welding",
+   "lang": "hinglish",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "rod welding",
+   "lang": "hinglish",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "arc welding",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "आर्क वेल्डिंग",
+   "lang": "hi",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "dandi wali welding",
+   "lang": "hinglish",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "डंडी",
+   "lang": "hi",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "transformer welding",
+   "lang": "hinglish",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "electrode holder",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "holder",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "6013",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "7018",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mma",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "smaw",
+   "lang": "en",
+   "canonical": "SMAW (111)",
+   "category": "process",
+   "expand": [
+    "smaw",
+    "111",
+    "electrode",
+    "stick welding",
+    "manual metal arc"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "flux core",
+   "lang": "en",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "flux cored",
+   "lang": "en",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "flux wire",
+   "lang": "en",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "फ्लक्स वायर",
+   "lang": "hi",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fcaw",
+   "lang": "en",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "flux wali wire",
+   "lang": "hinglish",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "flux core wire",
+   "lang": "en",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "फ्लक्स",
+   "lang": "hi",
+   "canonical": "FCAW-G (136)",
+   "category": "process",
+   "expand": [
+    "fcaw",
+    "fcaw-g",
+    "136",
+    "flux cored"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gas cutting",
+   "lang": "en",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gas cutter",
+   "lang": "en",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "cutting torch",
+   "lang": "en",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "oxy acetylene",
+   "lang": "en",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gas welding",
+   "lang": "en",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "गैस कटिंग",
+   "lang": "hi",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gas se katna",
+   "lang": "hinglish",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gas kattar",
+   "lang": "hinglish",
+   "canonical": "Oxy-fuel gas cutting",
+   "category": "process",
+   "expand": [
+    "gas cutting",
+    "cutting torch"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "welding",
+   "lang": "en",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "वेल्डिंग",
+   "lang": "hi",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "welder",
+   "lang": "en",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "वेल्डर",
+   "lang": "hi",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "welding ka kaam",
+   "lang": "hinglish",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "वेल्डिंग का काम",
+   "lang": "hi",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "welding mistri",
+   "lang": "hinglish",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "jodai",
+   "lang": "hinglish",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "jod lagana",
+   "lang": "hinglish",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "जोड़ाई",
+   "lang": "hi",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "veldin",
+   "lang": "hinglish",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "welding karta",
+   "lang": "hinglish",
+   "canonical": "Welding (general)",
+   "category": "trade",
+   "expand": [
+    "welding",
+    "welder"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "plate",
+   "lang": "en",
+   "canonical": "Plate",
+   "category": "joint",
+   "expand": [
+    "plate"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "प्लेट",
+   "lang": "hi",
+   "canonical": "Plate",
+   "category": "joint",
+   "expand": [
+    "plate"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "patra",
+   "lang": "hinglish",
+   "canonical": "Plate",
+   "category": "joint",
+   "expand": [
+    "plate"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chadar",
+   "lang": "hinglish",
+   "canonical": "Plate",
+   "category": "joint",
+   "expand": [
+    "plate"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "चादर",
+   "lang": "hi",
+   "canonical": "Plate",
+   "category": "joint",
+   "expand": [
+    "plate"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pipe",
+   "lang": "en",
+   "canonical": "Pipe",
+   "category": "joint",
+   "expand": [
+    "pipe"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "पाइप",
+   "lang": "hi",
+   "canonical": "Pipe",
+   "category": "joint",
+   "expand": [
+    "pipe"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "nali",
+   "lang": "hinglish",
+   "canonical": "Pipe",
+   "category": "joint",
+   "expand": [
+    "pipe"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tube",
+   "lang": "en",
+   "canonical": "Pipe",
+   "category": "joint",
+   "expand": [
+    "pipe"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "butt joint",
+   "lang": "en",
+   "canonical": "Butt joint",
+   "category": "joint",
+   "expand": [
+    "butt",
+    "butt weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "seedha jod",
+   "lang": "hinglish",
+   "canonical": "Butt joint",
+   "category": "joint",
+   "expand": [
+    "butt",
+    "butt weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aamne saamne jod",
+   "lang": "hinglish",
+   "canonical": "Butt joint",
+   "category": "joint",
+   "expand": [
+    "butt",
+    "butt weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fillet",
+   "lang": "en",
+   "canonical": "Fillet weld",
+   "category": "joint",
+   "expand": [
+    "fillet",
+    "fillet weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "t joint",
+   "lang": "en",
+   "canonical": "Fillet weld",
+   "category": "joint",
+   "expand": [
+    "fillet",
+    "fillet weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kona joint",
+   "lang": "hinglish",
+   "canonical": "Fillet weld",
+   "category": "joint",
+   "expand": [
+    "fillet",
+    "fillet weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "कोना जोड़",
+   "lang": "hi",
+   "canonical": "Fillet weld",
+   "category": "joint",
+   "expand": [
+    "fillet",
+    "fillet weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "corner joint",
+   "lang": "en",
+   "canonical": "Fillet weld",
+   "category": "joint",
+   "expand": [
+    "fillet",
+    "fillet weld"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "joint",
+   "lang": "en",
+   "canonical": "Joint",
+   "category": "joint",
+   "expand": [
+    "joint",
+    "welded joints"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "जोड़",
+   "lang": "hi",
+   "canonical": "Joint",
+   "category": "joint",
+   "expand": [
+    "joint",
+    "welded joints"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "jod",
+   "lang": "hinglish",
+   "canonical": "Joint",
+   "category": "joint",
+   "expand": [
+    "joint",
+    "welded joints"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "joint banata",
+   "lang": "hinglish",
+   "canonical": "Joint",
+   "category": "joint",
+   "expand": [
+    "joint",
+    "welded joints"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "root",
+   "lang": "en",
+   "canonical": "Root pass",
+   "category": "joint",
+   "expand": [
+    "root pass",
+    "root run",
+    "penetration"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "root pass",
+   "lang": "en",
+   "canonical": "Root pass",
+   "category": "joint",
+   "expand": [
+    "root pass",
+    "root run",
+    "penetration"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "root run",
+   "lang": "en",
+   "canonical": "Root pass",
+   "category": "joint",
+   "expand": [
+    "root pass",
+    "root run",
+    "penetration"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "रूट",
+   "lang": "hi",
+   "canonical": "Root pass",
+   "category": "joint",
+   "expand": [
+    "root pass",
+    "root run",
+    "penetration"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "andar ka jod",
+   "lang": "hinglish",
+   "canonical": "Root pass",
+   "category": "joint",
+   "expand": [
+    "root pass",
+    "root run",
+    "penetration"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "capping",
+   "lang": "en",
+   "canonical": "Capping pass",
+   "category": "joint",
+   "expand": [
+    "capping pass",
+    "cap"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "cap",
+   "lang": "en",
+   "canonical": "Capping pass",
+   "category": "joint",
+   "expand": [
+    "capping pass",
+    "cap"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "upar ki layer",
+   "lang": "hinglish",
+   "canonical": "Capping pass",
+   "category": "joint",
+   "expand": [
+    "capping pass",
+    "cap"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "6g",
+   "lang": "en",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "overhead",
+   "lang": "en",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "upar ki welding",
+   "lang": "hinglish",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "khadi welding",
+   "lang": "hinglish",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "vertical",
+   "lang": "en",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "खड़ी वेल्डिंग",
+   "lang": "hi",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "har position",
+   "lang": "hinglish",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "all position",
+   "lang": "en",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "flat position",
+   "lang": "en",
+   "canonical": "All positions",
+   "category": "position",
+   "expand": [
+    "all positions",
+    "position"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "grinding",
+   "lang": "en",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "grinder",
+   "lang": "en",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ग्राइंडिंग",
+   "lang": "hi",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ग्राइंडर",
+   "lang": "hi",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ghisai",
+   "lang": "hinglish",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ghisna",
+   "lang": "hinglish",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "घिसाई",
+   "lang": "hi",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "finishing",
+   "lang": "en",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "फिनिशिंग",
+   "lang": "hi",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "polish",
+   "lang": "en",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "dressing",
+   "lang": "en",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "safai",
+   "lang": "hinglish",
+   "canonical": "Grinding / dressing",
+   "category": "finishing",
+   "expand": [
+    "grinding",
+    "dress welds",
+    "finishing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chipping",
+   "lang": "en",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chipping hammer",
+   "lang": "en",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "slag",
+   "lang": "en",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "slag hatana",
+   "lang": "hinglish",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "मैल",
+   "lang": "hi",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kachra hatana",
+   "lang": "hinglish",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "wire brush",
+   "lang": "en",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "brush karna",
+   "lang": "hinglish",
+   "canonical": "Slag removal / chipping",
+   "category": "finishing",
+   "expand": [
+    "chipping",
+    "slag",
+    "weld metal cleanliness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "porosity",
+   "lang": "en",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chhed",
+   "lang": "hinglish",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "छेद",
+   "lang": "hi",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pin hole",
+   "lang": "en",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "blow hole",
+   "lang": "en",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "bulbule",
+   "lang": "hinglish",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "बुलबुले",
+   "lang": "hi",
+   "canonical": "Porosity",
+   "category": "defect",
+   "expand": [
+    "porosity",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "undercut",
+   "lang": "en",
+   "canonical": "Undercut",
+   "category": "defect",
+   "expand": [
+    "undercut",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kinara kat jana",
+   "lang": "hinglish",
+   "canonical": "Undercut",
+   "category": "defect",
+   "expand": [
+    "undercut",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kinare kat",
+   "lang": "hinglish",
+   "canonical": "Undercut",
+   "category": "defect",
+   "expand": [
+    "undercut",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "किनारा कटना",
+   "lang": "hi",
+   "canonical": "Undercut",
+   "category": "defect",
+   "expand": [
+    "undercut",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "spatter",
+   "lang": "en",
+   "canonical": "Spatter",
+   "category": "defect",
+   "expand": [
+    "spatter",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chhinte",
+   "lang": "hinglish",
+   "canonical": "Spatter",
+   "category": "defect",
+   "expand": [
+    "spatter",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chhite",
+   "lang": "hinglish",
+   "canonical": "Spatter",
+   "category": "defect",
+   "expand": [
+    "spatter",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "छींटे",
+   "lang": "hi",
+   "canonical": "Spatter",
+   "category": "defect",
+   "expand": [
+    "spatter",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "lack of fusion",
+   "lang": "en",
+   "canonical": "Incomplete fusion / penetration",
+   "category": "defect",
+   "expand": [
+    "incomplete",
+    "full penetration",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "incomplete penetration",
+   "lang": "en",
+   "canonical": "Incomplete fusion / penetration",
+   "category": "defect",
+   "expand": [
+    "incomplete",
+    "full penetration",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "adhoora jod",
+   "lang": "hinglish",
+   "canonical": "Incomplete fusion / penetration",
+   "category": "defect",
+   "expand": [
+    "incomplete",
+    "full penetration",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "adhura jod",
+   "lang": "hinglish",
+   "canonical": "Incomplete fusion / penetration",
+   "category": "defect",
+   "expand": [
+    "incomplete",
+    "full penetration",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "jod nahi pakda",
+   "lang": "hinglish",
+   "canonical": "Incomplete fusion / penetration",
+   "category": "defect",
+   "expand": [
+    "incomplete",
+    "full penetration",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "अधूरा जोड़",
+   "lang": "hi",
+   "canonical": "Incomplete fusion / penetration",
+   "category": "defect",
+   "expand": [
+    "incomplete",
+    "full penetration",
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "crack",
+   "lang": "en",
+   "canonical": "Crack",
+   "category": "defect",
+   "expand": [
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "daraar",
+   "lang": "hinglish",
+   "canonical": "Crack",
+   "category": "defect",
+   "expand": [
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "दरार",
+   "lang": "hi",
+   "canonical": "Crack",
+   "category": "defect",
+   "expand": [
+    "weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "distortion",
+   "lang": "en",
+   "canonical": "Distortion",
+   "category": "defect",
+   "expand": [
+    "distortion"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tedha",
+   "lang": "hinglish",
+   "canonical": "Distortion",
+   "category": "defect",
+   "expand": [
+    "distortion"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टेढ़ा",
+   "lang": "hi",
+   "canonical": "Distortion",
+   "category": "defect",
+   "expand": [
+    "distortion"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "bend ho jana",
+   "lang": "hinglish",
+   "canonical": "Distortion",
+   "category": "defect",
+   "expand": [
+    "distortion"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mud jana",
+   "lang": "hinglish",
+   "canonical": "Distortion",
+   "category": "defect",
+   "expand": [
+    "distortion"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "defect",
+   "lang": "en",
+   "canonical": "Weld defects",
+   "category": "defect",
+   "expand": [
+    "weld defects",
+    "recognize weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kharabi",
+   "lang": "hinglish",
+   "canonical": "Weld defects",
+   "category": "defect",
+   "expand": [
+    "weld defects",
+    "recognize weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "खराबी",
+   "lang": "hi",
+   "canonical": "Weld defects",
+   "category": "defect",
+   "expand": [
+    "weld defects",
+    "recognize weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "galti theek",
+   "lang": "hinglish",
+   "canonical": "Weld defects",
+   "category": "defect",
+   "expand": [
+    "weld defects",
+    "recognize weld defects"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "helmet",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "हेलमेट",
+   "lang": "hi",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "welding helmet",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mask",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "shield",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chashma",
+   "lang": "hinglish",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "चश्मा",
+   "lang": "hi",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "goggles",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "dastane",
+   "lang": "hinglish",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "दस्ताने",
+   "lang": "hi",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gloves",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "apron",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "एप्रन",
+   "lang": "hi",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "safety shoes",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "joote",
+   "lang": "hinglish",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ear plug",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ppe",
+   "lang": "en",
+   "canonical": "PPE",
+   "category": "safety",
+   "expand": [
+    "ppe",
+    "safety"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fire extinguisher",
+   "lang": "en",
+   "canonical": "Fire safety",
+   "category": "safety",
+   "expand": [
+    "hazard",
+    "safety",
+    "fire"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aag bujhane wala",
+   "lang": "hinglish",
+   "canonical": "Fire safety",
+   "category": "safety",
+   "expand": [
+    "hazard",
+    "safety",
+    "fire"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "आग",
+   "lang": "hi",
+   "canonical": "Fire safety",
+   "category": "safety",
+   "expand": [
+    "hazard",
+    "safety",
+    "fire"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aag",
+   "lang": "hinglish",
+   "canonical": "Fire safety",
+   "category": "safety",
+   "expand": [
+    "hazard",
+    "safety",
+    "fire"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fire",
+   "lang": "en",
+   "canonical": "Fire safety",
+   "category": "safety",
+   "expand": [
+    "hazard",
+    "safety",
+    "fire"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "dhuan",
+   "lang": "hinglish",
+   "canonical": "Fume extraction",
+   "category": "safety",
+   "expand": [
+    "fume extraction",
+    "emissions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "धुआं",
+   "lang": "hi",
+   "canonical": "Fume extraction",
+   "category": "safety",
+   "expand": [
+    "fume extraction",
+    "emissions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fumes",
+   "lang": "en",
+   "canonical": "Fume extraction",
+   "category": "safety",
+   "expand": [
+    "fume extraction",
+    "emissions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "exhaust fan",
+   "lang": "en",
+   "canonical": "Fume extraction",
+   "category": "safety",
+   "expand": [
+    "fume extraction",
+    "emissions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fume extraction",
+   "lang": "en",
+   "canonical": "Fume extraction",
+   "category": "safety",
+   "expand": [
+    "fume extraction",
+    "emissions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "safety",
+   "lang": "en",
+   "canonical": "Safety (general)",
+   "category": "safety",
+   "expand": [
+    "safety",
+    "work safely"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सुरक्षा",
+   "lang": "hi",
+   "canonical": "Safety (general)",
+   "category": "safety",
+   "expand": [
+    "safety",
+    "work safely"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "suraksha",
+   "lang": "hinglish",
+   "canonical": "Safety (general)",
+   "category": "safety",
+   "expand": [
+    "safety",
+    "work safely"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "first aid",
+   "lang": "en",
+   "canonical": "Safety (general)",
+   "category": "safety",
+   "expand": [
+    "safety",
+    "work safely"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ms",
+   "lang": "en",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mild steel",
+   "lang": "en",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "माइल्ड स्टील",
+   "lang": "hi",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "loha",
+   "lang": "hinglish",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "लोहा",
+   "lang": "hi",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "carbon steel",
+   "lang": "en",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "iron",
+   "lang": "en",
+   "canonical": "Mild / carbon steel",
+   "category": "material",
+   "expand": [
+    "carbon steel",
+    "mild steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ss",
+   "lang": "en",
+   "canonical": "Stainless steel",
+   "category": "material",
+   "expand": [
+    "stainless steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stainless",
+   "lang": "en",
+   "canonical": "Stainless steel",
+   "category": "material",
+   "expand": [
+    "stainless steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "स्टेनलेस",
+   "lang": "hi",
+   "canonical": "Stainless steel",
+   "category": "material",
+   "expand": [
+    "stainless steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "steel",
+   "lang": "en",
+   "canonical": "Stainless steel",
+   "category": "material",
+   "expand": [
+    "stainless steel"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aluminium",
+   "lang": "en",
+   "canonical": "Aluminium",
+   "category": "material",
+   "expand": [
+    "aluminium"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aluminum",
+   "lang": "en",
+   "canonical": "Aluminium",
+   "category": "material",
+   "expand": [
+    "aluminium"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "एल्युमिनियम",
+   "lang": "hi",
+   "canonical": "Aluminium",
+   "category": "material",
+   "expand": [
+    "aluminium"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aluminium sheet",
+   "lang": "en",
+   "canonical": "Aluminium",
+   "category": "material",
+   "expand": [
+    "aluminium"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "angle",
+   "lang": "en",
+   "canonical": "Structural sections",
+   "category": "material",
+   "expand": [
+    "angle",
+    "channel",
+    "structural"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "channel",
+   "lang": "en",
+   "canonical": "Structural sections",
+   "category": "material",
+   "expand": [
+    "angle",
+    "channel",
+    "structural"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "girder",
+   "lang": "en",
+   "canonical": "Structural sections",
+   "category": "material",
+   "expand": [
+    "angle",
+    "channel",
+    "structural"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "एंगल",
+   "lang": "hi",
+   "canonical": "Structural sections",
+   "category": "material",
+   "expand": [
+    "angle",
+    "channel",
+    "structural"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "vernier",
+   "lang": "en",
+   "canonical": "Measuring instruments",
+   "category": "tool",
+   "expand": [
+    "measuring",
+    "dimensions",
+    "accuracy"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "वर्नियर",
+   "lang": "hi",
+   "canonical": "Measuring instruments",
+   "category": "tool",
+   "expand": [
+    "measuring",
+    "dimensions",
+    "accuracy"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "measuring tape",
+   "lang": "en",
+   "canonical": "Measuring instruments",
+   "category": "tool",
+   "expand": [
+    "measuring",
+    "dimensions",
+    "accuracy"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "inchi tape",
+   "lang": "hinglish",
+   "canonical": "Measuring instruments",
+   "category": "tool",
+   "expand": [
+    "measuring",
+    "dimensions",
+    "accuracy"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fita",
+   "lang": "hinglish",
+   "canonical": "Measuring instruments",
+   "category": "tool",
+   "expand": [
+    "measuring",
+    "dimensions",
+    "accuracy"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "micrometer",
+   "lang": "en",
+   "canonical": "Measuring instruments",
+   "category": "tool",
+   "expand": [
+    "measuring",
+    "dimensions",
+    "accuracy"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "try square",
+   "lang": "en",
+   "canonical": "Try square",
+   "category": "tool",
+   "expand": [
+    "square",
+    "squareness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gunia",
+   "lang": "hinglish",
+   "canonical": "Try square",
+   "category": "tool",
+   "expand": [
+    "square",
+    "squareness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "गुनिया",
+   "lang": "hi",
+   "canonical": "Try square",
+   "category": "tool",
+   "expand": [
+    "square",
+    "squareness"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "clamp",
+   "lang": "en",
+   "canonical": "Clamp / vice",
+   "category": "tool",
+   "expand": [
+    "clamp"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "shikanja",
+   "lang": "hinglish",
+   "canonical": "Clamp / vice",
+   "category": "tool",
+   "expand": [
+    "clamp"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "शिकंजा",
+   "lang": "hi",
+   "canonical": "Clamp / vice",
+   "category": "tool",
+   "expand": [
+    "clamp"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "vice",
+   "lang": "en",
+   "canonical": "Clamp / vice",
+   "category": "tool",
+   "expand": [
+    "clamp"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "hacksaw",
+   "lang": "en",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "aari",
+   "lang": "hinglish",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "reti",
+   "lang": "hinglish",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "रेती",
+   "lang": "hi",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "hathoda",
+   "lang": "hinglish",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "हथौड़ा",
+   "lang": "hi",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pana",
+   "lang": "hinglish",
+   "canonical": "Hand tools",
+   "category": "tool",
+   "expand": [
+    "hacksaw"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "drawing",
+   "lang": "en",
+   "canonical": "Drawing and weld symbols",
+   "category": "tool",
+   "expand": [
+    "drawing",
+    "weld symbols",
+    "dimensions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "naksha",
+   "lang": "hinglish",
+   "canonical": "Drawing and weld symbols",
+   "category": "tool",
+   "expand": [
+    "drawing",
+    "weld symbols",
+    "dimensions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "नक्शा",
+   "lang": "hi",
+   "canonical": "Drawing and weld symbols",
+   "category": "tool",
+   "expand": [
+    "drawing",
+    "weld symbols",
+    "dimensions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "symbol",
+   "lang": "en",
+   "canonical": "Drawing and weld symbols",
+   "category": "tool",
+   "expand": [
+    "drawing",
+    "weld symbols",
+    "dimensions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "drawing padh",
+   "lang": "hinglish",
+   "canonical": "Drawing and weld symbols",
+   "category": "tool",
+   "expand": [
+    "drawing",
+    "weld symbols",
+    "dimensions"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ampere",
+   "lang": "en",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "current",
+   "lang": "en",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "करंट",
+   "lang": "hi",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "voltage",
+   "lang": "en",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "polarity",
+   "lang": "en",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "machine setting",
+   "lang": "en",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "setting karna",
+   "lang": "hinglish",
+   "canonical": "Machine set-up",
+   "category": "process",
+   "expand": [
+    "set up welding equipment",
+    "amperage",
+    "voltage",
+    "polarity"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "dp test",
+   "lang": "en",
+   "canonical": "Testing / NDT",
+   "category": "testing",
+   "expand": [
+    "non-destructive testing",
+    "testing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "dye penetrant",
+   "lang": "en",
+   "canonical": "Testing / NDT",
+   "category": "testing",
+   "expand": [
+    "non-destructive testing",
+    "testing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ndt",
+   "lang": "en",
+   "canonical": "Testing / NDT",
+   "category": "testing",
+   "expand": [
+    "non-destructive testing",
+    "testing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "hydro test",
+   "lang": "en",
+   "canonical": "Testing / NDT",
+   "category": "testing",
+   "expand": [
+    "non-destructive testing",
+    "testing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pressure test",
+   "lang": "en",
+   "canonical": "Testing / NDT",
+   "category": "testing",
+   "expand": [
+    "non-destructive testing",
+    "testing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "leak test",
+   "lang": "en",
+   "canonical": "Testing / NDT",
+   "category": "testing",
+   "expand": [
+    "non-destructive testing",
+    "testing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "site",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "साइट",
+   "lang": "hi",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "building",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "column",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "beam",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "structure",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "स्ट्रक्चर",
+   "lang": "hi",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "construction",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "sariya",
+   "lang": "hinglish",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सरिया",
+   "lang": "hi",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "rebar",
+   "lang": "en",
+   "canonical": "Construction site welding",
+   "category": "context",
+   "expand": [
+    "construction site",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "scaffolding",
+   "lang": "en",
+   "canonical": "Working at height",
+   "category": "safety",
+   "expand": [
+    "working at height",
+    "harness",
+    "scaffolding"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "paad",
+   "lang": "hinglish",
+   "canonical": "Working at height",
+   "category": "safety",
+   "expand": [
+    "working at height",
+    "harness",
+    "scaffolding"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "पाड़",
+   "lang": "hi",
+   "canonical": "Working at height",
+   "category": "safety",
+   "expand": [
+    "working at height",
+    "harness",
+    "scaffolding"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "uchai par",
+   "lang": "hinglish",
+   "canonical": "Working at height",
+   "category": "safety",
+   "expand": [
+    "working at height",
+    "harness",
+    "scaffolding"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "safety belt",
+   "lang": "en",
+   "canonical": "Working at height",
+   "category": "safety",
+   "expand": [
+    "working at height",
+    "harness",
+    "scaffolding"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "harness",
+   "lang": "en",
+   "canonical": "Working at height",
+   "category": "safety",
+   "expand": [
+    "working at height",
+    "harness",
+    "scaffolding"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stud",
+   "lang": "en",
+   "canonical": "Stud welding",
+   "category": "process",
+   "expand": [
+    "stud",
+    "stud welding",
+    "stud gun"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "स्टड",
+   "lang": "hi",
+   "canonical": "Stud welding",
+   "category": "process",
+   "expand": [
+    "stud",
+    "stud welding",
+    "stud gun"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stud gun",
+   "lang": "en",
+   "canonical": "Stud welding",
+   "category": "process",
+   "expand": [
+    "stud",
+    "stud welding",
+    "stud gun"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stud welding",
+   "lang": "en",
+   "canonical": "Stud welding",
+   "category": "process",
+   "expand": [
+    "stud",
+    "stud welding",
+    "stud gun"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "shear stud",
+   "lang": "en",
+   "canonical": "Stud welding",
+   "category": "process",
+   "expand": [
+    "stud",
+    "stud welding",
+    "stud gun"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "deck sheet",
+   "lang": "en",
+   "canonical": "Stud welding",
+   "category": "process",
+   "expand": [
+    "stud",
+    "stud welding",
+    "stud gun"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ibr",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "boiler",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "बॉयलर",
+   "lang": "hi",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "radiography",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "x ray",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "x-ray",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pipeline",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "पाइपलाइन",
+   "lang": "hi",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "refinery",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "wps",
+   "lang": "en",
+   "canonical": "Code pipe welding",
+   "category": "context",
+   "expand": [
+    "6g",
+    "radiography",
+    "ibr",
+    "boiler",
+    "pressure piping"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fitter",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "फिटर",
+   "lang": "hi",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fabrication",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "फैब्रिकेशन",
+   "lang": "hi",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gate",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "गेट",
+   "lang": "hi",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "grill",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ग्रिल",
+   "lang": "hi",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "shutter",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "marking",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "frame",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "fabricator",
+   "lang": "en",
+   "canonical": "Fitter fabrication",
+   "category": "trade",
+   "expand": [
+    "fitter",
+    "fabrication",
+    "fit-up",
+    "marking"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "bijli",
+   "lang": "hinglish",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "बिजली",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "bijli ka kaam",
+   "lang": "hinglish",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "electrician",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "इलेक्ट्रीशियन",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "wiring",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "वायरिंग",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "mcb",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "switch",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "स्विच",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "earthing",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "अर्थिंग",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "meter",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pankha",
+   "lang": "hinglish",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "पंखा",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "inverter",
+   "lang": "en",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "taar",
+   "lang": "hinglish",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "तार",
+   "lang": "hi",
+   "canonical": "Electrician",
+   "category": "trade",
+   "expand": [
+    "electrician",
+    "wiring"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "plumber",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "प्लंबर",
+   "lang": "hi",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "nal",
+   "lang": "hinglish",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "नल",
+   "lang": "hi",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tonti",
+   "lang": "hinglish",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टोंटी",
+   "lang": "hi",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pvc",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "cpvc",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "pipe fitting",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tanki",
+   "lang": "hinglish",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टंकी",
+   "lang": "hi",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "leakage",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "लीकेज",
+   "lang": "hi",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "sanitary",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "toilet",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "geyser",
+   "lang": "en",
+   "canonical": "Plumber",
+   "category": "trade",
+   "expand": [
+    "plumber",
+    "plumbing",
+    "pipe fitting"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "silai",
+   "lang": "hinglish",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सिलाई",
+   "lang": "hi",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "darzi",
+   "lang": "hinglish",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "दर्जी",
+   "lang": "hi",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tailor",
+   "lang": "en",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टेलर",
+   "lang": "hi",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "overlock",
+   "lang": "en",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ओवरलॉक",
+   "lang": "hi",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kapda",
+   "lang": "hinglish",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "कपड़ा",
+   "lang": "hi",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "stitching",
+   "lang": "en",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "garment",
+   "lang": "en",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "kurta",
+   "lang": "hinglish",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "collar",
+   "lang": "en",
+   "canonical": "Sewing machine operator",
+   "category": "trade",
+   "expand": [
+    "sewing",
+    "stitching",
+    "garment"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "parlour",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "पार्लर",
+   "lang": "hi",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "beauty",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ब्यूटी",
+   "lang": "hi",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "facial",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "फेशियल",
+   "lang": "hi",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "threading",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "थ्रेडिंग",
+   "lang": "hi",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "waxing",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "वैक्सिंग",
+   "lang": "hi",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "makeup",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "मेकअप",
+   "lang": "hi",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "manicure",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "bleach",
+   "lang": "en",
+   "canonical": "Beauty therapist",
+   "category": "trade",
+   "expand": [
+    "beauty",
+    "facial",
+    "threading"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "bike",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "बाइक",
+   "lang": "hi",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "motorcycle",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "scooter",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "स्कूटर",
+   "lang": "hi",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "gaadi",
+   "lang": "hinglish",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "servicing",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सर्विसिंग",
+   "lang": "hi",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "engine",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "इंजन",
+   "lang": "hi",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "carburettor",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "कार्बोरेटर",
+   "lang": "hi",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "brake",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ब्रेक",
+   "lang": "hi",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "clutch",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "spark plug",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "engine oil",
+   "lang": "en",
+   "canonical": "Two-wheeler technician",
+   "category": "trade",
+   "expand": [
+    "two wheeler",
+    "motorcycle",
+    "servicing"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "raj mistri",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "राजमिस्त्री",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "chinai",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "चिनाई",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "eent",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "ईंट",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "int",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "plaster",
+   "lang": "en",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "प्लास्टर",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "cement",
+   "lang": "en",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "सीमेंट",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "masala",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "sahul",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "साहुल",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "tiles",
+   "lang": "en",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "टाइल",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "deewar",
+   "lang": "hinglish",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  },
+  {
+   "term": "दीवार",
+   "lang": "hi",
+   "canonical": "Mason",
+   "category": "trade",
+   "expand": [
+    "mason",
+    "brickwork",
+    "plaster"
+   ],
+   "source": "seed"
+  }
+ ]
+}
