@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import Session
 
 from app import __version__
-from app.api import audit, auth, declarations, health, lexicon, packs, qps
+from app.api import assessments, audit, auth, declarations, health, lexicon, packs, qps, speech
 from app.core.config import Settings, get_settings
 from app.core.db import make_engine, run_migrations
 from app.services.mapping_service import MappingService
@@ -57,6 +57,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(lexicon.router)
     app.include_router(declarations.router)
     app.include_router(packs.router)
+    app.include_router(assessments.router)
+    app.include_router(speech.router)
     return app
 
 

@@ -15,6 +15,21 @@ const routes: RouteRecordRaw[] = [
   { path: '/about', component: () => import('../views/AboutView.vue'), meta: { public: true } },
   { path: '/worker', component: () => import('../views/WorkerHome.vue'), meta: { roles: ['worker'] } },
   {
+    path: '/worker/consent',
+    component: () => import('../views/worker/ConsentView.vue'),
+    meta: { roles: ['worker'] },
+  },
+  {
+    path: '/worker/declare',
+    component: () => import('../views/worker/DeclareView.vue'),
+    meta: { roles: ['worker'] },
+  },
+  {
+    path: '/worker/results/:clientId',
+    component: () => import('../views/worker/ResultsView.vue'),
+    meta: { roles: ['worker'] },
+  },
+  {
     path: '/assessor',
     component: () => import('../views/AssessorHome.vue'),
     meta: { roles: ['assessor'] },

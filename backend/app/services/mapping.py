@@ -249,7 +249,9 @@ class QPMapper:
         top = []
         for rank, i in enumerate(order[:top_n]):
             qp = self.corpus[self.qp_ids[i]]
-            matched = sorted({t for t in query_tokens if t in self.doc_sets[i]}, key=lambda t: -idf.get(t, 0))
+            matched = sorted(
+                {t for t in query_tokens if t in self.doc_sets[i]}, key=lambda t: (-idf.get(t, 0), t)
+            )
             top.append(
                 {
                     "rank": rank + 1,
@@ -285,7 +287,7 @@ class QPMapper:
             "k1": BM25_K1,
             "b": BM25_B,
             "avgdl": self.bm25.avgdl,
-            "idf": {t: round(v, 6) for t, v in self.bm25.idf.items()},
+            "idf": dict(self.bm25.idf),  # full precision: mapper-lite must reproduce scores exactly
             "docs": [
                 {"qp_id": q, "len": len(d), "tf": dict(Counter(d))}
                 for q, d in zip(self.qp_ids, self.docs, strict=True)

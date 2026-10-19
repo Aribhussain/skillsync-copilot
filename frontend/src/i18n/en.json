@@ -52,5 +52,62 @@
     "loading": "Loading…",
     "retry": "Retry",
     "error": "Something went wrong"
+  },
+  "worker": {
+    "declareCta": "Tell your Kaam ki Kahani",
+    "consentFirst": "First, please read and give consent.",
+    "giveConsent": "Read & give consent",
+    "myRequests": "My declarations",
+    "none": "No declarations yet.",
+    "status": {
+      "local": "Saved on phone",
+      "submitted": "Sent",
+      "mapped": "Matched",
+      "confirmed": "Assessment requested"
+    },
+    "viewResult": "View match"
+  },
+  "consent": {
+    "title": "Consent",
+    "required": "Required",
+    "optional": "Optional",
+    "agree": "I agree",
+    "cannotContinue": "Consent for RPL assessment is needed to continue.",
+    "saved": "Consent saved"
+  },
+  "declare": {
+    "title": "Kaam ki Kahani",
+    "lead": "Tell us in your own words what work you do, with which tools, for how long. Hindi, Hinglish or English — all fine.",
+    "speakLang": "Speech language",
+    "mic": "Tap and speak",
+    "listening": "Listening… tap to stop",
+    "voiceUnavailable": "Voice input is not available in this browser. Please type, or tap the cards below.",
+    "typeHere": "Or type here",
+    "cardsTitle": "Or tap what you do",
+    "submit": "Find my qualification",
+    "needInput": "Say, type or tap at least one thing.",
+    "micError": "Microphone problem: {code}"
+  },
+  "results": {
+    "title": "Your matching qualifications",
+    "provisional": "Provisional — matched on this phone (offline)",
+    "server": "Matched by server",
+    "engineHybrid": "BM25 + lexicon + multilingual embeddings",
+    "engineLite": "BM25 + lexicon",
+    "confidence": "Confidence",
+    "matched": "Matched words",
+    "understood": "We understood",
+    "noMatch": "We could not recognise your trade yet. Please tell us more, or tap the cards.",
+    "claimsTitle": "Skills you said you have",
+    "claimsHint": "Ticked skills were found in your story. Untick anything that is not right.",
+    "strong": "said clearly",
+    "weak": "related",
+    "confirm": "Yes, assess me for this",
+    "confirmed": "Assessment requested. An assessor will contact you.",
+    "source": {
+      "official": "Official NQR",
+      "drafted-for-demo": "Demo QP"
+    },
+    "supportNote": "The AI only suggests. You and the assessor decide."
   }
 }
