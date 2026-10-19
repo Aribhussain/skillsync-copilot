@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
 import { db, type LocalDeclaration } from '../../lib/db'
 import type { MappingResult, PCClaim, QP } from '../../lib/mapper/types'
 import { loadQp } from '../../lib/qps'
+import { onSyncChange } from '../../lib/sync'
 import { confirmQualification } from '../../lib/worker'
 
 const { t, locale } = useI18n()
@@ -23,24 +24,42 @@ const mapping = computed<MappingResult | undefined>(() => decl.value?.serverMapp
 const isProvisional = computed(() => !decl.value?.serverMapping && !!decl.value?.provisional)
 const claims = computed<PCClaim[]>(() => (mapping.value?.claims[selectedQp.value] ?? []) as PCClaim[])
 
+const userPicked = ref(false)
+
 async function refresh() {
+  const hadServer = !!decl.value?.serverMapping
   decl.value = (await db.declarations.get(String(route.params.clientId))) ?? null
-  if (decl.value && !selectedQp.value) {
-    selectedQp.value = decl.value.confirmedQpId ?? mapping.value?.top[0]?.qp_id ?? ''
+  if (!decl.value) return
+  const serverArrived = !hadServer && !!decl.value.serverMapping
+  if (decl.value.confirmedQpId) {
+    selectedQp.value = decl.value.confirmedQpId
+  } else if (!selectedQp.value || (serverArrived && !userPicked.value)) {
+    // follow the server's top-1 when it replaces the provisional result
+    selectedQp.value = mapping.value?.top[0]?.qp_id ?? ''
+    if (serverArrived) applyClaims(selectedQp.value)
   }
+}
+
+function applyClaims(id: string) {
+  const claimed =
+    decl.value?.confirmedQpId === id && decl.value.claimedPcIds
+      ? decl.value.claimedPcIds
+      : (mapping.value?.claims[id] ?? []).filter((c) => c.claimed).map((c) => c.pc_id)
+  ticked.value = new Set(claimed)
 }
 
 watch(selectedQp, async (id) => {
   if (!id) return
   qp.value = await loadQp(id)
-  const claimed = decl.value?.confirmedQpId === id && decl.value.claimedPcIds
-    ? decl.value.claimedPcIds
-    : (mapping.value?.claims[id] ?? []).filter((c) => c.claimed).map((c) => c.pc_id)
-  ticked.value = new Set(claimed)
+  applyClaims(id)
 })
 
-onMounted(refresh)
-defineExpose({ refresh })
+let unsubscribe: (() => void) | null = null
+onMounted(() => {
+  void refresh()
+  unsubscribe = onSyncChange(() => void refresh())
+})
+onBeforeUnmount(() => unsubscribe?.())
 
 function toggle(pcId: string) {
   const next = new Set(ticked.value)
@@ -107,7 +126,14 @@ const pct = (x: number) => `${Math.round(x * 100)}%`
           :data-testid="`qp-option-${q.rank}`"
         >
           <div class="flex items-start gap-3">
-            <input v-model="selectedQp" type="radio" :value="q.qp_id" class="mt-1 h-5 w-5 accent-navy-900" :disabled="decl.status === 'confirmed'" />
+            <input
+              v-model="selectedQp"
+              type="radio"
+              :value="q.qp_id"
+              class="mt-1 h-5 w-5 accent-navy-900"
+              :disabled="decl.status === 'confirmed'"
+              @change="userPicked = true"
+            />
             <div class="flex-1">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="text-lg font-bold">#{{ q.rank }} {{ locale === 'hi' && q.title_hi ? q.title_hi : q.title }}</span>
@@ -166,6 +192,9 @@ const pct = (x: number) => `${Math.round(x * 100)}%`
     <p v-if="error" class="rounded-lg bg-saffron-100 p-2 text-sm" role="alert">{{ error }}</p>
     <p v-if="decl.status === 'confirmed'" class="rounded-xl bg-green-india-100 p-3 font-semibold text-green-india-700" data-testid="confirmed">
       ✓ {{ t('results.confirmed') }}
+      <span class="mt-1 block text-sm font-normal" :data-testid="decl.assessmentId ? 'request-synced' : 'request-queued'">
+        {{ decl.assessmentId ? t('results.synced', { id: decl.assessmentId }) : t('results.queued') }}
+      </span>
     </p>
     <button
       v-else

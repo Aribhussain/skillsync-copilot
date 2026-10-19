@@ -5,9 +5,11 @@ import { useRouter } from 'vue-router'
 
 import type { ConsentNotice } from '../../lib/mapper/types'
 import { fetchNotice, giveConsent } from '../../lib/worker'
+import { useAuthStore } from '../../stores/auth'
 
 const { t, locale } = useI18n()
 const router = useRouter()
+const auth = useAuthStore()
 
 const notice = ref<ConsentNotice | null>(null)
 const checked = ref<Record<string, boolean>>({ rpl_assessment: false, evidence_capture: false, voice_processing: false })
@@ -34,7 +36,7 @@ async function submit() {
   busy.value = true
   try {
     const purposes = Object.entries(checked.value).filter(([, v]) => v).map(([k]) => k)
-    await giveConsent(purposes, lang.value, notice.value.sha256)
+    await giveConsent(auth.user!.username, purposes, lang.value, notice.value.sha256)
     await router.push('/worker/declare')
   } catch (e) {
     error.value = String(e)

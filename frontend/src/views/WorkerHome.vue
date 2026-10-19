@@ -12,7 +12,7 @@ const consented = ref<boolean | null>(null)
 const items = ref<LocalDeclaration[]>([])
 
 onMounted(async () => {
-  consented.value = await hasConsent()
+  consented.value = await hasConsent(auth.user!.username)
   items.value = await myDeclarations(auth.user!.username)
 })
 

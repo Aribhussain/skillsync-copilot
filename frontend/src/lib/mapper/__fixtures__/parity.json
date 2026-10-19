@@ -1,0 +1,2393 @@
+{
+ "pack_version": "4bd4da8cc02eac41",
+ "cases": [
+  {
+   "text": "Main 6 saal se fabrication shop mein kaam karta hoon, CO2 aur argon dono welding karta hoon, plate aur pipe joint banata hoon, grinding karke finishing deta hoon",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 67.2681,
+     "confidence": 0.9939
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 19.7231,
+     "confidence": 0.0028
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 18.0515,
+     "confidence": 0.0022
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "co2",
+    "argon",
+    "welding karta",
+    "plate",
+    "pipe",
+    "joint banata",
+    "grinding",
+    "finishing"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ]
+  },
+  {
+   "text": "मुझे 4 साल का अनुभव है। डेक शीट पर स्टड लगाता हूँ। स्टड का बेंड टेस्ट करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 36.1797,
+     "confidence": 0.9989
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 0.729,
+     "confidence": 0.0003
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 0.6457,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "स्टड",
+    "स्टड"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "I have worked for 4 years in a local shop. I do manicure and pedicure. I do bridal makeup. I do facial, threading and waxing in a beauty parlour. I want a certificate for a better job.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 102.8951,
+     "confidence": 0.9982
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 18.754,
+     "confidence": 0.0011
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "manicure",
+    "makeup",
+    "facial",
+    "threading",
+    "waxing",
+    "beauty",
+    "parlour"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-BWS-N1.PC1",
+    "DEMO-BWS-N1.PC2",
+    "DEMO-BWS-N1.PC3"
+   ]
+  },
+  {
+   "text": "Main 15 saal se dukaan mein kaam karta hoon. Argon ka kaam bhi aata hai, TIG se stainless sheet jodta hoon. Flux wire se bhi welding ki hai. Drawing dekh ke welding karta hoon. Slag hatana aur wire brush karna roz ka kaam hai. Certificate chahiye achhi naukri ke liye.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 71.6743,
+     "confidence": 0.9942
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 23.6247,
+     "confidence": 0.0037
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 10.375,
+     "confidence": 0.0008
+    }
+   ],
+   "lexicon_terms": [
+    "argon ka kaam",
+    "tig",
+    "stainless",
+    "flux wire",
+    "welding",
+    "drawing",
+    "welding karta",
+    "slag hatana",
+    "wire brush"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3123.PC1",
+    "ASC-N3123.PC2",
+    "ASC-N3123.PC3",
+    "ASC-N3123.PC4",
+    "ASC-N3123.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9",
+    "ASC-N9819.PC1",
+    "ASC-N9819.PC10",
+    "ASC-N9819.PC11",
+    "ASC-N9819.PC12",
+    "ASC-N9819.PC13",
+    "ASC-N9819.PC14",
+    "ASC-N9819.PC2",
+    "ASC-N9819.PC3",
+    "ASC-N9819.PC4",
+    "ASC-N9819.PC5",
+    "ASC-N9819.PC6",
+    "ASC-N9819.PC7",
+    "ASC-N9819.PC8",
+    "ASC-N9819.PC9"
+   ]
+  },
+  {
+   "text": "मैं 7 साल से फैक्ट्री में काम करता हूँ। रेडियोग्राफी टेस्ट पास होता है। बॉयलर और पाइपलाइन पर काम किया है। 6G पाइप वेल्डिंग करता हूँ।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 48.3996,
+     "confidence": 0.9979
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 7.8877,
+     "confidence": 0.0009
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 3.7839,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "बॉयलर",
+    "पाइपलाइन",
+    "6g",
+    "पाइप",
+    "वेल्डिंग"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-PIPE1.PC1",
+    "DEMO-CG-N-PIPE1.PC2",
+    "DEMO-CG-N-PIPE1.PC3",
+    "DEMO-CG-N-PIPE2.PC1",
+    "DEMO-CG-N-PIPE2.PC2",
+    "DEMO-CG-N-PIPE2.PC3"
+   ]
+  },
+  {
+   "text": "My experience is 4 years, mostly in a fabrication shop. I build brick walls with cement mortar. I lay tiles on floors. I do plastering of walls. I did not go to ITI.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 47.6198,
+     "confidence": 0.9966
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 12.8501,
+     "confidence": 0.0023
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 2.8585,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "cement",
+    "tiles"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N-MAS1.PC1",
+    "DEMO-CON-N-MAS1.PC2",
+    "DEMO-CON-N-MAS1.PC3",
+    "DEMO-CON-N-MAS2.PC1",
+    "DEMO-CON-N-MAS2.PC2",
+    "DEMO-CON-N-MAS2.PC3"
+   ]
+  },
+  {
+   "text": "Main 9 saal se dukaan mein kaam karta hoon. Deewar pe plaster karta hoon. Sahul aur level se deewar seedhi rakhta hoon. Eent ki chinai karta hoon.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 77.5552,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "deewar",
+    "plaster",
+    "sahul",
+    "deewar",
+    "eent",
+    "chinai"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N-MAS1.PC1",
+    "DEMO-CON-N-MAS1.PC2",
+    "DEMO-CON-N-MAS1.PC3"
+   ]
+  },
+  {
+   "text": "मुझे 14 साल का अनुभव है। प्लंबर का काम करता हूँ। नल और टोंटी लगाता हूँ। पाइप की लीकेज ठीक करता हूँ। टंकी का कनेक्शन करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 58.5536,
+     "confidence": 0.9962
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 11.7423,
+     "confidence": 0.0013
+    },
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 11.6734,
+     "confidence": 0.0013
+    }
+   ],
+   "lexicon_terms": [
+    "प्लंबर",
+    "नल",
+    "टोंटी",
+    "पाइप",
+    "लीकेज",
+    "टंकी"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-PL-N2.PC1",
+    "DEMO-PL-N2.PC2",
+    "DEMO-PL-N2.PC3"
+   ]
+  },
+  {
+   "text": "I have worked for 6 years in a small workshop. I read the drawing and weld symbols before starting. After welding I do grinding and finishing with wire brush. I have used flux core wire welding also.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 65.5862,
+     "confidence": 0.9966
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 15.0664,
+     "confidence": 0.0016
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 9.1678,
+     "confidence": 0.0008
+    }
+   ],
+   "lexicon_terms": [
+    "drawing",
+    "symbol",
+    "welding",
+    "grinding",
+    "finishing",
+    "wire brush",
+    "flux core wire",
+    "welding"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3123.PC1",
+    "ASC-N3123.PC2",
+    "ASC-N3123.PC3",
+    "ASC-N3123.PC4",
+    "ASC-N3123.PC5",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9",
+    "ASC-N9819.PC1",
+    "ASC-N9819.PC10",
+    "ASC-N9819.PC11",
+    "ASC-N9819.PC12",
+    "ASC-N9819.PC13",
+    "ASC-N9819.PC14",
+    "ASC-N9819.PC2",
+    "ASC-N9819.PC3",
+    "ASC-N9819.PC4",
+    "ASC-N9819.PC5",
+    "ASC-N9819.PC6",
+    "ASC-N9819.PC7",
+    "ASC-N9819.PC8",
+    "ASC-N9819.PC9"
+   ]
+  },
+  {
+   "text": "15 saal ka experience hai, fabrication shop mein. Factory mein kurta aur shirt silti hoon. Kapde ki stitching karti hoon. Silai ka kaam karti hoon. Overlock machine chalati hoon. Certificate chahiye achhi naukri ke liye.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AMH-SMO-L4",
+     "bm25": 58.4287,
+     "confidence": 0.9972
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 14.273,
+     "confidence": 0.0018
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 2.8585,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "kurta",
+    "stitching",
+    "silai",
+    "overlock"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AMH-N1.PC1",
+    "DEMO-AMH-N1.PC2",
+    "DEMO-AMH-N1.PC3"
+   ]
+  },
+  {
+   "text": "मैं 9 साल से फैक्ट्री में काम करता हूँ। टाइल लगाता हूँ। ईंट की चिनाई करता हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 33.3157,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "टाइल",
+    "ईंट",
+    "चिनाई"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "I have worked for 15 years in a small workshop. I use gas cutter for cutting plates. I do marking and cutting of angle and channel. Sometimes I also do a little welding. I did not go to ITI.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 55.757,
+     "confidence": 0.995
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 16.7547,
+     "confidence": 0.0029
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 9.3089,
+     "confidence": 0.001
+    }
+   ],
+   "lexicon_terms": [
+    "gas cutter",
+    "plate",
+    "marking",
+    "angle",
+    "channel",
+    "welding"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3"
+   ]
+  },
+  {
+   "text": "Pichle 4 saal se factory mein hoon. Structure ka kaam electrode se karta hoon. Construction site pe loha jodta hoon. Building site pe column aur beam ki welding karta hoon.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 179.221,
+     "confidence": 0.9977
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 28.0351,
+     "confidence": 0.0009
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 16.7566,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "structure",
+    "electrode",
+    "construction",
+    "site",
+    "loha",
+    "building",
+    "site",
+    "column",
+    "beam",
+    "welding karta"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N1.PC1",
+    "DEMO-CON-N1.PC2",
+    "DEMO-CON-N1.PC3",
+    "DEMO-CON-N1.PC4"
+   ]
+  },
+  {
+   "text": "मुझे 9 साल का अनुभव है। नल और टोंटी लगाता हूँ। प्लंबर का काम करता हूँ। पाइप की लीकेज ठीक करता हूँ। ग्राइंडर से पाइप काटता हूँ। उस्ताद से सीखा है।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 49.0394,
+     "confidence": 0.9929
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 16.1511,
+     "confidence": 0.0037
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 12.0652,
+     "confidence": 0.0019
+    }
+   ],
+   "lexicon_terms": [
+    "नल",
+    "टोंटी",
+    "प्लंबर",
+    "पाइप",
+    "लीकेज",
+    "ग्राइंडर",
+    "पाइप"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-PL-N2.PC1",
+    "DEMO-PL-N2.PC2",
+    "DEMO-PL-N2.PC3"
+   ]
+  },
+  {
+   "text": "My experience is 5 years, mostly in a small workshop. I work on a garment production line. I stitch collars and cuffs. I stitch shirts and kurtas on industrial sewing machines.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AMH-SMO-L4",
+     "bm25": 64.8421,
+     "confidence": 0.9989
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 1.9926,
+     "confidence": 0.0003
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 1.4229,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "garment",
+    "collar",
+    "kurta"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AMH-N1.PC1",
+    "DEMO-AMH-N1.PC2",
+    "DEMO-AMH-N1.PC3"
+   ]
+  },
+  {
+   "text": "2 saal ka experience hai, workshop mein. Makeup bhi karti hoon. Waxing aur bleach karti hoon. Parlour mein facial aur threading karti hoon. Certificate chahiye achhi naukri ke liye.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 84.1536,
+     "confidence": 0.9981
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 16.4097,
+     "confidence": 0.0012
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "makeup",
+    "waxing",
+    "bleach",
+    "parlour",
+    "facial",
+    "threading"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-BWS-N1.PC1",
+    "DEMO-BWS-N1.PC2",
+    "DEMO-BWS-N1.PC3"
+   ]
+  },
+  {
+   "text": "मैं 10 साल से वर्कशॉप में काम करता हूँ। एंगल की मार्किंग और कटिंग करता हूँ। फैब्रिकेशन में गेट और ग्रिल बनाता हूँ। उस्ताद से सीखा है।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 38.7027,
+     "confidence": 0.9974
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 7.6195,
+     "confidence": 0.0012
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 5.7639,
+     "confidence": 0.0008
+    }
+   ],
+   "lexicon_terms": [
+    "एंगल",
+    "फैब्रिकेशन",
+    "गेट",
+    "ग्रिल"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3"
+   ]
+  },
+  {
+   "text": "I have worked for 2 years in a local shop. I do GI pipe threading. I repair leakage in taps and pipes. I fit PVC and CPVC pipes in houses. I fit water tank connections. I learned from my ustad.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 75.5985,
+     "confidence": 0.9949
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 17.6135,
+     "confidence": 0.0017
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 17.2123,
+     "confidence": 0.0016
+    }
+   ],
+   "lexicon_terms": [
+    "pipe",
+    "threading",
+    "leakage",
+    "pipe",
+    "pvc",
+    "cpvc",
+    "pipe"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-PL-N1.PC1",
+    "DEMO-PL-N1.PC2",
+    "DEMO-PL-N1.PC3",
+    "DEMO-PL-N2.PC1",
+    "DEMO-PL-N2.PC2",
+    "DEMO-PL-N2.PC3"
+   ]
+  },
+  {
+   "text": "12 saal ka experience hai, workshop mein. CO2 welding karta hoon MS plate pe. Chhed aur chhinte aa jaye to theek karta hoon. Argon ka kaam bhi aata hai, TIG se stainless sheet jodta hoon. Slag hatana aur wire brush karna roz ka kaam hai. ITI nahi kiya.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 75.1488,
+     "confidence": 0.9927
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 28.4487,
+     "confidence": 0.0056
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 10.2256,
+     "confidence": 0.0007
+    }
+   ],
+   "lexicon_terms": [
+    "co2 welding",
+    "ms",
+    "plate",
+    "chhed",
+    "chhinte",
+    "argon ka kaam",
+    "tig",
+    "stainless",
+    "slag hatana",
+    "wire brush"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3123.PC1",
+    "ASC-N3123.PC2",
+    "ASC-N3123.PC3",
+    "ASC-N3123.PC4",
+    "ASC-N3123.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ]
+  },
+  {
+   "text": "मुझे 5 साल का अनुभव है। वेल्डिंग में छेद या छींटे हों तो ठीक करता हूँ। इलेक्ट्रोड से पाइप पर वेल्डिंग करता हूँ। आर्गन वेल्डिंग से स्टेनलेस की चादर जोड़ता हूँ। उस्ताद से सीखा है।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 35.2568,
+     "confidence": 0.9682
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 20.1435,
+     "confidence": 0.0272
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 9.9432,
+     "confidence": 0.0024
+    }
+   ],
+   "lexicon_terms": [
+    "वेल्डिंग",
+    "छेद",
+    "छींटे",
+    "इलेक्ट्रोड",
+    "पाइप",
+    "वेल्डिंग",
+    "आर्गन वेल्डिंग",
+    "स्टेनलेस",
+    "चादर"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ]
+  },
+  {
+   "text": "My experience is 6 years, mostly in a fabrication shop. I install toilet and wash basin. I fit water tank connections. I do GI pipe threading. I also cut pipes with a grinder.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 47.2337,
+     "confidence": 0.983
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 19.0517,
+     "confidence": 0.0068
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 18.5829,
+     "confidence": 0.0063
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "toilet",
+    "pipe",
+    "threading",
+    "pipe",
+    "grinder"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-PL-N1.PC1",
+    "DEMO-PL-N1.PC2",
+    "DEMO-PL-N1.PC3",
+    "DEMO-PL-N2.PC1",
+    "DEMO-PL-N2.PC2",
+    "DEMO-PL-N2.PC3"
+   ]
+  },
+  {
+   "text": "Pichle 5 saal se factory mein hoon. Bike aur scooter ki servicing karta hoon. Gaadi ka engine ka kaam aata hai. Bike frame pe chhoti welding bhi kar leta hoon.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 100.6899,
+     "confidence": 0.9982
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 14.9475,
+     "confidence": 0.0008
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 4.0704,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "bike",
+    "scooter",
+    "servicing",
+    "gaadi",
+    "engine",
+    "bike",
+    "frame",
+    "welding"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AU-N-2W1.PC1",
+    "DEMO-AU-N-2W1.PC2",
+    "DEMO-AU-N-2W1.PC3",
+    "DEMO-AU-N-2W2.PC1",
+    "DEMO-AU-N-2W2.PC2",
+    "DEMO-AU-N-2W2.PC3"
+   ]
+  },
+  {
+   "text": "मुझे 9 साल का अनुभव है। पंखा और स्विच लगाता हूँ। बिजली का काम करता हूँ। अर्थिंग करता हूँ। घर की वायरिंग करता हूँ।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 33.9371,
+     "confidence": 0.9979
+    },
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 7.2499,
+     "confidence": 0.0014
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "पंखा",
+    "स्विच",
+    "बिजली",
+    "अर्थिंग",
+    "वायरिंग"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-EL-N1.PC1",
+    "DEMO-EL-N1.PC2",
+    "DEMO-EL-N1.PC3"
+   ]
+  },
+  {
+   "text": "For the last 6 years I am working in a factory. I do marking and cutting of angle and channel. I make gates, grills and frames in a fabrication shop. I do fit-up of fabrication assemblies. I fit up and tack weld frames square. I want a certificate for a better job.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 129.7049,
+     "confidence": 0.9975
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 22.239,
+     "confidence": 0.001
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 21.2325,
+     "confidence": 0.0009
+    }
+   ],
+   "lexicon_terms": [
+    "marking",
+    "angle",
+    "channel",
+    "gate",
+    "grill",
+    "frame",
+    "fabrication",
+    "fabrication",
+    "frame"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3",
+    "DEMO-CG-N-FAB2.PC1",
+    "DEMO-CG-N-FAB2.PC2",
+    "DEMO-CG-N-FAB2.PC3"
+   ]
+  },
+  {
+   "text": "2 saal ka experience hai, fabrication shop mein. Car body pe stud aur nut welding karta hoon. Deck sheet pe shear stud lagata hoon. Stud gun se stud welding karta hoon.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 125.8645,
+     "confidence": 0.9981
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 15.9344,
+     "confidence": 0.0007
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 8.9941,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "stud",
+    "welding karta",
+    "deck sheet",
+    "shear stud",
+    "stud gun",
+    "stud welding"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "मैं 12 साल से दुकान में काम करता हूँ। प्लेट और पाइप के जोड़ बनाता हूँ। वेल्डिंग के बाद ग्राइंडर से घिसाई और फिनिशिंग करता हूँ। आर्गन वेल्डिंग से स्टेनलेस की चादर जोड़ता हूँ। वेल्डिंग में छेद या छींटे हों तो ठीक करता हूँ। उस्ताद से सीखा है।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 50.7923,
+     "confidence": 0.9897
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 21.7465,
+     "confidence": 0.0084
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 6.3613,
+     "confidence": 0.0007
+    }
+   ],
+   "lexicon_terms": [
+    "प्लेट",
+    "पाइप",
+    "जोड़",
+    "वेल्डिंग",
+    "ग्राइंडर",
+    "घिसाई",
+    "फिनिशिंग",
+    "आर्गन वेल्डिंग",
+    "स्टेनलेस",
+    "चादर",
+    "वेल्डिंग",
+    "छेद",
+    "छींटे"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ]
+  },
+  {
+   "text": "I have worked for 11 years in a local shop. I service motorcycles and scooters. I repair bike chain and spark plug problems. I can do small welding repairs on bike frames.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 100.2006,
+     "confidence": 0.9982
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 14.9475,
+     "confidence": 0.0008
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 4.1705,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "motorcycle",
+    "scooter",
+    "bike",
+    "spark plug",
+    "welding",
+    "bike",
+    "frame"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AU-N-2W1.PC1",
+    "DEMO-AU-N-2W1.PC2",
+    "DEMO-AU-N-2W1.PC3",
+    "DEMO-AU-N-2W2.PC1",
+    "DEMO-AU-N-2W2.PC2",
+    "DEMO-AU-N-2W2.PC3"
+   ]
+  },
+  {
+   "text": "7 saal ka experience hai, fabrication shop mein. Deewar pe plaster karta hoon. Sahul aur level se deewar seedhi rakhta hoon. Raj mistri ka kaam karta hoon. Eent ki chinai karta hoon.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 95.434,
+     "confidence": 0.9984
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 12.8501,
+     "confidence": 0.0007
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 2.8585,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "deewar",
+    "plaster",
+    "sahul",
+    "deewar",
+    "raj mistri",
+    "eent",
+    "chinai"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N-MAS1.PC1",
+    "DEMO-CON-N-MAS1.PC2",
+    "DEMO-CON-N-MAS1.PC3"
+   ]
+  },
+  {
+   "text": "मैं 5 साल से फैक्ट्री में काम करता हूँ। कपड़े की सिलाई करती हूँ। सिलाई का काम करती हूँ। ओवरलॉक मशीन चलाती हूँ। अच्छी नौकरी के लिए सर्टिफिकेट चाहिए।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AMH-SMO-L4",
+     "bm25": 34.0863,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "सिलाई",
+    "सिलाई",
+    "ओवरलॉक"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AMH-N1.PC1",
+    "DEMO-AMH-N1.PC2",
+    "DEMO-AMH-N1.PC3"
+   ]
+  },
+  {
+   "text": "For the last 9 years I am working in a small workshop. I do house wiring and fix switch boards. I do earthing for houses. I learned from my ustad.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 41.9328,
+     "confidence": 0.9984
+    },
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 5.7999,
+     "confidence": 0.0008
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 1.4203,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "wiring",
+    "switch",
+    "earthing"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-EL-N1.PC1",
+    "DEMO-EL-N1.PC2",
+    "DEMO-EL-N1.PC3",
+    "DEMO-EL-N2.PC1",
+    "DEMO-EL-N2.PC2",
+    "DEMO-EL-N2.PC3"
+   ]
+  },
+  {
+   "text": "3 saal ka experience hai, workshop mein. Paad pe chadh ke uchai par welding karta hoon, safety belt lagata hoon. Sariya jodne ka kaam site pe karta hoon.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 78.165,
+     "confidence": 0.9985
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 4.5705,
+     "confidence": 0.0004
+    },
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 4.54,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "paad",
+    "uchai par",
+    "welding karta",
+    "safety belt",
+    "sariya",
+    "site"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N1.PC1",
+    "DEMO-CON-N1.PC2",
+    "DEMO-CON-N1.PC3",
+    "DEMO-CON-N1.PC4",
+    "DEMO-CON-N2.PC1",
+    "DEMO-CON-N2.PC2",
+    "DEMO-CON-N2.PC3"
+   ]
+  },
+  {
+   "text": "welding ka sab kaam aata hai bhai, mig tig dono",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 30.8529,
+     "confidence": 0.9959
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 9.431,
+     "confidence": 0.0031
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 2.1647,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "welding",
+    "mig",
+    "tig"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6"
+   ]
+  },
+  {
+   "text": "Gas wali welding aur danda wali welding dono karta hu, sheet aur pipe dono pe",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 10.1311,
+     "confidence": 0.7575
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 8.635,
+     "confidence": 0.2213
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 5.0019,
+     "confidence": 0.0111
+    }
+   ],
+   "lexicon_terms": [
+    "welding",
+    "welding",
+    "pipe"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3123.PC1",
+    "ASC-N3123.PC2",
+    "ASC-N3123.PC3",
+    "ASC-N3123.PC4",
+    "ASC-N3123.PC5"
+   ]
+  },
+  {
+   "text": "मैं वेल्डर हूँ, आर्गन और कार्बन दोनों मशीन चलाता हूँ",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 10.1575,
+     "confidence": 0.8763
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 7.7559,
+     "confidence": 0.1222
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 1.8511,
+     "confidence": 0.001
+    }
+   ],
+   "lexicon_terms": [
+    "वेल्डर",
+    "आर्गन"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6"
+   ]
+  },
+  {
+   "text": "I fix chassis parts and do MIG and stick welding, also clean the slag and grind it",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 37.9275,
+     "confidence": 0.9956
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 10.3797,
+     "confidence": 0.0023
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 5.7813,
+     "confidence": 0.0009
+    }
+   ],
+   "lexicon_terms": [
+    "mig",
+    "stick welding",
+    "slag"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3123.PC1",
+    "ASC-N3123.PC2",
+    "ASC-N3123.PC3",
+    "ASC-N3123.PC4",
+    "ASC-N3123.PC5",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ]
+  },
+  {
+   "text": "tig se ss ki patti jodta hu aur fir polish",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 19.3012,
+     "confidence": 0.9858
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 9.263,
+     "confidence": 0.0129
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 1.7112,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "tig",
+    "ss",
+    "polish"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ]
+  },
+  {
+   "text": "Fabrication unit me welder hu, co2 machine pe 8 ghante",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 24.4109,
+     "confidence": 0.9644
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 14.451,
+     "confidence": 0.0322
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 6.2473,
+     "confidence": 0.002
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "welder",
+    "co2"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5"
+   ]
+  },
+  {
+   "text": "weldin karta hu 5 saal se",
+   "no_match": true,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0
+    },
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 0.0,
+     "confidence": 0.0
+    }
+   ],
+   "lexicon_terms": [],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "metro project pe girder aur column jodne ka kaam, upar chadh ke",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 28.733,
+     "confidence": 0.997
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 6.7949,
+     "confidence": 0.0017
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 2.4314,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "girder",
+    "column"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N1.PC1",
+    "DEMO-CON-N1.PC2",
+    "DEMO-CON-N1.PC3",
+    "DEMO-CON-N1.PC4"
+   ]
+  },
+  {
+   "text": "building ke sariya ko welding se jodta hu, site pe rehta hu",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 72.7356,
+     "confidence": 0.9982
+    },
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 7.0591,
+     "confidence": 0.0005
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 5.1982,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "building",
+    "sariya",
+    "welding",
+    "site"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N1.PC1",
+    "DEMO-CON-N1.PC2",
+    "DEMO-CON-N1.PC3",
+    "DEMO-CON-N1.PC4"
+   ]
+  },
+  {
+   "text": "बिल्डिंग साइट पर लोहे के ढांचे की वेल्डिंग करता हूँ",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 22.9398,
+     "confidence": 0.9979
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 2.555,
+     "confidence": 0.0006
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 2.5362,
+     "confidence": 0.0006
+    }
+   ],
+   "lexicon_terms": [
+    "साइट",
+    "वेल्डिंग"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CON-N1.PC1",
+    "DEMO-CON-N1.PC2",
+    "DEMO-CON-N1.PC3",
+    "DEMO-CON-N1.PC4"
+   ]
+  },
+  {
+   "text": "factory me stud wali machine chalata hu, car ki body pe",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 22.6734,
+     "confidence": 0.998
+    },
+    {
+     "qp_id": "DEMO-AMH-SMO-L4",
+     "bm25": 2.8336,
+     "confidence": 0.0007
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 2.4032,
+     "confidence": 0.0006
+    }
+   ],
+   "lexicon_terms": [
+    "stud"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "I shoot studs on metal decking for bridges",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 24.3319,
+     "confidence": 0.9986
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 1.7095,
+     "confidence": 0.0004
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 1.5476,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "stud"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "refinery me pipeline welding, sab joint radiography hote hai",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 61.7414,
+     "confidence": 0.9974
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 13.1185,
+     "confidence": 0.0014
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 7.3389,
+     "confidence": 0.0006
+    }
+   ],
+   "lexicon_terms": [
+    "refinery",
+    "pipeline",
+    "welding",
+    "joint",
+    "radiography"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-PIPE1.PC1",
+    "DEMO-CG-N-PIPE1.PC2",
+    "DEMO-CG-N-PIPE1.PC3",
+    "DEMO-CG-N-PIPE2.PC1",
+    "DEMO-CG-N-PIPE2.PC2",
+    "DEMO-CG-N-PIPE2.PC3"
+   ]
+  },
+  {
+   "text": "boiler tube welding IBR certificate wala kaam",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 48.065,
+     "confidence": 0.9982
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 5.6425,
+     "confidence": 0.0006
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 3.7839,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "boiler",
+    "tube",
+    "welding",
+    "ibr"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-PIPE1.PC1",
+    "DEMO-CG-N-PIPE1.PC2",
+    "DEMO-CG-N-PIPE1.PC3",
+    "DEMO-CG-N-PIPE2.PC1",
+    "DEMO-CG-N-PIPE2.PC2",
+    "DEMO-CG-N-PIPE2.PC3"
+   ]
+  },
+  {
+   "text": "पाइप की 6G वेल्डिंग, एक्स-रे में पास",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 11.1847,
+     "confidence": 0.9786
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 5.8401,
+     "confidence": 0.0182
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 2.2559,
+     "confidence": 0.0013
+    }
+   ],
+   "lexicon_terms": [
+    "पाइप",
+    "6g",
+    "वेल्डिंग"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-PIPE1.PC1",
+    "DEMO-CG-N-PIPE1.PC2",
+    "DEMO-CG-N-PIPE1.PC3"
+   ]
+  },
+  {
+   "text": "lohe ka gate aur khidki ki grill banata hu, cutting aur fitting",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 33.2633,
+     "confidence": 0.998
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 3.8114,
+     "confidence": 0.0006
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 3.0335,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "gate",
+    "grill"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3"
+   ]
+  },
+  {
+   "text": "I read fabrication drawings, mark and cut steel sections and assemble frames",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 43.2873,
+     "confidence": 0.9938
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 14.2919,
+     "confidence": 0.0037
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 10.4517,
+     "confidence": 0.0018
+    }
+   ],
+   "lexicon_terms": [
+    "fabrication",
+    "drawing",
+    "steel",
+    "frame"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3",
+    "DEMO-CG-N-FAB2.PC1",
+    "DEMO-CG-N-FAB2.PC2",
+    "DEMO-CG-N-FAB2.PC3"
+   ]
+  },
+  {
+   "text": "शटर और ग्रिल बनाने का काम, कटिंग और ड्रिलिंग",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 10.9512,
+     "confidence": 0.9977
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 1.9057,
+     "confidence": 0.001
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 1.5168,
+     "confidence": 0.0008
+    }
+   ],
+   "lexicon_terms": [
+    "ग्रिल"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3"
+   ]
+  },
+  {
+   "text": "ghar me light fitting, board, inverter lagana",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 19.7648,
+     "confidence": 0.9983
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 2.661,
+     "confidence": 0.0007
+    },
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 1.45,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "inverter"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-EL-N1.PC1",
+    "DEMO-EL-N1.PC2",
+    "DEMO-EL-N1.PC3"
+   ]
+  },
+  {
+   "text": "I do domestic electrical repairs and fix tripping MCBs",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 21.0545,
+     "confidence": 0.9973
+    },
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 4.7413,
+     "confidence": 0.0016
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 1.7686,
+     "confidence": 0.0005
+    }
+   ],
+   "lexicon_terms": [
+    "mcb"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-EL-N1.PC1",
+    "DEMO-EL-N1.PC2",
+    "DEMO-EL-N1.PC3",
+    "DEMO-EL-N2.PC1",
+    "DEMO-EL-N2.PC2",
+    "DEMO-EL-N2.PC3"
+   ]
+  },
+  {
+   "text": "bathroom fitting, nal, geyser connection",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 27.4923,
+     "confidence": 0.9961
+    },
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 7.004,
+     "confidence": 0.002
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 4.4467,
+     "confidence": 0.0009
+    }
+   ],
+   "lexicon_terms": [
+    "nal",
+    "geyser"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-PL-N2.PC1",
+    "DEMO-PL-N2.PC2",
+    "DEMO-PL-N2.PC3"
+   ]
+  },
+  {
+   "text": "पानी की पाइपलाइन और टॉयलेट फिटिंग",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 18.6075,
+     "confidence": 0.9988
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 1.0238,
+     "confidence": 0.0004
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 0.9767,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "पाइपलाइन"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-CG-N-PIPE1.PC1",
+    "DEMO-CG-N-PIPE1.PC2",
+    "DEMO-CG-N-PIPE1.PC3",
+    "DEMO-CG-N-PIPE2.PC1",
+    "DEMO-CG-N-PIPE2.PC2",
+    "DEMO-CG-N-PIPE2.PC3"
+   ]
+  },
+  {
+   "text": "garment factory me machine operator, collar aur cuff",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AMH-SMO-L4",
+     "bm25": 37.3554,
+     "confidence": 0.9986
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 4.2944,
+     "confidence": 0.0006
+    },
+    {
+     "qp_id": "DEMO-CG-FITTER-FAB-L4",
+     "bm25": 1.4229,
+     "confidence": 0.0003
+    }
+   ],
+   "lexicon_terms": [
+    "garment",
+    "collar"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AMH-N1.PC1",
+    "DEMO-AMH-N1.PC2",
+    "DEMO-AMH-N1.PC3"
+   ]
+  },
+  {
+   "text": "ब्लाउज़ और सूट की सिलाई",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AMH-SMO-L4",
+     "bm25": 11.3621,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "सिलाई"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-AMH-N1.PC1",
+    "DEMO-AMH-N1.PC2",
+    "DEMO-AMH-N1.PC3"
+   ]
+  },
+  {
+   "text": "salon me eyebrow aur facial karti hu",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 20.2917,
+     "confidence": 0.9987
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 2.3442,
+     "confidence": 0.0006
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "facial"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-BWS-N1.PC1",
+    "DEMO-BWS-N1.PC2",
+    "DEMO-BWS-N1.PC3"
+   ]
+  },
+  {
+   "text": "dulhan ka makeup aur mehendi",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 13.7178,
+     "confidence": 0.9983
+    },
+    {
+     "qp_id": "DEMO-PL-GENERAL-L3",
+     "bm25": 2.3442,
+     "confidence": 0.001
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "makeup"
+   ],
+   "claimed_pc_ids": [
+    "DEMO-BWS-N1.PC1",
+    "DEMO-BWS-N1.PC2",
+    "DEMO-BWS-N1.PC3"
+   ]
+  },
+  {
+   "text": "Hero Honda ki bike ki service, clutch plate badalna",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-AU-2W-TECH-L4",
+     "bm25": 37.3835,
+     "confidence": 0.9978
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 5.1599,
+     "confidence": 0.0008
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 5.0638,
+     "confidence": 0.0007
+    }
+   ],
+   "lexicon_terms": [
+    "bike",
+    "clutch",
+    "plate"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "scooty ka self start kharab ho to theek karta hu",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 2.2453,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "makaan banane me int jodna aur plaster",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 26.3606,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [
+    "int",
+    "plaster"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "I am a mason, I build brick walls and do plastering",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CON-MASON-L3",
+     "bm25": 15.5169,
+     "confidence": 0.999
+    },
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0002
+    }
+   ],
+   "lexicon_terms": [],
+   "claimed_pc_ids": [
+    "DEMO-CON-N-MAS1.PC1",
+    "DEMO-CON-N-MAS1.PC2",
+    "DEMO-CON-N-MAS1.PC3"
+   ]
+  },
+  {
+   "text": "",
+   "no_match": true,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0
+    },
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 0.0,
+     "confidence": 0.0
+    }
+   ],
+   "lexicon_terms": [],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "hoon karta",
+   "no_match": true,
+   "top": [
+    {
+     "qp_id": "DEMO-BWS-ABT-L3",
+     "bm25": 0.0,
+     "confidence": 0.0
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 0.0,
+     "confidence": 0.0
+    },
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 0.0,
+     "confidence": 0.0
+    }
+   ],
+   "lexicon_terms": [],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "वेल्डिंग।",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 2.0376,
+     "confidence": 0.6239
+    },
+    {
+     "qp_id": "DEMO-CON-WELDER-L4",
+     "bm25": 1.8511,
+     "confidence": 0.291
+    },
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 1.5476,
+     "confidence": 0.0841
+    }
+   ],
+   "lexicon_terms": [
+    "वेल्डिंग"
+   ],
+   "claimed_pc_ids": []
+  },
+  {
+   "text": "TIG_welding on SS sheets",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 15.0124,
+     "confidence": 0.9585
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 9.263,
+     "confidence": 0.0394
+    },
+    {
+     "qp_id": "DEMO-AU-STUD-WELD-L3",
+     "bm25": 2.5699,
+     "confidence": 0.001
+    }
+   ],
+   "lexicon_terms": [
+    "tig welding",
+    "ss"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6"
+   ]
+  },
+  {
+   "text": "Welding!!! CO2, MIG; argon-TIG.",
+   "no_match": false,
+   "top": [
+    {
+     "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+     "bm25": 60.3826,
+     "confidence": 0.9965
+    },
+    {
+     "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+     "bm25": 17.0739,
+     "confidence": 0.0025
+    },
+    {
+     "qp_id": "DEMO-EL-DOMESTIC-L3",
+     "bm25": 2.9166,
+     "confidence": 0.0004
+    }
+   ],
+   "lexicon_terms": [
+    "welding",
+    "co2",
+    "mig",
+    "argon",
+    "tig"
+   ],
+   "claimed_pc_ids": [
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6"
+   ]
+  }
+ ]
+}

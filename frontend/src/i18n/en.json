@@ -108,6 +108,8 @@
       "official": "Official NQR",
       "drafted-for-demo": "Demo QP"
     },
-    "supportNote": "The AI only suggests. You and the assessor decide."
+    "supportNote": "The AI only suggests. You and the assessor decide.",
+    "queued": "Saved on this phone — it will be sent automatically when you are online.",
+    "synced": "Sent to the server (request #{id})."
   }
 }

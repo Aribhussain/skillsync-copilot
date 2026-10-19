@@ -40,8 +40,25 @@ const routes: RouteRecordRaw[] = [
 
 export const router = createRouter({ history: createWebHistory(), routes })
 
+// Load the screens a role needs offline as soon as we know the role, so they are in
+// memory (and in the SW cache) before the network drops.
+const ROLE_VIEWS: Partial<Record<Role, (() => Promise<unknown>)[]>> = {
+  worker: [
+    () => import('../views/worker/ConsentView.vue'),
+    () => import('../views/worker/DeclareView.vue'),
+    () => import('../views/worker/ResultsView.vue'),
+  ],
+}
+const prefetched = new Set<Role>()
+function prefetchRoleViews(role: Role) {
+  if (prefetched.has(role)) return
+  prefetched.add(role)
+  for (const load of ROLE_VIEWS[role] ?? []) load().catch(() => prefetched.delete(role))
+}
+
 router.beforeEach((to) => {
   const auth = useAuthStore()
+  if (auth.user) prefetchRoleViews(auth.user.role)
   if (to.meta.public) {
     if (to.path === '/login' && auth.isAuthenticated && auth.user) return homeFor[auth.user.role]
     return true

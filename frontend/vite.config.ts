@@ -28,7 +28,9 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2}'],
+        // includes /packs/seed-pack.json, so the offline mapper works right after install
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2,json}'],
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api\//],
       },

@@ -1,14 +1,43 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import AppHeader from './components/AppHeader.vue'
+import { loadPack, refreshPack } from './lib/pack'
+import { flush, onSyncChange, wakeAll } from './lib/sync'
+import './lib/worker' // registers the worker outbox handlers at start-up
+import { useAuthStore } from './stores/auth'
 import { useNetworkStore } from './stores/network'
 
 const { t } = useI18n()
 const net = useNetworkStore()
+const auth = useAuthStore()
 
-onMounted(() => net.start())
+async function syncNow() {
+  if (!net.online || !auth.isAuthenticated) return
+  await flush()
+  refreshPack().catch(() => undefined)
+}
+
+onMounted(() => {
+  net.start()
+  onSyncChange(() => void net.refreshOutbox())
+  loadPack().catch(() => undefined) // warm the offline mapper
+  void syncNow()
+  setInterval(() => void syncNow(), 15_000)
+})
+
+// Connectivity is back: retry everything immediately instead of waiting for backoff.
+watch(
+  () => net.online,
+  async (online) => {
+    if (online) {
+      await wakeAll()
+      await syncNow()
+    }
+  },
+)
+watch(() => auth.isAuthenticated, (ok) => ok && void syncNow())
 </script>
 
 <template>
