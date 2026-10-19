@@ -42,14 +42,14 @@ make test         # backend + frontend tests
 ```
 
 ## Phase checklist
-- [ ] 0 Environment setup
-- [ ] 1 Repository bootstrap
-- [ ] 2 Backend core (app, auth/RBAC, audit ledger, consent) → v0.1.0
-- [ ] 3 Data foundation (QP corpus, lexicon, synthetic generator)
-- [ ] 4 M1+M2 mapping engine + eval + QP pack → v0.3.0
-- [ ] 5 Frontend foundation
-- [ ] 6 Worker declaration + mapper-lite + outbox
-- [ ] 7 Evidence plan + assessor checklist
+- [x] 0 Environment setup
+- [x] 1 Repository bootstrap
+- [x] 2 Backend core (app, auth/RBAC, audit ledger, consent) → v0.1.0
+- [x] 3 Data foundation (QP corpus, lexicon, synthetic generator)
+- [x] 4 M1+M2 mapping engine + eval + QP pack → v0.3.0
+- [x] 5 Frontend foundation
+- [x] 6 Worker declaration + mapper-lite + outbox
+- [x] 7 Evidence plan + assessor checklist
 - [ ] 8 Signed P-P-P capture + integrity → v0.5.0
 - [ ] 9 Blind-first shadow rater
 - [ ] 10 Calibration, profile, sign-off, credential → v0.8.0

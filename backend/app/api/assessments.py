@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import secrets
 import uuid
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -14,7 +15,9 @@ from app.models.assessment import Assessment
 from app.models.declaration import Declaration
 from app.models.user import Role, User
 from app.services import audit
+from app.services.evidence_plan import build_plan, plan_summary, route_for
 from app.services.qp_store import get_qp, pc_index
+from app.services.rubric import rubric
 
 router = APIRouter(prefix="/assessments", tags=["assessments"])
 
@@ -138,3 +141,135 @@ def read_assessment(
     assessment_id: int, session: Session = Depends(get_session), user: User = Depends(get_current_user)
 ) -> dict:
     return public_view(get_visible_assessment(session, assessment_id, user), user)
+
+
+def candidate_name(session: Session, a: Assessment) -> str:
+    if a.candidate_label:
+        return a.candidate_label
+    worker = session.get(User, a.worker_id) if a.worker_id else None
+    return worker.full_name if worker else f"Candidate #{a.id}"
+
+
+def assessment_card(session: Session, a: Assessment, viewer: User) -> dict:
+    qp = get_qp(a.qp_id)
+    return {
+        **public_view(a, viewer),
+        "candidate": candidate_name(session, a),
+        "qp_title": qp["title"] if qp else a.qp_id,
+        "nsqf_level": qp["nsqf_level"] if qp else None,
+    }
+
+
+@router.get("/{assessment_id}/plan")
+def evidence_plan(
+    assessment_id: int, session: Session = Depends(get_session), user: User = Depends(get_current_user)
+) -> dict:
+    """M3: the PC-level evidence plan (route per PC, critical/safety PCs locked) and rubric."""
+    a = get_visible_assessment(session, assessment_id, user)
+    qp = get_qp(a.qp_id)
+    if not qp:
+        raise HTTPException(500, "QP missing from corpus")
+    plan = build_plan(qp, a.claimed_pc_ids, a.plan_overrides or {})
+    return {
+        "assessment": assessment_card(session, a, user),
+        "qp": {
+            "id": qp["id"],
+            "title": qp["title"],
+            "title_hi": qp.get("title_hi"),
+            "nsqf_level": qp["nsqf_level"],
+        },
+        "plan": plan,
+        "summary": plan_summary(plan),
+        "rubric": rubric(),
+    }
+
+
+class PlanOverrideIn(BaseModel):
+    pc_id: str = Field(max_length=64)
+    route: str = Field(pattern="^(observe|photo|viva|declaration\\+spot-check)$")
+    reason: str = Field(min_length=3, max_length=300)
+
+
+@router.patch("/{assessment_id}/plan")
+def override_route(
+    assessment_id: int,
+    body: PlanOverrideIn,
+    session: Session = Depends(get_session),
+    user: User = Depends(require_roles(Role.assessor)),
+) -> dict:
+    """Change the evidence route of an unlocked PC. Critical/safety PCs are refused (409)."""
+    a = get_visible_assessment(session, assessment_id, user)
+    qp = get_qp(a.qp_id)
+    pc = pc_index(qp).get(body.pc_id) if qp else None
+    if not pc:
+        raise HTTPException(404, "PC not in this qualification")
+    default = route_for(pc, pc["id"] in a.claimed_pc_ids)
+    if default["locked"]:
+        raise HTTPException(
+            409, f"{pc['code']} is a {default['rule']} PC: it must be observed live and cannot be changed"
+        )
+    overrides = dict(a.plan_overrides or {})
+    overrides[body.pc_id] = {"route": body.route, "reason": body.reason}
+    a.plan_overrides = overrides
+    touch(a)
+    session.add(a)
+    audit.record(
+        session,
+        user.username,
+        "plan.override",
+        {
+            "assessment_id": a.id,
+            "pc_id": body.pc_id,
+            "from": default["route"],
+            "to": body.route,
+            "reason": body.reason,
+        },
+    )
+    session.commit()
+    return {"pc_id": body.pc_id, "route": body.route}
+
+
+CODE_ALPHABET = "ACDEFGHJKMNPQRTUVWXY34679"  # no 0/O, 1/I/L, 2/Z, 5/S, 8/B look-alikes
+
+
+def new_challenge_code() -> str:
+    return "".join(secrets.choice(CODE_ALPHABET) for _ in range(6))
+
+
+@router.post("/{assessment_id}/start")
+def start_assessment(
+    assessment_id: int,
+    session: Session = Depends(get_session),
+    user: User = Depends(require_roles(Role.assessor)),
+) -> dict:
+    """Begin the assessment and issue the one-time challenge code for the 'Person' photo."""
+    a = get_visible_assessment(session, assessment_id, user)
+    if a.status == "signed_off":
+        raise HTTPException(409, "Already signed off")
+    if not a.challenge_code:
+        a.challenge_code = new_challenge_code()
+        a.started_at = utcnow()
+        a.status = "in_progress"
+        touch(a)
+        session.add(a)
+        audit.record(session, user.username, "assessment.started", {"assessment_id": a.id})
+        session.commit()
+        session.refresh(a)
+    return assessment_card(session, a, user)
+
+
+assessor_router = APIRouter(prefix="/assessor", tags=["assessments"])
+
+
+@assessor_router.get("/queue")
+def assessor_queue(
+    session: Session = Depends(get_session), user: User = Depends(require_roles(Role.assessor))
+) -> list[dict]:
+    """Assessments assigned to me. Calibration (golden) packets look exactly like the rest."""
+    q = select(Assessment).where(Assessment.assessor_id == user.id).order_by(Assessment.id)
+    return [assessment_card(session, a, user) for a in session.exec(q)]
+
+
+@assessor_router.get("/rubric")
+def get_rubric() -> dict:
+    return rubric()

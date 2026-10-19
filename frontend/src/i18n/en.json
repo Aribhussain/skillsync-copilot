@@ -111,5 +111,36 @@
     "supportNote": "The AI only suggests. You and the assessor decide.",
     "queued": "Saved on this phone — it will be sent automatically when you are online.",
     "synced": "Sent to the server (request #{id})."
+  },
+  "assessor": {
+    "offlineCopy": "Offline copy",
+    "emptyQueue": "No assessments assigned to you yet.",
+    "claimed": "{n} PCs claimed",
+    "status": {
+      "requested": "New",
+      "in_progress": "In progress",
+      "scored": "Scored",
+      "signed_off": "Signed off"
+    },
+    "lockedCount": "{n} locked (live observation)",
+    "start": "Start assessment & get challenge code",
+    "challengeCode": "One-time challenge code",
+    "challengeHint": "The worker writes this code on a slate and holds it in the Person photo. It proves the photo was taken in this assessment.",
+    "marks": "Marks — theory {t} · practical {p} · viva {v}",
+    "critical": "Critical — observe live",
+    "safety": "Safety — observe live",
+    "claimedByWorker": "Claimed by worker",
+    "overridden": "Changed by assessor",
+    "rubric": "Rubric anchors",
+    "changeRoute": "Change route",
+    "reasonPlaceholder": "Reason (required)",
+    "rubricTitle": "Same 0–3 scale at every centre",
+    "anchorGood": "Meets standard"
+  },
+  "route": {
+    "observe": "Observe live",
+    "photo": "Signed photo",
+    "viva": "Viva (oral)",
+    "declaration+spot-check": "Declaration + spot-check"
   }
 }

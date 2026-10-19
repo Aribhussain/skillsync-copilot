@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
 from app.api.packs import pack_content  # noqa: E402
+from app.services.evidence_plan import build_plan  # noqa: E402
 from app.services.lexicon import all_entries  # noqa: E402
 from app.services.mapping import QPMapper  # noqa: E402
 from app.services.qp_store import load_corpus  # noqa: E402
@@ -63,7 +64,22 @@ def build() -> tuple[dict, dict]:
                 ),
             }
         )
-    return pack, {"pack_version": pack["pack_version"], "cases": cases}
+    # Evidence-plan parity: every QP with nothing claimed, and with every PC claimed.
+    plans = []
+    for qp in load_corpus().values():
+        all_ids = [p["id"] for n in qp["nos"] for p in n["pcs"]]
+        for claimed in ([], all_ids):
+            plan = build_plan(qp, claimed)
+            plans.append(
+                {
+                    "qp_id": qp["id"],
+                    "claimed": claimed,
+                    "routes": {
+                        p["pc_id"]: [p["route"], p["locked"], p["rule"]] for n in plan for p in n["pcs"]
+                    },
+                }
+            )
+    return pack, {"pack_version": pack["pack_version"], "cases": cases, "plans": plans}
 
 
 def main() -> None:

@@ -2389,5 +2389,1349 @@
     "ASC-N3124.PC6"
    ]
   }
+ ],
+ "plans": [
+  {
+   "qp_id": "DEMO-BWS-ABT-L3",
+   "claimed": [],
+   "routes": {
+    "DEMO-BWS-N1.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-BWS-N1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-BWS-N1.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-BWS-N2.PC1": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-BWS-N2.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-BWS-N2.PC3": [
+     "observe",
+     false,
+     "observe"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-BWS-ABT-L3",
+   "claimed": [
+    "DEMO-BWS-N1.PC1",
+    "DEMO-BWS-N1.PC2",
+    "DEMO-BWS-N1.PC3",
+    "DEMO-BWS-N2.PC1",
+    "DEMO-BWS-N2.PC2",
+    "DEMO-BWS-N2.PC3"
+   ],
+   "routes": {
+    "DEMO-BWS-N1.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-BWS-N1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-BWS-N1.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-BWS-N2.PC1": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-BWS-N2.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-BWS-N2.PC3": [
+     "observe",
+     false,
+     "observe"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CON-WELDER-L4",
+   "claimed": [],
+   "routes": {
+    "DEMO-CON-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N1.PC3": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CON-N1.PC4": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-CON-N2.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CON-N2.PC2": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-CON-N2.PC3": [
+     "viva",
+     false,
+     "viva"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CON-WELDER-L4",
+   "claimed": [
+    "DEMO-CON-N1.PC1",
+    "DEMO-CON-N1.PC2",
+    "DEMO-CON-N1.PC3",
+    "DEMO-CON-N1.PC4",
+    "DEMO-CON-N2.PC1",
+    "DEMO-CON-N2.PC2",
+    "DEMO-CON-N2.PC3"
+   ],
+   "routes": {
+    "DEMO-CON-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N1.PC3": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CON-N1.PC4": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-CON-N2.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CON-N2.PC2": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-CON-N2.PC3": [
+     "viva",
+     false,
+     "viva"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-EL-DOMESTIC-L3",
+   "claimed": [],
+   "routes": {
+    "DEMO-EL-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-EL-N1.PC2": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-EL-N1.PC3": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-EL-N2.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-EL-N2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-EL-N2.PC3": [
+     "viva",
+     false,
+     "viva"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-EL-DOMESTIC-L3",
+   "claimed": [
+    "DEMO-EL-N1.PC1",
+    "DEMO-EL-N1.PC2",
+    "DEMO-EL-N1.PC3",
+    "DEMO-EL-N2.PC1",
+    "DEMO-EL-N2.PC2",
+    "DEMO-EL-N2.PC3"
+   ],
+   "routes": {
+    "DEMO-EL-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-EL-N1.PC2": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-EL-N1.PC3": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-EL-N2.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-EL-N2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-EL-N2.PC3": [
+     "viva",
+     false,
+     "viva"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CG-FITTER-FAB-L4",
+   "claimed": [],
+   "routes": {
+    "DEMO-CG-N-FAB1.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-CG-N-FAB1.PC2": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-CG-N-FAB1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CG-N-FAB2.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CG-N-FAB2.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CG-N-FAB2.PC3": [
+     "photo",
+     false,
+     "photo"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CG-FITTER-FAB-L4",
+   "claimed": [
+    "DEMO-CG-N-FAB1.PC1",
+    "DEMO-CG-N-FAB1.PC2",
+    "DEMO-CG-N-FAB1.PC3",
+    "DEMO-CG-N-FAB2.PC1",
+    "DEMO-CG-N-FAB2.PC2",
+    "DEMO-CG-N-FAB2.PC3"
+   ],
+   "routes": {
+    "DEMO-CG-N-FAB1.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-CG-N-FAB1.PC2": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-CG-N-FAB1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CG-N-FAB2.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CG-N-FAB2.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CG-N-FAB2.PC3": [
+     "photo",
+     false,
+     "photo"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CON-MASON-L3",
+   "claimed": [],
+   "routes": {
+    "DEMO-CON-N-MAS1.PC1": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CON-N-MAS1.PC2": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CON-N-MAS1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N-MAS2.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N-MAS2.PC2": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ],
+    "DEMO-CON-N-MAS2.PC3": [
+     "observe",
+     true,
+     "safety"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CON-MASON-L3",
+   "claimed": [
+    "DEMO-CON-N-MAS1.PC1",
+    "DEMO-CON-N-MAS1.PC2",
+    "DEMO-CON-N-MAS1.PC3",
+    "DEMO-CON-N-MAS2.PC1",
+    "DEMO-CON-N-MAS2.PC2",
+    "DEMO-CON-N-MAS2.PC3"
+   ],
+   "routes": {
+    "DEMO-CON-N-MAS1.PC1": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CON-N-MAS1.PC2": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CON-N-MAS1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N-MAS2.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CON-N-MAS2.PC2": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ],
+    "DEMO-CON-N-MAS2.PC3": [
+     "observe",
+     true,
+     "safety"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-PL-GENERAL-L3",
+   "claimed": [],
+   "routes": {
+    "DEMO-PL-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-PL-N1.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-PL-N1.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-PL-N2.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-PL-N2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-PL-N2.PC3": [
+     "observe",
+     true,
+     "safety"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-PL-GENERAL-L3",
+   "claimed": [
+    "DEMO-PL-N1.PC1",
+    "DEMO-PL-N1.PC2",
+    "DEMO-PL-N1.PC3",
+    "DEMO-PL-N2.PC1",
+    "DEMO-PL-N2.PC2",
+    "DEMO-PL-N2.PC3"
+   ],
+   "routes": {
+    "DEMO-PL-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-PL-N1.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-PL-N1.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-PL-N2.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-PL-N2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-PL-N2.PC3": [
+     "observe",
+     true,
+     "safety"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+   "claimed": [],
+   "routes": {
+    "DEMO-CG-N-PIPE1.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CG-N-PIPE1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CG-N-PIPE1.PC3": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CG-N-PIPE2.PC1": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CG-N-PIPE2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-CG-N-PIPE2.PC3": [
+     "photo",
+     false,
+     "photo"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-CG-SR-WELDER-PIPE-L5",
+   "claimed": [
+    "DEMO-CG-N-PIPE1.PC1",
+    "DEMO-CG-N-PIPE1.PC2",
+    "DEMO-CG-N-PIPE1.PC3",
+    "DEMO-CG-N-PIPE2.PC1",
+    "DEMO-CG-N-PIPE2.PC2",
+    "DEMO-CG-N-PIPE2.PC3"
+   ],
+   "routes": {
+    "DEMO-CG-N-PIPE1.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-CG-N-PIPE1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-CG-N-PIPE1.PC3": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CG-N-PIPE2.PC1": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-CG-N-PIPE2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-CG-N-PIPE2.PC3": [
+     "photo",
+     false,
+     "photo"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-AMH-SMO-L4",
+   "claimed": [],
+   "routes": {
+    "DEMO-AMH-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AMH-N1.PC2": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-AMH-N1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AMH-N2.PC1": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-AMH-N2.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-AMH-N2.PC3": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-AMH-SMO-L4",
+   "claimed": [
+    "DEMO-AMH-N1.PC1",
+    "DEMO-AMH-N1.PC2",
+    "DEMO-AMH-N1.PC3",
+    "DEMO-AMH-N2.PC1",
+    "DEMO-AMH-N2.PC2",
+    "DEMO-AMH-N2.PC3"
+   ],
+   "routes": {
+    "DEMO-AMH-N1.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AMH-N1.PC2": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-AMH-N1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AMH-N2.PC1": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "DEMO-AMH-N2.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-AMH-N2.PC3": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-AU-STUD-WELD-L3",
+   "claimed": [],
+   "routes": {
+    "DEMO-AU-N-STUD1.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-AU-N-STUD1.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-STUD1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AU-N-STUD2.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AU-N-STUD2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-STUD2.PC3": [
+     "viva",
+     false,
+     "viva"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-AU-STUD-WELD-L3",
+   "claimed": [
+    "DEMO-AU-N-STUD1.PC1",
+    "DEMO-AU-N-STUD1.PC2",
+    "DEMO-AU-N-STUD1.PC3",
+    "DEMO-AU-N-STUD2.PC1",
+    "DEMO-AU-N-STUD2.PC2",
+    "DEMO-AU-N-STUD2.PC3"
+   ],
+   "routes": {
+    "DEMO-AU-N-STUD1.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-AU-N-STUD1.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-STUD1.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AU-N-STUD2.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AU-N-STUD2.PC2": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-STUD2.PC3": [
+     "viva",
+     false,
+     "viva"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-AU-2W-TECH-L4",
+   "claimed": [],
+   "routes": {
+    "DEMO-AU-N-2W1.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-2W1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AU-N-2W1.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-AU-N-2W2.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-2W2.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-AU-N-2W2.PC3": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ]
+   }
+  },
+  {
+   "qp_id": "DEMO-AU-2W-TECH-L4",
+   "claimed": [
+    "DEMO-AU-N-2W1.PC1",
+    "DEMO-AU-N-2W1.PC2",
+    "DEMO-AU-N-2W1.PC3",
+    "DEMO-AU-N-2W2.PC1",
+    "DEMO-AU-N-2W2.PC2",
+    "DEMO-AU-N-2W2.PC3"
+   ],
+   "routes": {
+    "DEMO-AU-N-2W1.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-2W1.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "DEMO-AU-N-2W1.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "DEMO-AU-N-2W2.PC1": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "DEMO-AU-N-2W2.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "DEMO-AU-N-2W2.PC3": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ]
+   }
+  },
+  {
+   "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+   "claimed": [],
+   "routes": {
+    "ASC-N9819.PC1": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC2": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC3": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC4": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC5": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N9819.PC6": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC7": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N9819.PC8": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ],
+    "ASC-N9819.PC9": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N9819.PC10": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N9819.PC11": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ],
+    "ASC-N9819.PC12": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N9819.PC13": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC14": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ],
+    "ASC-N3120.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3120.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3120.PC3": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N3120.PC4": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC1": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3121.PC3": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC4": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC5": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3122.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3122.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3122.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3122.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3122.PC5": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3123.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3123.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3123.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3123.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3123.PC5": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3124.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3124.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC5": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC6": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3125.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC5": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N3125.PC6": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3125.PC7": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3125.PC8": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC9": [
+     "viva",
+     false,
+     "declaration_unclaimed"
+    ]
+   }
+  },
+  {
+   "qp_id": "QG-4.5-AU-01811-2024-V1-ASDC",
+   "claimed": [
+    "ASC-N9819.PC1",
+    "ASC-N9819.PC2",
+    "ASC-N9819.PC3",
+    "ASC-N9819.PC4",
+    "ASC-N9819.PC5",
+    "ASC-N9819.PC6",
+    "ASC-N9819.PC7",
+    "ASC-N9819.PC8",
+    "ASC-N9819.PC9",
+    "ASC-N9819.PC10",
+    "ASC-N9819.PC11",
+    "ASC-N9819.PC12",
+    "ASC-N9819.PC13",
+    "ASC-N9819.PC14",
+    "ASC-N3120.PC1",
+    "ASC-N3120.PC2",
+    "ASC-N3120.PC3",
+    "ASC-N3120.PC4",
+    "ASC-N3121.PC1",
+    "ASC-N3121.PC2",
+    "ASC-N3121.PC3",
+    "ASC-N3121.PC4",
+    "ASC-N3121.PC5",
+    "ASC-N3122.PC1",
+    "ASC-N3122.PC2",
+    "ASC-N3122.PC3",
+    "ASC-N3122.PC4",
+    "ASC-N3122.PC5",
+    "ASC-N3123.PC1",
+    "ASC-N3123.PC2",
+    "ASC-N3123.PC3",
+    "ASC-N3123.PC4",
+    "ASC-N3123.PC5",
+    "ASC-N3124.PC1",
+    "ASC-N3124.PC2",
+    "ASC-N3124.PC3",
+    "ASC-N3124.PC4",
+    "ASC-N3124.PC5",
+    "ASC-N3124.PC6",
+    "ASC-N3125.PC1",
+    "ASC-N3125.PC2",
+    "ASC-N3125.PC3",
+    "ASC-N3125.PC4",
+    "ASC-N3125.PC5",
+    "ASC-N3125.PC6",
+    "ASC-N3125.PC7",
+    "ASC-N3125.PC8",
+    "ASC-N3125.PC9"
+   ],
+   "routes": {
+    "ASC-N9819.PC1": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC2": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC3": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC4": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC5": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N9819.PC6": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC7": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N9819.PC8": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ],
+    "ASC-N9819.PC9": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N9819.PC10": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N9819.PC11": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ],
+    "ASC-N9819.PC12": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N9819.PC13": [
+     "observe",
+     true,
+     "safety"
+    ],
+    "ASC-N9819.PC14": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ],
+    "ASC-N3120.PC1": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3120.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3120.PC3": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N3120.PC4": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC1": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC2": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3121.PC3": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC4": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3121.PC5": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3122.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3122.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3122.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3122.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3122.PC5": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3123.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3123.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3123.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3123.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3123.PC5": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3124.PC3": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3124.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC5": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3124.PC6": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC1": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC2": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3125.PC3": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC4": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC5": [
+     "observe",
+     false,
+     "observe"
+    ],
+    "ASC-N3125.PC6": [
+     "viva",
+     false,
+     "viva"
+    ],
+    "ASC-N3125.PC7": [
+     "observe",
+     true,
+     "critical"
+    ],
+    "ASC-N3125.PC8": [
+     "photo",
+     false,
+     "photo"
+    ],
+    "ASC-N3125.PC9": [
+     "declaration+spot-check",
+     false,
+     "declaration_claimed"
+    ]
+   }
+  }
  ]
 }

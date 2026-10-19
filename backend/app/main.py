@@ -58,6 +58,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(declarations.router)
     app.include_router(packs.router)
     app.include_router(assessments.router)
+    app.include_router(assessments.assessor_router)
     app.include_router(speech.router)
     return app
 
