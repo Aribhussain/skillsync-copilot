@@ -1,6 +1,6 @@
 /** Assessor-side data access. Server first; cached in IndexedDB so the checklist and
  *  rubric stay usable offline (e.g. during capture in a workshop without signal). */
-import { api, NetworkError } from './api'
+import { api, API_BASE, getToken, NetworkError } from './api'
 import { db } from './db'
 import type { Route, Rule } from './evidencePlan'
 import type { PCMarks } from './mapper/types'
@@ -89,6 +89,40 @@ export async function startAssessment(id: number): Promise<AssessmentCard> {
   const plan = (await db.kv.get(key))?.value as PlanResponse | undefined
   if (plan) await db.kv.put({ key, value: { ...plan, assessment: card } })
   return card
+}
+
+export interface IntegrityFlag {
+  code: string
+  severity: 'high' | 'medium' | 'low' | 'info'
+  detail: string
+  matches?: { evidence_id: number; assessment_id: number; shot: string; distance: number; exact: boolean }[]
+}
+
+export interface EvidenceItem {
+  id: number
+  assessment_id: number
+  shot: 'process' | 'product' | 'person'
+  sha256: string
+  phash: string | null
+  signature_valid: boolean
+  captured_at: string
+  challenge_code: string
+  gps_lat: number | null
+  gps_lon: number | null
+  source: string
+  integrity_flags: IntegrityFlag[] | null
+  image_url: string
+}
+
+export function fetchEvidence(id: number) {
+  return cached(`assessment.${id}.evidence`, () => api<EvidenceItem[]>(`/assessments/${id}/evidence`))
+}
+
+/** Evidence images need the bearer token, so fetch them as blobs (not <img src>). */
+export async function evidenceImageUrl(item: EvidenceItem): Promise<string> {
+  const res = await fetch(`${API_BASE}${item.image_url}`, { headers: { Authorization: `Bearer ${getToken()}` } })
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  return URL.createObjectURL(await res.blob())
 }
 
 export async function overrideRoute(id: number, pcId: string, route: Route, reason: string): Promise<void> {

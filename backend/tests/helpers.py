@@ -6,6 +6,7 @@ import hashlib
 import io
 import json
 import uuid
+from datetime import UTC, datetime
 
 import numpy as np
 from cryptography.hazmat.primitives.asymmetric import ec
@@ -51,7 +52,7 @@ class Device:
             "assessment_id": assessment["id"],
             "shot": shot,
             "sha256": hashlib.sha256(data).hexdigest(),
-            "captured_at": "2026-10-19T10:00:00.000Z",
+            "captured_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z",
             "device_id": self.device_id,
             "challenge_code": assessment["challenge_code"],
             "gps": {"lat": 28.4089, "lon": 77.3178, "accuracy": 12.0},

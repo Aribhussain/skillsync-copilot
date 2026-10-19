@@ -25,3 +25,20 @@ Each entry: date · decision · why.
 - **`no_match` flag:** when nothing in the narrative matches the corpus, the mapper reports 0 confidence instead of an arbitrary ranking.
 - **Claim prefill is gated by distinctive NOS keywords.** A first version claimed 48 of 48 PCs from generic words such as "weld" and "plate".
 - **Process note:** the `v0.3.0` tag was pushed on a commit where `ml/eval_mapping.py` still had ruff E501 (line-length) findings, because a shell heredoc broke the command chain that should have stopped on lint failure. The very next commit fixes them. The tag was not moved, to avoid rewriting published history.
+
+## 2026-10-20 · Evidence capture and integrity (Phase 8)
+
+- **Capture QC thresholds are measured, not guessed.** On a ≤320 px grayscale copy, the Laplacian variance of sharp synthetic welds is 15–37 and blurred ones are below 2.5, so the blur threshold is 8. Real phone photos score higher, so the thresholds need field calibration.
+- **Framing check is basic by design.** It measures the share of edge energy in the central 60% box, with magnitudes clipped at the 95th percentile (so printed text or glare can't dominate) and the median subtracted as a noise floor. A first version failed our own captioned samples: the crisp caption text dominated the edge energy. Known limitation: a small off-centre subject on a *noisy* background isn't detected.
+- **Signatures:** the device key is ECDSA P-256, generated non-extractable in WebCrypto. The packet is a canonical `|`-joined string, identical in TypeScript and Python and checked by a literal test on both sides. WebCrypto's raw r‖s signature is converted to DER for `cryptography`. GPS is rounded to 6 decimals *before* signing, because JS `toFixed` and Python `.6f` can differ on exact ties. The e2e test has Brave sign and the Python server verify.
+- **Vault:** images are AES-GCM-256 encrypted with a non-extractable key, and the ciphertext is wiped after a successful sync.
+- **pHash reuse threshold is 6, not 10.** Measured on 300 synthetic welds:
+  - Different images: min 0, 1st percentile 6, median 28; 4.5% of pairs are ≤ 10 and about 1% are ≤ 6, because the synthetic welds share one template.
+  - Brightness ±15%, contrast, JPEG quality 60 and 50% resizing all move pHash by ≤ 4.
+  - A 5% crop moves it up to 32, and a 3° rotation up to 16, so those are not caught.
+  - dHash in combination was *less* edit-robust (brightness alone moves it by 12).
+  - ORB + RANSAC verification did not separate the classes on these low-texture images: different welds reached 59 inliers while true crops dropped to 8. It was therefore not shipped.
+
+  Exact copies (same SHA-256 in another assessment) are always flagged. All integrity results are **flags for assessor review; nothing is auto-rejected**. A guard test keeps the 12 bundled demo samples pairwise above the threshold (the closest pair is 8).
+- **OCR of the challenge code is optional.** pytesseract isn't installed, so a `ocr_skipped` info flag tells the assessor to confirm the code visually.
+- **Process note:** piping test output through `tail` hides failures, so checks now use `set -o pipefail` / `PIPESTATUS`. A repo-root `ruff.toml` makes `scripts/` and `ml/` lint the same way from any directory.

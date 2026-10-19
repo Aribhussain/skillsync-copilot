@@ -37,7 +37,7 @@ class Settings(BaseSettings):
     embedding_model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
     ai_gap_threshold: int = 2
-    phash_hamming_threshold: int = 10
+    phash_hamming_threshold: int = 6  # measured: see app/services/integrity.py
 
     bhashini_api_key: str = ""
     bhashini_user_id: str = ""

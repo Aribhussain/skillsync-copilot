@@ -182,5 +182,28 @@
     "sealHint": "Each photo is hashed (SHA-256), signed with this device's non-extractable key together with time, GPS and the challenge code, encrypted in the local vault, and queued. It syncs automatically when online.",
     "seal": "Seal, encrypt & queue all three",
     "sealedAll": "Sealed and queued — will sync automatically."
+  },
+  "evidence": {
+    "title": "Signed evidence & integrity checks",
+    "none": "No evidence synced yet.",
+    "sigOk": "signature verified",
+    "sigBad": "signature INVALID",
+    "reviewNote": "Flags are for your review: the system never rejects evidence on its own.",
+    "flag": {
+      "reused_image": "Reused photo",
+      "duplicate_within_assessment": "Same picture twice",
+      "challenge_mismatch": "Wrong challenge code",
+      "qc_warning": "Quality warning",
+      "future_timestamp": "Future timestamp",
+      "stale_capture": "Old capture",
+      "captured_before_start": "Before assessment start",
+      "exif_time_mismatch": "EXIF time mismatch",
+      "timestamp_unparseable": "Bad timestamp",
+      "no_gps": "No GPS",
+      "gps_inconsistent": "GPS inconsistent",
+      "ocr_skipped": "Code not OCR-checked",
+      "ocr_code_ok": "Code read on slate",
+      "ocr_code_not_found": "Code not found on slate"
+    }
   }
 }

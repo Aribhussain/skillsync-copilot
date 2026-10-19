@@ -3,6 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
+import EvidencePanel from '../../components/EvidencePanel.vue'
 import RubricAnchors from '../../components/RubricAnchors.vue'
 import { fetchPlan, overrideRoute, type PlanPC, type PlanResponse, startAssessment } from '../../lib/assessor'
 import { ROUTE_ICON, type Route } from '../../lib/evidencePlan'
@@ -97,6 +98,8 @@ async function saveOverride(pc: PlanPC) {
     </section>
 
     <p v-if="error" class="rounded-lg bg-saffron-100 p-2 text-sm" role="alert">{{ error }}</p>
+
+    <EvidencePanel v-if="card.challenge_code" :assessment-id="id" />
 
     <section v-for="nos in data.plan" :key="nos.nos_id" class="card" :data-testid="`nos-${nos.nos_id}`">
       <h2 class="text-lg font-bold">{{ nos.nos_id }} · {{ nos.title }}</h2>

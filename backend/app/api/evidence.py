@@ -15,6 +15,7 @@ from app.core.deps import get_current_user, require_roles
 from app.models.evidence import DeviceKey, Evidence
 from app.models.user import Role, User
 from app.services import audit
+from app.services.integrity import check_evidence
 from app.services.signing import load_public_key, verify_packet
 
 router = APIRouter(tags=["M4 evidence"])
@@ -167,6 +168,10 @@ async def upload_evidence(
     )
     session.add(ev)
     session.flush()
+    # Integrity checks (pHash reuse across all evidence, EXIF, time, GPS, OCR): flags only.
+    flags = flags + check_evidence(session, ev, data, a, request.app.state.settings.phash_hamming_threshold)
+    ev.integrity_flags = flags
+    session.add(ev)
     audit.record(
         session,
         user.username,
