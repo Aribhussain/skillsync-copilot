@@ -1,0 +1,135 @@
+{
+  "id": "DEMO-CG-FITTER-FAB-L4",
+  "title": "Fitter Fabrication",
+  "title_hi": "फिटर फैब्रिकेशन",
+  "sector": "Capital Goods",
+  "awarding_body": "Capital Goods Skill Council (CGSC)",
+  "nsqf_level": 4,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Marks, cuts, drills and fits up sheet metal and structural sections into fabricated assemblies such as frames, gates, grills and machine guards, using gas cutting, grinding and tack welding.",
+  "keywords": [
+    "fitter",
+    "fabrication",
+    "fabricator",
+    "marking",
+    "layout",
+    "gas cutting",
+    "cutting torch",
+    "drilling",
+    "fit-up",
+    "tack weld",
+    "frame",
+    "gate",
+    "grill",
+    "shutter",
+    "sheet metal",
+    "angle",
+    "channel"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/CG/N-FAB1",
+      "title": "Mark out and cut materials",
+      "marks": {
+        "theory": 15,
+        "practical": 25,
+        "viva": 10
+      },
+      "keywords": [
+        "marking",
+        "scriber",
+        "try square",
+        "measuring tape",
+        "gas cutting",
+        "hacksaw",
+        "shearing"
+      ],
+      "bridge_module": {
+        "title": "Marking-out and cutting practice",
+        "hours": 16
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Mark out sheets and sections from fabrication drawings using scriber, square and tape",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Cut sections using gas cutting, abrasive cut-off and hacksaw",
+          "weight": 2,
+          "critical": false,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Drill and tap holes to drawing",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/CG/N-FAB2",
+      "title": "Fit up and assemble fabrications",
+      "marks": {
+        "theory": 15,
+        "practical": 25,
+        "viva": 10
+      },
+      "keywords": [
+        "fit-up",
+        "tack",
+        "clamp",
+        "alignment",
+        "squareness",
+        "assembly"
+      ],
+      "bridge_module": {
+        "title": "Fit-up and assembly",
+        "hours": 20
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Fit up and tack weld frames, gates and grills square and true",
+          "weight": 3,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Check assemblies for squareness, flatness and dimensions",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Grind and finish fabricated assemblies",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "spatter"
+        }
+      ]
+    }
+  ]
+}

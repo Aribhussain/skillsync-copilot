@@ -1,0 +1,129 @@
+{
+  "id": "DEMO-CON-MASON-L3",
+  "title": "Mason General",
+  "title_hi": "राजमिस्त्री (सामान्य)",
+  "sector": "Construction",
+  "awarding_body": "Construction Skill Development Council of India (CSDCI)",
+  "nsqf_level": 3,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Builds brick and block masonry walls, prepares mortar, and does plastering and flooring work on building sites.",
+  "keywords": [
+    "mason",
+    "raj mistri",
+    "mistri",
+    "brickwork",
+    "chinai",
+    "brick",
+    "block",
+    "plaster",
+    "cement mortar",
+    "level",
+    "plumb",
+    "flooring",
+    "tiles"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/CON/N-MAS1",
+      "title": "Construct brick and block masonry",
+      "marks": {
+        "theory": 20,
+        "practical": 35,
+        "viva": 10
+      },
+      "keywords": [
+        "brick",
+        "English bond",
+        "mortar",
+        "plumb",
+        "level",
+        "line"
+      ],
+      "bridge_module": {
+        "title": "Brick masonry practice",
+        "hours": 20
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Prepare cement mortar in correct ratio",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Lay brick walls in English / Flemish bond to line, level and plumb",
+          "weight": 3,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Construct corners, openings and lintels",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/CON/N-MAS2",
+      "title": "Plaster and finish surfaces",
+      "marks": {
+        "theory": 15,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "plaster",
+        "curing",
+        "tiles",
+        "flooring",
+        "finish"
+      ],
+      "bridge_module": {
+        "title": "Plastering and finishing practice",
+        "hours": 12
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Apply internal and external plaster to thickness and finish",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Cure masonry and plaster correctly",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "declaration",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Work safely on scaffolds and ladders",
+          "weight": 2,
+          "critical": false,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

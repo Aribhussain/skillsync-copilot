@@ -1,0 +1,128 @@
+{
+  "id": "QG-4.5-AU-01811-2024-V1-ASDC",
+  "title": "Welding",
+  "title_hi": "वेल्डिंग",
+  "sector": "Automotive",
+  "awarding_body": "Automotive Skills Development Council (ASDC)",
+  "nsqf_level": 4.5,
+  "nco_code": "NCO-2015/7212.0302",
+  "source": "nqr.gov.in/qualification/file/QFile_Welding.pdf (Qualification File approved 06-02-2024). NOS, PC text and T/P/V marks are official; evidence_hint, critical, safety and ai_signal are SkillSync annotations.",
+  "source_kind": "official",
+  "description": "A welder prepares and joins a range of metals and metallic alloys using mainly processes where an electric arc is the heat source. Electric arc processes utilize a gas shield or a flux to protect the molten weld area from contamination. A welder interprets engineering drawings, standards and symbols and translates them into accurate structures and fabrications.",
+  "keywords": ["welder", "welding", "arc welding", "fabrication", "SMAW", "GMAW", "MIG", "MAG", "CO2 welding", "FCAW", "flux cored", "GTAW", "TIG", "argon", "electrode", "plate", "pipe", "butt joint", "fillet weld", "grinding", "finishing", "weld defects", "carbon steel", "stainless steel", "aluminium"],
+  "pass_percentage": 70,
+  "total_marks": 450,
+  "nos": [
+    {
+      "id": "ASC/N9819",
+      "title": "Work organization and management",
+      "marks": {"theory": 30, "practical": 50, "viva": 20},
+      "keywords": ["safety", "PPE", "hazard", "fume extraction", "weld symbols", "drawing", "housekeeping", "time management"],
+      "bridge_module": {"title": "Workshop safety, PPE and work organisation refresher", "hours": 12},
+      "pcs": [
+        {"code": "PC1", "text": "Work safely with regard to themselves and others", "marks": {"theory": 2, "practical": 4, "viva": 2}, "critical": false, "safety": true, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC2", "text": "Select, wear, and maintain PPE as required", "marks": {"theory": 2, "practical": 3, "viva": 1}, "critical": false, "safety": true, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC3", "text": "Recognize hazardous situations and take appropriate actions with regard to their own and others' safety", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": true, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC4", "text": "Follow correct procedural processes when working in hazardous environments", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": true, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC5", "text": "Locate and identify dimensions and weld symbols", "marks": {"theory": 2, "practical": 3, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC6", "text": "Adhere to manufacturers' safety data sheets", "marks": {"theory": 2, "practical": 3, "viva": 2}, "critical": false, "safety": true, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC7", "text": "Maintain a clean working environment", "marks": {"theory": 2, "practical": 4, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": null},
+        {"code": "PC8", "text": "Complete work within agreed timescales", "marks": {"theory": 2, "practical": 3, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "declaration", "ai_signal": null},
+        {"code": "PC9", "text": "Make essential connections for specific welding procedures", "marks": {"theory": 2, "practical": 3, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC10", "text": "Problem solve efficiently", "marks": {"theory": 2, "practical": 3, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC11", "text": "Take account of the physical and mental demand of the tasks", "marks": {"theory": 2, "practical": 3, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "declaration", "ai_signal": null},
+        {"code": "PC12", "text": "Use hand and eye coordination with precision", "marks": {"theory": 2, "practical": 3, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC13", "text": "Utilize fume extraction systems efficiently to remove emissions", "marks": {"theory": 2, "practical": 4, "viva": 1}, "critical": false, "safety": true, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC14", "text": "Create efficient work practices to eliminate waste", "marks": {"theory": 2, "practical": 4, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "declaration", "ai_signal": null}
+      ]
+    },
+    {
+      "id": "ASC/N3120",
+      "title": "Preparation and assembly techniques",
+      "marks": {"theory": 15, "practical": 25, "viva": 10},
+      "keywords": ["polarity", "amperage", "voltage", "wire feed speed", "travel speed", "electrode angle", "edge preparation", "bevel", "distortion", "heat input", "tack weld", "fit-up"],
+      "bridge_module": {"title": "Machine set-up, edge preparation and distortion control", "hours": 18},
+      "pcs": [
+        {"code": "PC1", "text": "Set up welding equipment to manufacturers' specifications including welding polarity, amperage, voltage, wire feed speed, travel speed, travel/electrode angles and mode of metal transfer", "marks": {"theory": 4, "practical": 7, "viva": 3}, "critical": true, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC2", "text": "Prepare material edges in line with specifications and drawing requirements", "marks": {"theory": 4, "practical": 6, "viva": 3}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": null},
+        {"code": "PC3", "text": "Set up and operate appropriate controls to minimize and correct distortion", "marks": {"theory": 4, "practical": 6, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC4", "text": "Carry out appropriate procedures to control heat input", "marks": {"theory": 3, "practical": 6, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null}
+      ]
+    },
+    {
+      "id": "ASC/N3121",
+      "title": "Welding materials",
+      "marks": {"theory": 15, "practical": 25, "viva": 10},
+      "keywords": ["mild steel", "stainless steel", "aluminium", "consumables", "electrode storage", "shielding gas", "argon", "CO2", "purging", "material list"],
+      "bridge_module": {"title": "Welding metallurgy, consumables and shielding gases", "hours": 10},
+      "pcs": [
+        {"code": "PC1", "text": "Use materials with consideration to their mechanical and physical properties", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC2", "text": "Store welding consumables correctly with reference to type, use and safety considerations", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": null},
+        {"code": "PC3", "text": "Select and prepare materials with reference to drawing material list", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC4", "text": "Select methods used in shielding the weld area from contamination", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC5", "text": "Select gasses used for shielding and purging", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null}
+      ]
+    },
+    {
+      "id": "ASC/N3122",
+      "title": "SMAW (111) and GMAW (135) Process",
+      "marks": {"theory": 15, "practical": 25, "viva": 10},
+      "keywords": ["SMAW", "111", "stick welding", "electrode", "manual metal arc", "MMA", "GMAW", "135", "MIG", "MAG", "CO2 welding", "wire feed", "root pass", "butt weld", "fillet weld", "pipe", "plate", "all positions"],
+      "bridge_module": {"title": "SMAW and GMAW positional welding practice (plate and pipe)", "hours": 40},
+      "pcs": [
+        {"code": "PC1", "text": "Make welded joints in relation to international specifications", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "overall"},
+        {"code": "PC2", "text": "Interpret welding terminology to complete task to specification", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC3", "text": "Perform welding of carbon steel material in all positions (except vertical down) on pipe and plates; deposit single sided full penetration root pass welds", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": true, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC4", "text": "Deposit full penetration butt and fillet welds on pipe and plate", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "incomplete"},
+        {"code": "PC5", "text": "Perform stop/starts", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "incomplete"}
+      ]
+    },
+    {
+      "id": "ASC/N3123",
+      "title": "FCAW-G (136) Process",
+      "marks": {"theory": 15, "practical": 25, "viva": 10},
+      "keywords": ["FCAW", "FCAW-G", "136", "flux cored", "flux core wire", "gas shielded", "slag", "pipe", "plate", "all positions"],
+      "bridge_module": {"title": "FCAW-G positional welding practice", "hours": 24},
+      "pcs": [
+        {"code": "PC1", "text": "Make welded joints in relation to international specifications", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "overall"},
+        {"code": "PC2", "text": "Interpret welding terminology to complete task to specification", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC3", "text": "Perform welding on carbon steel material in all positions (except vertical down) on pipe and plate", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": true, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC4", "text": "Perform stop/starts", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "incomplete"},
+        {"code": "PC5", "text": "Deposit full penetration butt and fillet welds on pipe and plate", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "incomplete"}
+      ]
+    },
+    {
+      "id": "ASC/N3124",
+      "title": "GTAW (141) Process",
+      "marks": {"theory": 15, "practical": 25, "viva": 10},
+      "keywords": ["GTAW", "141", "TIG", "argon", "tungsten", "filler rod", "stainless steel sheet", "aluminium sheet", "root and capping pass", "single pass", "pipe", "plate"],
+      "bridge_module": {"title": "GTAW (TIG) on stainless steel and aluminium sheet — root and capping passes", "hours": 36},
+      "pcs": [
+        {"code": "PC1", "text": "Make welded joints in relation to international specifications", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "overall"},
+        {"code": "PC2", "text": "Interpret welding terminology to complete task to specification", "marks": {"theory": 2, "practical": 3, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC3", "text": "Perform welding on carbon steel, aluminium sheet, and stainless steel sheet material in all positions (except vertical down) on pipe and plate", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": true, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC4", "text": "Perform stop/starts", "marks": {"theory": 1, "practical": 2, "viva": 1}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "incomplete"},
+        {"code": "PC5", "text": "Deposit full penetration butt and fillet welds on pipe and plate", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "incomplete"},
+        {"code": "PC6", "text": "Deposit utilising a single pass on stainless steel and aluminium sheet, root and capping pass combination", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "overall"}
+      ]
+    },
+    {
+      "id": "ASC/N3125",
+      "title": "Finishing, quality assurance, and testing",
+      "marks": {"theory": 30, "practical": 50, "viva": 20},
+      "keywords": ["grinding", "dressing", "wire brush", "chipping", "weld defects", "porosity", "undercut", "spatter", "visual inspection", "NDT", "dye penetrant", "hydrostatic test", "pressure vessel", "flatness", "squareness"],
+      "bridge_module": {"title": "Weld finishing, defect recognition and basic NDT", "hours": 24},
+      "pcs": [
+        {"code": "PC1", "text": "Produce welds to meet drawing and legislative specifications", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "porosity"},
+        {"code": "PC2", "text": "Recognize weld defects and take appropriate action to rectify them", "marks": {"theory": 4, "practical": 6, "viva": 3}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC3", "text": "Utilize correct techniques to ensure weld metal cleanliness is maintained", "marks": {"theory": 3, "practical": 5, "viva": 3}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "spatter"},
+        {"code": "PC4", "text": "Dress welds using wire brushes, scrapers, chisels, etc.", "marks": {"theory": 4, "practical": 6, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "spatter"},
+        {"code": "PC5", "text": "Check completed work against drawing requirements to reflect accuracy, square and flatness where necessary", "marks": {"theory": 3, "practical": 6, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC6", "text": "Carry out basic non-destructive testing and be familiar with more advanced testing methods", "marks": {"theory": 4, "practical": 6, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "viva", "ai_signal": null},
+        {"code": "PC7", "text": "Complete pressure vessels capable of withstanding hydrostatic pressure testing", "marks": {"theory": 3, "practical": 6, "viva": 2}, "critical": true, "safety": true, "evidence_hint": "observe", "ai_signal": null},
+        {"code": "PC8", "text": "Be creative in weld bead sequencing and weld bead tie ins to achieve uniform aesthetic appearances for faster finishing", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "photo", "ai_signal": "undercut"},
+        {"code": "PC9", "text": "Develop efficient welding procedures to reduce rework and waste during finishing", "marks": {"theory": 3, "practical": 5, "viva": 2}, "critical": false, "safety": false, "evidence_hint": "declaration", "ai_signal": null}
+      ]
+    }
+  ]
+}

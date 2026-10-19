@@ -1,0 +1,131 @@
+{
+  "id": "DEMO-PL-GENERAL-L3",
+  "title": "Plumber (General)",
+  "title_hi": "प्लंबर (सामान्य)",
+  "sector": "Plumbing",
+  "awarding_body": "Indian Plumbing Skills Council (IPSC)",
+  "nsqf_level": 3,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Installs and repairs water supply and drainage pipework and sanitary fittings in buildings using PVC, CPVC, GI and composite pipes.",
+  "keywords": [
+    "plumber",
+    "plumbing",
+    "pipe fitting",
+    "PVC",
+    "CPVC",
+    "GI pipe",
+    "tap",
+    "leakage",
+    "water tank",
+    "sanitary",
+    "toilet",
+    "drainage",
+    "threading"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/PL/N1",
+      "title": "Install water supply and drainage pipework",
+      "marks": {
+        "theory": 20,
+        "practical": 35,
+        "viva": 10
+      },
+      "keywords": [
+        "PVC",
+        "CPVC",
+        "GI",
+        "solvent cement",
+        "threading",
+        "slope",
+        "drainage"
+      ],
+      "bridge_module": {
+        "title": "Pipework installation practice",
+        "hours": 20
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Cut, thread and join GI, PVC and CPVC pipes",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Lay drainage lines with correct slope and traps",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Pressure-test supply lines for leaks",
+          "weight": 2,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/PL/N2",
+      "title": "Install and repair sanitary fittings",
+      "marks": {
+        "theory": 15,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "tap",
+        "wash basin",
+        "WC",
+        "cistern",
+        "geyser",
+        "leak repair"
+      ],
+      "bridge_module": {
+        "title": "Sanitary fittings practice",
+        "hours": 12
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Install wash basins, WCs, cisterns and taps",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Repair leaking taps, joints and cisterns",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Work safely with tools and at heights",
+          "weight": 1,
+          "critical": false,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

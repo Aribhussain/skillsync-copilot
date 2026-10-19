@@ -1,0 +1,125 @@
+{
+  "id": "DEMO-AU-STUD-WELD-L3",
+  "title": "Stud Welding Operator",
+  "title_hi": "स्टड वेल्डिंग ऑपरेटर",
+  "sector": "Automotive",
+  "awarding_body": "Automotive Skills Development Council (ASDC)",
+  "nsqf_level": 3,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Operates drawn-arc and capacitor-discharge stud welding guns to fix studs, nuts and shear connectors on sheet metal and structural parts.",
+  "keywords": [
+    "stud",
+    "stud welding",
+    "stud gun",
+    "drawn arc",
+    "capacitor discharge",
+    "shear connector",
+    "deck",
+    "sheet metal",
+    "nut welding"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 85,
+  "nos": [
+    {
+      "id": "DEMO/AU/N-STUD1",
+      "title": "Set up and operate stud welding equipment",
+      "marks": {
+        "theory": 15,
+        "practical": 30,
+        "viva": 10
+      },
+      "keywords": [
+        "stud gun",
+        "ferrule",
+        "drawn arc",
+        "capacitor discharge",
+        "timer",
+        "lift"
+      ],
+      "bridge_module": {
+        "title": "Stud welding set-up and operation",
+        "hours": 16
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Set stud gun lift, plunge, weld time and current for the stud diameter",
+          "weight": 3,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Load studs and ceramic ferrules correctly and position the gun square to the work",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Weld studs and shear connectors on steel deck and sheet metal",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "overall"
+        }
+      ]
+    },
+    {
+      "id": "DEMO/AU/N-STUD2",
+      "title": "Inspect stud welds",
+      "marks": {
+        "theory": 10,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "bend test",
+        "torque test",
+        "collar",
+        "flash",
+        "visual inspection"
+      ],
+      "bridge_module": {
+        "title": "Stud weld quality inspection",
+        "hours": 8
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Inspect weld collar (flash) for full 360-degree fusion",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "incomplete"
+        },
+        {
+          "code": "PC2",
+          "text": "Perform bend and torque tests on sample studs",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Record stud weld defects and corrective settings",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

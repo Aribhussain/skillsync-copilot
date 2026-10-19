@@ -1,0 +1,135 @@
+{
+  "id": "DEMO-CG-SR-WELDER-PIPE-L5",
+  "title": "Senior Welder – Pipes & Plates",
+  "title_hi": "वरिष्ठ वेल्डर – पाइप एवं प्लेट",
+  "sector": "Capital Goods",
+  "awarding_body": "Capital Goods Skill Council (CGSC)",
+  "nsqf_level": 5,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Performs code-quality welding of pipes and plates in all positions including 6G, combining GTAW root runs with SMAW fill and cap, for pressure piping, boilers and process plants. Welds are tested by radiography.",
+  "keywords": [
+    "pipe welding",
+    "6G",
+    "5G",
+    "2G",
+    "root run",
+    "root pass",
+    "radiography",
+    "x-ray",
+    "IBR",
+    "boiler",
+    "pressure piping",
+    "WPS",
+    "PQR",
+    "welder qualification",
+    "GTAW root",
+    "SMAW fill"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 130,
+  "nos": [
+    {
+      "id": "DEMO/CG/N-PIPE1",
+      "title": "Weld pipes in all positions to code",
+      "marks": {
+        "theory": 25,
+        "practical": 45,
+        "viva": 15
+      },
+      "keywords": [
+        "6G",
+        "5G",
+        "pipe",
+        "root run",
+        "hot pass",
+        "cap",
+        "TIG root",
+        "argon purge"
+      ],
+      "bridge_module": {
+        "title": "6G pipe welding (code quality)",
+        "hours": 60
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Weld carbon steel and alloy pipes in 6G position with GTAW root and SMAW fill and cap",
+          "weight": 3,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Achieve root penetration acceptable to radiography (RT) standards",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "incomplete"
+        },
+        {
+          "code": "PC3",
+          "text": "Purge stainless pipe with argon to protect the root",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/CG/N-PIPE2",
+      "title": "Follow welding procedure specifications and codes",
+      "marks": {
+        "theory": 15,
+        "practical": 20,
+        "viva": 10
+      },
+      "keywords": [
+        "WPS",
+        "PQR",
+        "ASME IX",
+        "IBR",
+        "preheat",
+        "interpass temperature"
+      ],
+      "bridge_module": {
+        "title": "Welding codes (ASME IX / IBR) and WPS interpretation",
+        "hours": 20
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Interpret WPS / PQR and apply essential variables",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Control preheat and interpass temperature",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Weld plates in 3G and 4G positions free of porosity and undercut",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "porosity"
+        }
+      ]
+    }
+  ]
+}

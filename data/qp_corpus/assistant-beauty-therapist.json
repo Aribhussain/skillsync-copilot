@@ -1,0 +1,126 @@
+{
+  "id": "DEMO-BWS-ABT-L3",
+  "title": "Assistant Beauty Therapist",
+  "title_hi": "सहायक ब्यूटी थेरेपिस्ट",
+  "sector": "Beauty & Wellness",
+  "awarding_body": "Beauty & Wellness Sector Skill Council (B&WSSC)",
+  "nsqf_level": 3,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Provides basic beauty services such as facials, threading, waxing, manicure and pedicure in salons while maintaining hygiene.",
+  "keywords": [
+    "beauty",
+    "parlour",
+    "salon",
+    "facial",
+    "threading",
+    "waxing",
+    "manicure",
+    "pedicure",
+    "makeup",
+    "skin care",
+    "hygiene",
+    "bleach"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/BWS/N1",
+      "title": "Provide basic skin care services",
+      "marks": {
+        "theory": 20,
+        "practical": 35,
+        "viva": 10
+      },
+      "keywords": [
+        "facial",
+        "cleanup",
+        "bleach",
+        "threading",
+        "waxing"
+      ],
+      "bridge_module": {
+        "title": "Skin care services practice",
+        "hours": 20
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Perform cleanup and basic facial",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Perform eyebrow threading and waxing",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Conduct patch test before chemical services",
+          "weight": 2,
+          "critical": true,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/BWS/N2",
+      "title": "Maintain hygiene and client care",
+      "marks": {
+        "theory": 15,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "sterilisation",
+        "hygiene",
+        "client consultation",
+        "towels"
+      ],
+      "bridge_module": {
+        "title": "Salon hygiene and client care",
+        "hours": 8
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Sterilise tools and maintain workstation hygiene",
+          "weight": 2,
+          "critical": false,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Consult client and record service preferences",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Perform manicure and pedicure",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

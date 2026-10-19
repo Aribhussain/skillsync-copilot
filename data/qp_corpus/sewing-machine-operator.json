@@ -1,0 +1,129 @@
+{
+  "id": "DEMO-AMH-SMO-L4",
+  "title": "Sewing Machine Operator",
+  "title_hi": "सिलाई मशीन ऑपरेटर",
+  "sector": "Apparel",
+  "awarding_body": "Apparel, Made-Ups & Home Furnishing SSC (AMHSSC)",
+  "nsqf_level": 4,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Operates industrial sewing machines to stitch garment components to specification, maintaining quality and production targets.",
+  "keywords": [
+    "sewing",
+    "stitching",
+    "tailor",
+    "silai",
+    "garment",
+    "overlock",
+    "single needle",
+    "flatlock",
+    "fabric",
+    "seam",
+    "hem",
+    "collar",
+    "production line"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/AMH/N1",
+      "title": "Stitch garment components",
+      "marks": {
+        "theory": 20,
+        "practical": 40,
+        "viva": 10
+      },
+      "keywords": [
+        "single needle",
+        "overlock",
+        "seam",
+        "hem",
+        "collar",
+        "cuff",
+        "SPI"
+      ],
+      "bridge_module": {
+        "title": "Garment stitching practice",
+        "hours": 24
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Stitch seams, hems, collars and cuffs to specification",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Operate single-needle, overlock and flatlock machines",
+          "weight": 3,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Maintain stitches-per-inch and seam allowance",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/AMH/N2",
+      "title": "Maintain machine, quality and safety",
+      "marks": {
+        "theory": 10,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "needle guard",
+        "oiling",
+        "defects",
+        "quality check"
+      ],
+      "bridge_module": {
+        "title": "Machine care and stitch quality",
+        "hours": 8
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Clean, oil and change needles safely",
+          "weight": 1,
+          "critical": false,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Identify and correct stitching defects (skipped stitch, puckering)",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Meet hourly production targets",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "declaration",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "DEMO-CON-WELDER-L4",
+  "title": "Construction Welder",
+  "title_hi": "निर्माण वेल्डर",
+  "sector": "Construction",
+  "awarding_body": "Construction Skill Development Council of India (CSDCI)",
+  "nsqf_level": 4,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Welds structural steel members, reinforcement bars and site fabrications on construction projects, mostly with SMAW on site, working at height and alongside other trades.",
+  "keywords": [
+    "construction site",
+    "building",
+    "structural steel",
+    "column",
+    "beam",
+    "rebar",
+    "sariya",
+    "scaffolding",
+    "site welding",
+    "SMAW",
+    "electrode",
+    "working at height"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/CON/N1",
+      "title": "Weld structural members on site",
+      "marks": {
+        "theory": 20,
+        "practical": 40,
+        "viva": 15
+      },
+      "keywords": [
+        "column",
+        "beam",
+        "truss",
+        "rebar",
+        "structural",
+        "electrode",
+        "SMAW"
+      ],
+      "bridge_module": {
+        "title": "Structural site welding practice",
+        "hours": 24
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Weld structural steel columns, beams and trusses as per structural drawings",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "overall"
+        },
+        {
+          "code": "PC2",
+          "text": "Lap and butt weld reinforcement bars (rebar) to site specification",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": "incomplete"
+        },
+        {
+          "code": "PC3",
+          "text": "Select electrodes and current for site SMAW on mild steel sections",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        },
+        {
+          "code": "PC4",
+          "text": "Tack and fit-up members accurately before final welding",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/CON/N2",
+      "title": "Work safely at height and on construction sites",
+      "marks": {
+        "theory": 10,
+        "practical": 10,
+        "viva": 5
+      },
+      "keywords": [
+        "harness",
+        "scaffolding",
+        "height",
+        "site safety",
+        "fire watch"
+      ],
+      "bridge_module": {
+        "title": "Working at height and hot-work permit refresher",
+        "hours": 8
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Use full body harness and anchor points when welding at height",
+          "weight": 2,
+          "critical": true,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Maintain fire watch and remove combustibles before hot work",
+          "weight": 2,
+          "critical": false,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Follow permit-to-work and site induction requirements",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

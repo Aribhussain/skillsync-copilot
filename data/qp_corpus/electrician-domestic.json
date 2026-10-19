@@ -1,0 +1,132 @@
+{
+  "id": "DEMO-EL-DOMESTIC-L3",
+  "title": "Electrician Domestic Solutions",
+  "title_hi": "घरेलू इलेक्ट्रीशियन",
+  "sector": "Power / Electronics",
+  "awarding_body": "Electronics Sector Skills Council of India (ESSCI)",
+  "nsqf_level": 3,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Installs and maintains domestic wiring, distribution boards, earthing, lighting and appliances in homes, and tests installations for safety.",
+  "keywords": [
+    "electrician",
+    "wiring",
+    "house wiring",
+    "MCB",
+    "distribution board",
+    "switch board",
+    "earthing",
+    "fan",
+    "light fitting",
+    "inverter",
+    "meter",
+    "conduit",
+    "socket"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/EL/N1",
+      "title": "Install domestic wiring and accessories",
+      "marks": {
+        "theory": 20,
+        "practical": 35,
+        "viva": 10
+      },
+      "keywords": [
+        "wiring",
+        "conduit",
+        "switch",
+        "socket",
+        "MCB",
+        "DB",
+        "fan",
+        "tube light"
+      ],
+      "bridge_module": {
+        "title": "Domestic wiring practice",
+        "hours": 24
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Lay conduit and wire circuits as per wiring diagram",
+          "weight": 3,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Install and connect MCB distribution board",
+          "weight": 2,
+          "critical": true,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Fix switches, sockets, fans and light fittings",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/EL/N2",
+      "title": "Test and maintain electrical safety",
+      "marks": {
+        "theory": 15,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "earthing",
+        "insulation test",
+        "megger",
+        "shock",
+        "isolation",
+        "lockout"
+      ],
+      "bridge_module": {
+        "title": "Electrical safety and testing",
+        "hours": 12
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Isolate supply and verify dead before work",
+          "weight": 2,
+          "critical": true,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Install and test earthing; measure insulation resistance",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Diagnose and repair common faults (short circuit, tripping)",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}

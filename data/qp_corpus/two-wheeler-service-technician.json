@@ -1,0 +1,128 @@
+{
+  "id": "DEMO-AU-2W-TECH-L4",
+  "title": "Two-Wheeler Service Technician",
+  "title_hi": "दोपहिया सर्विस तकनीशियन",
+  "sector": "Automotive",
+  "awarding_body": "Automotive Skills Development Council (ASDC)",
+  "nsqf_level": 4,
+  "source": "drafted-for-demo: realistic structure so the mapper has real competition; the code is indicative and not verified against NQR.",
+  "source_kind": "drafted-for-demo",
+  "description": "Services and repairs motorcycles and scooters: periodic maintenance, engine tuning, brakes, clutch, chain and electrical faults.",
+  "keywords": [
+    "two wheeler",
+    "bike",
+    "motorcycle",
+    "scooter",
+    "mechanic",
+    "servicing",
+    "engine oil",
+    "carburettor",
+    "spark plug",
+    "brake",
+    "clutch",
+    "chain sprocket",
+    "battery"
+  ],
+  "pass_percentage": 70,
+  "total_marks": 100,
+  "nos": [
+    {
+      "id": "DEMO/AU/N-2W1",
+      "title": "Carry out periodic maintenance",
+      "marks": {
+        "theory": 20,
+        "practical": 35,
+        "viva": 10
+      },
+      "keywords": [
+        "engine oil",
+        "air filter",
+        "spark plug",
+        "chain adjustment",
+        "brake shoe"
+      ],
+      "bridge_module": {
+        "title": "Periodic maintenance practice",
+        "hours": 20
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Change engine oil, air filter and spark plug per service schedule",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Adjust and lubricate drive chain; inspect sprockets",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "photo",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Inspect and adjust brakes and clutch",
+          "weight": 3,
+          "critical": true,
+          "safety": true,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO/AU/N-2W2",
+      "title": "Diagnose engine and electrical faults",
+      "marks": {
+        "theory": 15,
+        "practical": 15,
+        "viva": 5
+      },
+      "keywords": [
+        "carburettor",
+        "fuel injection",
+        "starting problem",
+        "wiring",
+        "battery"
+      ],
+      "bridge_module": {
+        "title": "Engine and electrical diagnostics",
+        "hours": 16
+      },
+      "pcs": [
+        {
+          "code": "PC1",
+          "text": "Clean and tune carburettor / diagnose FI faults",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "observe",
+          "ai_signal": null
+        },
+        {
+          "code": "PC2",
+          "text": "Diagnose starting, charging and lighting faults",
+          "weight": 2,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "viva",
+          "ai_signal": null
+        },
+        {
+          "code": "PC3",
+          "text": "Road-test vehicle and record findings",
+          "weight": 1,
+          "critical": false,
+          "safety": false,
+          "evidence_hint": "declaration",
+          "ai_signal": null
+        }
+      ]
+    }
+  ]
+}
