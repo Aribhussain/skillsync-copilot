@@ -68,9 +68,22 @@ function retryable(err: unknown): boolean {
 
 async function runFlush(): Promise<FlushResult> {
   const result: FlushResult = { sent: 0, failed: 0, remaining: 0 }
-  const items = (await db.outbox.where('status').anyOf('pending', 'sending').toArray()).sort((a, b) => a.id! - b.id!)
+  const attempted = new Set<number>()
+  // Keep going while new due items appear (e.g. enqueued while this run was in flight).
+  for (;;) {
+    const due = (await db.outbox.where('status').anyOf('pending', 'sending').toArray())
+      .filter((i) => !attempted.has(i.id!) && i.nextAttemptAt <= Date.now())
+      .sort((a, b) => a.id! - b.id!)
+    if (!due.length || result.stoppedBy) break
+    await processBatch(due, attempted, result)
+  }
+  result.remaining = await db.outbox.where('status').anyOf('pending', 'sending').count()
+  return result
+}
+
+async function processBatch(items: OutboxItem[], attempted: Set<number>, result: FlushResult): Promise<void> {
   for (const item of items) {
-    if (item.nextAttemptAt > Date.now()) continue
+    attempted.add(item.id!)
     const handler = handlers.get(item.kind)
     if (!handler) continue
     await db.outbox.update(item.id!, { status: 'sending' })
@@ -103,8 +116,6 @@ async function runFlush(): Promise<FlushResult> {
       }
     }
   }
-  result.remaining = await db.outbox.where('status').anyOf('pending', 'sending').count()
-  return result
 }
 
 /** Process due outbox items. Concurrent calls share one run. */

@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
 import { fetchPlan, type PlanResponse } from '../../lib/assessor'
+import { currentPosition, sealCapture } from '../../lib/evidence'
 import { analyseImage, type QcResult } from '../../lib/imageQc'
 import {
   canvasToBlob,
@@ -14,6 +15,7 @@ import {
   type ProductSample,
   productSamples,
 } from '../../lib/sampleCapture'
+import { useAuthStore } from '../../stores/auth'
 
 type Shot = 'process' | 'product' | 'person'
 type Source = 'camera' | 'upload' | 'simulated'
@@ -29,6 +31,7 @@ interface Capture {
 const SHOTS: Shot[] = ['process', 'product', 'person']
 const { t } = useI18n()
 const route = useRoute()
+const auth = useAuthStore()
 const id = Number(route.params.id)
 
 const plan = ref<PlanResponse | null>(null)
@@ -122,6 +125,37 @@ function accept() {
   if (!c) return
   captures.value = { ...captures.value, [shot.value]: { ...c, accepted: true } }
   if (step.value < SHOTS.length - 1) step.value++
+}
+
+const sealed = ref<Partial<Record<Shot, { sha256: string; vaultId: number }>>>({})
+const allSealed = computed(() => SHOTS.every((s) => sealed.value[s]))
+
+/** Hash, sign with the device key, encrypt into the vault and queue for sync. */
+async function sealAll() {
+  busy.value = true
+  error.value = ''
+  try {
+    const gps = await currentPosition() // one fix for the whole session, not one per shot
+    for (const s of SHOTS) {
+      const c = captures.value[s]
+      if (!c || sealed.value[s]) continue
+      const r = await sealCapture({
+        username: auth.user!.username,
+        assessmentId: id,
+        shot: s,
+        blob: c.blob,
+        challengeCode: code.value,
+        qc: c.qc,
+        source: c.source,
+        gps,
+      })
+      sealed.value = { ...sealed.value, [s]: { sha256: r.packet.sha256, vaultId: r.vaultId } }
+    }
+  } catch (e) {
+    error.value = String(e)
+  } finally {
+    busy.value = false
+  }
 }
 
 function retake() {
@@ -230,7 +264,26 @@ function retake() {
           <figcaption class="mt-1 text-xs font-semibold">
             {{ t(`capture.shot.${s}`) }} {{ captures[s]!.qc.ok ? '✓' : '⚠' }}
           </figcaption>
+          <div v-if="sealed[s]" class="mt-1 grid gap-0.5 text-[11px]" :data-testid="`sealed-${s}`">
+            <span>🔏 {{ t('capture.signed') }}</span>
+            <span>🔐 {{ t('capture.encrypted') }}</span>
+            <span class="font-mono">#{{ sealed[s]!.sha256.slice(0, 12) }}</span>
+          </div>
         </figure>
+      </div>
+      <p class="mt-3 text-sm text-navy-700">{{ t('capture.sealHint') }}</p>
+      <button
+        v-if="!allSealed"
+        class="btn-green mt-3 w-full"
+        :disabled="busy || !code"
+        data-testid="seal-all"
+        @click="sealAll"
+      >
+        🔏 {{ t('capture.seal') }}
+      </button>
+      <div v-else class="mt-3 rounded-xl bg-green-india-100 p-3 text-sm font-semibold text-green-india-700" data-testid="sealed-all">
+        ✓ {{ t('capture.sealedAll') }}
+        <RouterLink :to="`/assessor/assessment/${id}`" class="ml-2 underline">{{ t('common.back') }}</RouterLink>
       </div>
     </section>
 

@@ -176,6 +176,11 @@
     "simulatedTag": "SIMULATED",
     "review": "All three shots captured",
     "cameraError": "Camera unavailable: {msg}",
-    "goCapture": "Capture evidence"
+    "goCapture": "Capture evidence",
+    "signed": "Signed (device key)",
+    "encrypted": "Encrypted on device",
+    "sealHint": "Each photo is hashed (SHA-256), signed with this device's non-extractable key together with time, GPS and the challenge code, encrypted in the local vault, and queued. It syncs automatically when online.",
+    "seal": "Seal, encrypt & queue all three",
+    "sealedAll": "Sealed and queued — will sync automatically."
   }
 }

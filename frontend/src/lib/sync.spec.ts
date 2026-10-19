@@ -63,6 +63,18 @@ describe('outbox sync engine', () => {
     expect(item.status).toBe('done')
   })
 
+  it('items enqueued while a flush is running are sent in the same run (regression)', async () => {
+    const seen: string[] = []
+    registerHandler('t-chain', async (item) => {
+      seen.push(String(item.payload.n))
+      if (item.payload.n === 'first') await enqueue('t-chain', { n: 'second' }, 'k-chain-2')
+    })
+    await enqueue('t-chain', { n: 'first' }, 'k-chain-1')
+    const r = await flush()
+    expect(seen).toEqual(['first', 'second'])
+    expect(r.remaining).toBe(0)
+  })
+
   it('marks a 422 as permanently failed', async () => {
     registerHandler('t-422', async () => {
       throw new ApiError(422, 'Unknown QP')

@@ -43,10 +43,23 @@ export interface LocalDeclaration {
   assessmentId?: number
 }
 
+export interface VaultEntry {
+  id?: number
+  assessmentId: number
+  shot: 'process' | 'product' | 'person'
+  sha256: string
+  mime: string
+  iv: Uint8Array
+  ciphertext: ArrayBuffer | null // null once synced (wiped)
+  createdAt: number
+  syncedAt?: number
+}
+
 export class SkillSyncDB extends Dexie {
   outbox!: Table<OutboxItem, number>
   kv!: Table<KeyValue, string>
   declarations!: Table<LocalDeclaration, string>
+  vault!: Table<VaultEntry, number>
 
   constructor(name = 'skillsync') {
     super(name)
@@ -56,6 +69,9 @@ export class SkillSyncDB extends Dexie {
     })
     this.version(2).stores({
       declarations: 'clientId, username, status, createdAt',
+    })
+    this.version(3).stores({
+      vault: '++id, assessmentId, shot, sha256',
     })
   }
 }

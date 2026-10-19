@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-import { createAssessmentViaApi, GOLDEN, loginAs } from './helpers'
+import { API, apiToken, createAssessmentViaApi, GOLDEN, loginAs } from './helpers'
 
 test('assessor: guided Process -> Product -> Person capture with on-device QC', async ({ page, request }) => {
   const { assessmentId, assessorUsername } = await createAssessmentViaApi(request, 'worker1', GOLDEN, [])
@@ -27,6 +27,21 @@ test('assessor: guided Process -> Product -> Person capture with on-device QC', 
   await page.getByTestId('simulate-shot').click()
   await page.getByTestId('accept-shot').click()
   await expect(page.getByTestId('capture-review')).toBeVisible()
+
+  // Seal: browser WebCrypto signs; the Python server must verify every packet.
+  await page.getByTestId('seal-all').click()
+  await expect(page.getByTestId('sealed-all')).toBeVisible()
+  await expect(page.getByTestId('outbox-count')).toHaveAttribute('data-count', '0', { timeout: 20_000 })
+  const token = await apiToken(request, assessorUsername)
+  const evidence = await (
+    await request.get(`${API}/assessments/${assessmentId}/evidence`, { headers: { Authorization: `Bearer ${token}` } })
+  ).json()
+  expect(evidence.map((e: { shot: string }) => e.shot).sort()).toEqual(['person', 'process', 'product'])
+  for (const e of evidence) {
+    expect(e.signature_valid).toBe(true)
+    expect(e.challenge_code).toBe(code)
+    expect(e.source).toBe('simulated')
+  }
 })
 
 test('QC rejects a blurry upload with "hold steady" feedback', async ({ page, request }) => {
