@@ -73,7 +73,13 @@ class MappingService:
                 mapper = QPMapper(get_corpus(), all_entries(session), version)
                 self._mapper = mapper
             if mapper.vector_index is None and self.embedder.ready:
-                mapper.attach_embeddings(self.embedder, self._qp_vectors(session))
+                vectors = self._qp_vectors(session)
+                index = None
+                if self.settings.db_dialect == "postgresql" and vectors:
+                    from app.services.vector_index import PgVectorIndex
+
+                    index = PgVectorIndex(self.engine, len(next(iter(vectors.values()))))
+                mapper.attach_embeddings(self.embedder, vectors, index)
         return mapper
 
     def map(self, session: Session, narrative: str) -> dict[str, Any]:

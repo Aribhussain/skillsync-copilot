@@ -58,3 +58,59 @@ class NumpyVectorIndex:
 
     def __len__(self) -> int:
         return len(self._refs)
+
+
+class PgVectorIndex:
+    """pgvector-backed index for Docker full mode (PostgreSQL 16 + the `vector` extension).
+    Plain SQL with text-cast vectors, so no extra driver package is needed."""
+
+    def __init__(self, engine, dim: int, table: str = "qp_vectors") -> None:
+        from sqlalchemy import text
+
+        self.engine, self.dim, self.table, self._text = engine, dim, table, text
+        with engine.begin() as conn:
+            conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+            conn.execute(
+                text(
+                    f"CREATE TABLE IF NOT EXISTS {table} "
+                    f"(ref varchar(96) PRIMARY KEY, embedding vector({dim}))"
+                )
+            )
+
+    @staticmethod
+    def _lit(v) -> str:
+        n = NumpyVectorIndex._norm(np.asarray(v, dtype=np.float32))
+        return "[" + ",".join(f"{x:.7f}" for x in n) + "]"
+
+    def add(self, ref: str, vector) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                self._text(
+                    f"INSERT INTO {self.table} (ref, embedding) VALUES (:r, CAST(:v AS vector)) "
+                    "ON CONFLICT (ref) DO UPDATE SET embedding = EXCLUDED.embedding"
+                ),
+                {"r": ref, "v": self._lit(vector)},
+            )
+
+    def similarity(self, query) -> dict[str, float]:
+        with self.engine.connect() as conn:
+            rows = conn.execute(
+                self._text(f"SELECT ref, 1 - (embedding <=> CAST(:q AS vector)) FROM {self.table}"),
+                {"q": self._lit(query)},
+            ).all()
+        return {r: float(s) for r, s in rows}
+
+    def search(self, query, k: int = 10) -> list[tuple[str, float]]:
+        with self.engine.connect() as conn:
+            rows = conn.execute(
+                self._text(
+                    f"SELECT ref, 1 - (embedding <=> CAST(:q AS vector)) AS s FROM {self.table} "
+                    "ORDER BY embedding <=> CAST(:q AS vector) LIMIT :k"
+                ),
+                {"q": self._lit(query), "k": k},
+            ).all()
+        return [(r, float(s)) for r, s in rows]
+
+    def __len__(self) -> int:
+        with self.engine.connect() as conn:
+            return int(conn.execute(self._text(f"SELECT count(*) FROM {self.table}")).scalar_one())

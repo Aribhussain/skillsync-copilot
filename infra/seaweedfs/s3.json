@@ -1,0 +1,11 @@
+{
+  "identities": [
+    {
+      "name": "skillsync",
+      "credentials": [
+        { "accessKey": "skillsync", "secretKey": "skillsync-dev-secret" }
+      ],
+      "actions": ["Admin", "Read", "Write", "List", "Tagging"]
+    }
+  ]
+}

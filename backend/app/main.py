@@ -30,7 +30,7 @@ from app.core.config import Settings, get_settings
 from app.core.db import make_engine, run_migrations
 from app.ml.shadow_rater import load_rater
 from app.services.mapping_service import MappingService
-from app.services.storage import LocalStorage
+from app.services.storage import make_storage
 from app.services.users import seed_demo_users
 
 
@@ -59,7 +59,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = settings
     app.state.engine = make_engine(settings)
     app.state.mapping = MappingService(settings, app.state.engine)
-    app.state.storage = LocalStorage(settings.storage_path)
+    app.state.storage = make_storage(settings)
 
     app.add_middleware(
         CORSMiddleware,

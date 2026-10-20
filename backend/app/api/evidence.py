@@ -25,9 +25,9 @@ from app.core.deps import get_current_user, require_roles
 from app.models.evidence import DeviceKey, Evidence
 from app.models.user import Role, User
 from app.services import audit
-from app.services.ai_service import analyse_evidence
 from app.services.integrity import check_evidence
 from app.services.signing import load_public_key, verify_packet
+from app.services.tasks import dispatch_evidence_analysis
 from app.services.uploads import UploadStore
 
 router = APIRouter(tags=["M4 evidence"])
@@ -208,8 +208,7 @@ async def upload_evidence(
     session.refresh(ev)
     if ev.shot == "product":
         # M5: shadow-rater analysis runs after the response (BackgroundTasks; Celery in full mode)
-        st = request.app.state
-        background.add_task(analyse_evidence, st.engine, st.storage, st.rater, ev.id)
+        dispatch_evidence_analysis(request, background, ev.id)
     return evidence_view(ev)
 
 

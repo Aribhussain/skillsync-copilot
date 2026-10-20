@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "e2e": "playwright test",
-    "e2e:pwa": "playwright test -c playwright.pwa.config.ts"
+    "e2e:pwa": "playwright test -c playwright.pwa.config.ts",
+    "e2e:docker": "playwright test -c playwright.docker.config.ts"
   },
   "dependencies": {
     "dexie": "^4.4.6",

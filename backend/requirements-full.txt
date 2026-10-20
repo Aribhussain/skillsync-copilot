@@ -1,0 +1,5 @@
+# Docker full mode only (not needed in lite mode). All permissively licensed.
+pg8000>=1.31        # PostgreSQL driver, BSD-3 (psycopg/psycopg2 are LGPL, so not used)
+celery>=5.4         # task queue, BSD-3
+redis>=5            # broker client, MIT
+minio>=7.2          # S3/MinIO object storage client, Apache-2.0

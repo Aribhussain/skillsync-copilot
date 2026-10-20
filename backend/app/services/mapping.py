@@ -174,8 +174,9 @@ class QPMapper:
         df = Counter(t for terms in kw.values() for t in terms)
         return {nid: {t for t in terms if df[t] <= 2 and t not in generic} for nid, terms in kw.items()}
 
-    def attach_embeddings(self, embedder, vectors: dict[str, list[float]]) -> None:
-        index = NumpyVectorIndex()
+    def attach_embeddings(self, embedder, vectors: dict[str, list[float]], index=None) -> None:
+        """Attach QP vectors to a VectorIndex (numpy in lite mode, pgvector in full mode)."""
+        index = index if index is not None else NumpyVectorIndex()
         for qp_id in self.qp_ids:
             if qp_id in vectors:
                 index.add(qp_id, vectors[qp_id])

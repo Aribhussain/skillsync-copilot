@@ -44,7 +44,7 @@ class Settings(BaseSettings):
 
     storage_backend: str = "local"  # local | s3
     queue_backend: str = "background"  # background | celery
-    s3_endpoint: str = "http://minio:9000"
+    s3_endpoint: str = "http://objectstore:8333"
     s3_access_key: str = "skillsync"
     s3_secret_key: str = "skillsync-dev-secret"
     s3_bucket: str = "evidence"
