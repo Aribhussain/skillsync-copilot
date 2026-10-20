@@ -19,6 +19,7 @@ from app.api import (
     health,
     lexicon,
     packs,
+    profile,
     qps,
     scoring,
     speech,
@@ -80,6 +81,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(evidence.router)
     app.include_router(scoring.router)
     app.include_router(calibration.router)
+    app.include_router(profile.router)
     return app
 
 

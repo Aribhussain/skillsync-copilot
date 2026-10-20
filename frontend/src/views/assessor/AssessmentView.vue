@@ -102,6 +102,14 @@ async function saveOverride(pc: PlanPC) {
         >
           ✍ {{ t('scoring.go') }}
         </RouterLink>
+        <RouterLink
+          v-if="card.challenge_code"
+          :to="`/assessor/assessment/${id}/profile`"
+          class="btn-ghost"
+          data-testid="go-profile"
+        >
+          📊 {{ t('profile.go') }}
+        </RouterLink>
       </div>
     </section>
 
