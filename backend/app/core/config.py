@@ -48,7 +48,7 @@ class Settings(BaseSettings):
     s3_access_key: str = "skillsync"
     s3_secret_key: str = "skillsync-dev-secret"
     s3_bucket: str = "evidence"
-    redis_url: str = "redis://redis:6379/0"
+    redis_url: str = "redis://valkey:6379/0"
 
     @property
     def is_production(self) -> bool:
