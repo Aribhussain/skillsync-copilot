@@ -37,16 +37,20 @@ docs/       documentation, results/, screenshots/
 
 The full original brief is in [docs/BUILD_PROMPT.md](docs/BUILD_PROMPT.md); the session clarifications are at its end.
 
-**Done:** Phases 0–11 (tags v0.1.0, v0.3.0, v0.5.0, v0.8.0). Phase 11 added the SIMULATED crossover study (`scripts/simulate_study.py` → `docs/results/consistency_study.md`, with sensitivity scenarios) and the live study mode (`/studies` API, assessor OFF→ON flow, QA panel with real alpha).
+**Done:** Phases 0–12 (tags v0.1.0, v0.3.0, v0.5.0, v0.8.0). Phase 12 added:
+- An `injectManifest` service worker with runtime caches and a Background Sync hook.
+- Resumable chunked evidence uploads.
+- Assessor sync-down.
+- An offline e2e test against the built PWA (`npm run e2e:pwa`).
 
-**Resume at: Phase 12, offline hardening.**
-- Service worker runtime caching: the QP pack (it's already precached as the seed pack), lexicon, golden-packet images and rubric images.
-- Background Sync where supported: the SW notifies open clients to flush.
-- Chunked image upload: `/uploads` init/chunk/complete, with the server deduplicating by packet hash.
-- A sync-down endpoint for updated packs (there's already `/packs/version` + `/packs/latest`).
-- A Playwright test against the built PWA (`vite preview`, with the SW active) that goes offline, completes a declaration + capture, goes online and asserts the server received signed packets.
+**Resume at: Phase 13, Docker full mode.**
+- Ask before pulling Docker images (likely > 500 MB in total).
+- `docker-compose.yml`: postgres+pgvector, minio, redis, backend, a Celery worker, and the frontend served by nginx.
+- Storage (local | S3/MinIO) and queue (BackgroundTasks | Celery) adapters switched by env; a pgvector `VectorIndex`.
+- `make full-up` / `make lite-up`.
+- Also `scripts/setup_db.py` for the installed MySQL 8: the user runs it themselves or provides the root password at runtime, never stored. Run the suite once against MySQL and record the result in DECISIONS.md.
 
-**Next phases after 12:** 13 Docker full mode + MySQL `setup_db.py` (ask the user for the MySQL root password at runtime, or let them run it) → 14 CI, `seed_demo.py`, screenshots, README, `v1.0.0` release.
+**Next phases after 13:** 14 CI, `seed_demo.py`, screenshots, README, `v1.0.0` release.
 
 **Open issues / decisions to remember**
 - The `Makefile` doesn't exist yet (Phase 14), so the `make …` commands in this file are planned, not working. Use the manual commands below.
@@ -90,6 +94,6 @@ Planned `make setup / seed / lite-up / test` targets arrive in Phase 14.
 - [x] 9 Blind-first shadow rater
 - [x] 10 Calibration, profile, sign-off, credential → v0.8.0
 - [x] 11 Consistency study
-- [ ] 12 Offline hardening + sync
+- [x] 12 Offline hardening + sync
 - [ ] 13 Docker full mode / MySQL support
 - [ ] 14 CI, demo seed, screenshots, docs → v1.0.0

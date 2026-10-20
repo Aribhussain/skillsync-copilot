@@ -8,7 +8,10 @@ beforeEach(async () => {
   await db.outbox.clear()
   await db.kv.clear()
 })
-afterEach(() => vi.restoreAllMocks())
+afterEach(() => {
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals() // stubbed fetch must not leak into the next test
+})
 
 describe('blind score client', () => {
   it('online: returns the server reveal', async () => {

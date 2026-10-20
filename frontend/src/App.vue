@@ -3,6 +3,7 @@ import { onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import AppHeader from './components/AppHeader.vue'
+import { syncDownAssessor } from './lib/assessor'
 import { loadPack, refreshPack } from './lib/pack'
 import { flush, onSyncChange, wakeAll } from './lib/sync'
 import './lib/evidence' // registers the device + evidence outbox handlers at start-up
@@ -18,11 +19,16 @@ const auth = useAuthStore()
 async function syncNow() {
   if (!net.online || !auth.isAuthenticated) return
   await flush()
-  refreshPack().catch(() => undefined)
+  refreshPack().catch(() => undefined) // sync-down: newer QP pack / lexicon
+  if (auth.user?.role === 'assessor') syncDownAssessor().catch(() => undefined)
 }
 
 onMounted(() => {
   net.start()
+  // Background Sync: the service worker asks open tabs to flush the outbox
+  navigator.serviceWorker?.addEventListener('message', (e: MessageEvent) => {
+    if (e.data?.type === 'skillsync:flush') void syncNow()
+  })
   onSyncChange(() => void net.refreshOutbox())
   loadPack().catch(() => undefined) // warm the offline mapper
   void syncNow()

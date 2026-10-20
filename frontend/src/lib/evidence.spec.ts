@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { db } from './db'
 import { fromBase64, getDeviceIdentity } from './deviceKey'
-import { canonicalPacket, sealCapture } from './evidence'
+import { CHUNK_SIZE, canonicalPacket, sealCapture } from './evidence'
 import { flush } from './sync'
 import { vaultGet } from './vault'
 
@@ -11,7 +11,10 @@ beforeEach(async () => {
   await db.vault.clear()
   await db.kv.clear()
 })
-afterEach(() => vi.restoreAllMocks())
+afterEach(() => {
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals() // stubbed fetch must not leak into the next test
+})
 
 describe('evidence packets', () => {
   it('canonical string matches the server (same literal as backend test_canonical_packet_is_stable)', () => {
@@ -77,12 +80,38 @@ describe('evidence packets', () => {
     vi.stubGlobal(
       'fetch',
       vi.fn(async (url: string) => {
-        calls.push(String(url).replace(/^https?:\/\/[^/]+/, ''))
+        const path = String(url).replace(/^https?:\/\/[^/]+/, '')
+        calls.push(path)
+        if (path === '/uploads') return new Response(JSON.stringify({ upload_id: 'u1', received: [] }), { status: 201 })
         return new Response(JSON.stringify({ ok: true }), { status: 201 })
       }),
     )
     await flush()
-    expect(calls).toEqual(['/devices', '/assessments/12/evidence'])
+    expect(calls).toEqual(['/devices', '/uploads', '/uploads/u1/chunks/0', '/assessments/12/evidence'])
     expect((await db.vault.get(sealed.vaultId))!.ciphertext).toBeNull()
+  })
+})
+
+
+describe('chunked evidence upload', () => {
+  it('a resumed upload only sends the chunks the server is missing', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => Promise.reject(new TypeError('Failed to fetch')))) // offline
+    const image = new Blob([new Uint8Array(CHUNK_SIZE * 2 + 10)], { type: 'image/jpeg' }) // 3 chunks
+    await sealCapture({ username: 'assessor1', assessmentId: 3, shot: 'product', blob: image, challengeCode: 'AAAAAA', qc: null, source: 'upload', gps: null })
+    await flush() // drains the offline flush started by sealCapture
+    await db.kv.put({ key: 'device.registered.assessor1', value: true })
+    await db.outbox.where('kind').equals('device').delete()
+    const calls: string[] = []
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (url: string) => {
+        const path = String(url).replace(/^https?:\/\/[^/]+/, '')
+        calls.push(path)
+        if (path === '/uploads') return new Response(JSON.stringify({ upload_id: 'u9', received: [0, 2] }), { status: 201 })
+        return new Response(JSON.stringify({ ok: true }), { status: 201 })
+      }),
+    )
+    await flush()
+    expect(calls).toEqual(['/uploads', '/uploads/u9/chunks/1', '/assessments/3/evidence'])
   })
 })

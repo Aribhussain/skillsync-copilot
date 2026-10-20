@@ -58,7 +58,17 @@ export async function enqueue(kind: string, payload: Record<string, unknown>, id
     createdAt: Date.now(),
   })
   notify()
+  requestBackgroundSync()
   return id
+}
+
+/** Ask the service worker for a Background Sync (Chromium only); elsewhere the online
+ *  event and the periodic timer cover it. */
+function requestBackgroundSync(): void {
+  if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return
+  navigator.serviceWorker.ready
+    .then((reg) => (reg as ServiceWorkerRegistration & { sync?: { register(tag: string): Promise<void> } }).sync?.register('skillsync-outbox'))
+    .catch(() => undefined)
 }
 
 function retryable(err: unknown): boolean {

@@ -82,6 +82,20 @@ export function fetchPlan(id: number) {
   return cached(`assessment.${id}.plan`, () => api<PlanResponse>(`/assessments/${id}/plan`))
 }
 
+/** Sync-down: cache the queue and every open assessment's plan and scores for offline use. */
+export async function syncDownAssessor(): Promise<number> {
+  const { data: queue, fromCache } = await fetchQueue()
+  if (fromCache) return 0
+  let n = 0
+  for (const a of queue) {
+    if (a.status === 'signed_off') continue
+    await fetchPlan(a.id).catch(() => undefined)
+    await cached(`scores.${a.id}`, () => api(`/assessments/${a.id}/scores`)).catch(() => undefined)
+    n++
+  }
+  return n
+}
+
 export async function startAssessment(id: number): Promise<AssessmentCard> {
   const card = await api<AssessmentCard>(`/assessments/${id}/start`, { method: 'POST' })
   // keep the offline copy's challenge code in step

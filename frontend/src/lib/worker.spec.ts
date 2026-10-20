@@ -44,7 +44,10 @@ beforeEach(async () => {
   await db.kv.clear()
   resetPackCache()
 })
-afterEach(() => vi.restoreAllMocks())
+afterEach(() => {
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals() // stubbed fetch must not leak into the next test
+})
 
 describe('local-first worker flow', () => {
   it('stores plain data even when given Vue reactive arrays (regression: DataCloneError)', async () => {

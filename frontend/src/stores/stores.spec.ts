@@ -9,7 +9,10 @@ beforeEach(() => {
   setActivePinia(createPinia())
   localStorage.clear()
 })
-afterEach(() => vi.restoreAllMocks())
+afterEach(() => {
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals() // stubbed fetch must not leak into the next test
+})
 
 describe('auth store', () => {
   it('logs in, persists the session and logs out', async () => {

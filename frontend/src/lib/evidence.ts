@@ -122,14 +122,29 @@ registerHandler('device', async (item) => {
   await db.kv.put({ key: `device.registered.${p.username}`, value: true })
 })
 
+export const CHUNK_SIZE = 256 * 1024 // must match backend app/services/uploads.py
+
+/** Resumable chunked upload: the server says which chunks it already has, so a retry after
+ *  a dropped connection only sends what is missing. The image is then attached to the
+ *  signed packet by upload_id. */
 registerHandler('evidence', async (item) => {
   const { vaultId, packet, signature } = item.payload as { vaultId: number; packet: Packet; signature: string }
   const stored = await vaultGet(vaultId)
   if (!stored) return // already synced and wiped
+  const bytes = new Uint8Array(stored.data)
+  const total = Math.max(1, Math.ceil(bytes.length / CHUNK_SIZE))
+  const st = await api<{ upload_id: string; received: number[] }>('/uploads', {
+    body: { sha256: packet.sha256, size: bytes.length, total_chunks: total },
+  })
+  for (let i = 0; i < total; i++) {
+    if (st.received.includes(i)) continue
+    const chunk = new Blob([bytes.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE)])
+    await api(`/uploads/${st.upload_id}/chunks/${i}`, { method: 'PUT', body: chunk })
+  }
   const form = new FormData()
   form.append('packet', JSON.stringify(packet))
   form.append('signature', signature)
-  form.append('file', new Blob([stored.data], { type: stored.entry.mime }), `${packet.shot}.jpg`)
+  form.append('upload_id', st.upload_id)
   await api(`/assessments/${packet.assessment_id}/evidence`, { body: form })
   await vaultWipe(vaultId)
 })

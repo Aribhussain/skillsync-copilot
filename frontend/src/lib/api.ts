@@ -27,7 +27,7 @@ export class ApiError extends Error {
 /** Thrown when the network itself is unavailable (offline, server down). */
 export class NetworkError extends Error {}
 
-type Body = Record<string, unknown> | unknown[] | FormData | undefined
+type Body = Record<string, unknown> | unknown[] | FormData | Blob | undefined
 
 export async function api<T = unknown>(
   path: string,
@@ -38,6 +38,9 @@ export async function api<T = unknown>(
   if (token) headers.Authorization = `Bearer ${token}`
   let body: BodyInit | undefined
   if (options.body instanceof FormData) {
+    body = options.body
+  } else if (options.body instanceof Blob) {
+    headers['Content-Type'] = 'application/octet-stream'
     body = options.body
   } else if (options.body !== undefined) {
     headers['Content-Type'] = 'application/json'

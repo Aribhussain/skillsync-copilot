@@ -60,3 +60,13 @@ Each entry: date · decision · why.
 - **Frontend notes:**
   - vue-echarts fills its parent, so charts sit in fixed-height wrappers.
   - Vite now pre-bundles echarts and qrcode, because runtime discovery made the dev server re-optimise mid-navigation and hang the first dashboard load.
+
+## 2026-10-20 · Consistency study and offline hardening (Phases 11–12)
+
+- **The consistency study has two parts, labelled accordingly.** `scripts/simulate_study.py` is a SIMULATED AB/BA crossover over 200 Monte-Carlo replications, with sensitivity scenarios. Its baseline α of 0.33 → 0.57 is driven by the stated assumptions, mostly by the rubric anchors (the AI reveal changed about 5% of scores). The live study mode (`/studies`) computes α from real raters' scores, OFF then ON.
+- **The service worker moved to `injectManifest`** (`src/sw.ts`), so it can react to Background Sync. It precaches the app shell, the seed QP pack, rubric images and demo samples (61 entries). Runtime caching is network-first for packs, lexicon and QPs, and cache-first for golden-packet images.
+- **Background Sync only nudges open tabs.** The outbox logic needs the session token and IndexedDB keys, so it runs in the page. Without an open tab, the queue waits for the next visit or online event. Background Sync is Chromium-only; elsewhere the `online` event and the 15 s timer cover it.
+- **Evidence uploads are chunked and resumable** (256 KB chunks, `/uploads`). The upload id is deterministic per (user, SHA-256, size), so retries resume, and duplicate chunks are harmless. The server reassembles and checks size and SHA-256 before the normal signature check. A corrupt reassembly deletes the chunks so a retry starts clean; a regression test covers this.
+- **Sync-down:** when online, the app refreshes the QP pack and lexicon (`/packs/version` → `/packs/latest`). Assessors also get their queue, plans and scores cached for offline work.
+- **The offline e2e runs against the built PWA** (`npm run e2e:pwa`: `vite build` + `vite preview` with the real service worker). It tests offline full reloads, offline consent, declaration and capture, then sync with signature verification on reconnect.
+- **Test hygiene:** `vi.restoreAllMocks()` does not undo `vi.stubGlobal`; a leaked `fetch` stub masked a test. All specs now call `vi.unstubAllGlobals()`.

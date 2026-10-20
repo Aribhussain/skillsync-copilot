@@ -10,6 +10,10 @@ export default defineConfig({
     vue(),
     tailwindcss(),
     VitePWA({
+      // custom service worker (src/sw.ts): precache + runtime caching + Background Sync hook
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.ts',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/*.png', 'rubric/*.jpg'],
       manifest: {
@@ -27,12 +31,10 @@ export default defineConfig({
           { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
-      workbox: {
+      injectManifest: {
         // includes /packs/seed-pack.json, so the offline mapper works right after install
         globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2,json}'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
-        navigateFallback: '/index.html',
-        navigateFallbackDenylist: [/^\/api\//],
       },
       devOptions: { enabled: false },
     }),

@@ -28,6 +28,7 @@ from app.services import audit
 from app.services.ai_service import analyse_evidence
 from app.services.integrity import check_evidence
 from app.services.signing import load_public_key, verify_packet
+from app.services.uploads import UploadStore
 
 router = APIRouter(tags=["M4 evidence"])
 
@@ -100,11 +101,13 @@ async def upload_evidence(
     background: BackgroundTasks,
     packet: str = Form(...),
     signature: str = Form(...),
-    file: UploadFile = File(...),
+    file: UploadFile | None = File(default=None),
+    upload_id: str | None = Form(default=None),
     session: Session = Depends(get_session),
     user: User = Depends(require_roles(Role.assessor)),
 ) -> dict:
-    """Accept a capture packet only if the image hash and the device signature verify."""
+    """Accept a capture packet only if the image hash and the device signature verify.
+    The image comes either as a multipart `file` or as a completed chunked `upload_id`."""
     a = get_visible_assessment(session, assessment_id, user)
     try:
         p = PacketIn.model_validate(json.loads(packet))
@@ -113,7 +116,12 @@ async def upload_evidence(
     if p.assessment_id != assessment_id:
         raise HTTPException(422, "Packet is for a different assessment")
 
-    data = await file.read(MAX_BYTES + 1)
+    if upload_id:
+        data = uploads_for(request).assemble(upload_id, user.id)
+    elif file is not None:
+        data = await file.read(MAX_BYTES + 1)
+    else:
+        raise HTTPException(422, "Send the image as `file` or a completed `upload_id`")
     if len(data) > MAX_BYTES:
         raise HTTPException(413, "Image too large")
     if hashlib.sha256(data).hexdigest() != p.sha256:
@@ -174,7 +182,7 @@ async def upload_evidence(
         qc=p.qc,
         integrity_flags=flags,
         file_path=key,
-        mime=file.content_type or "image/jpeg",
+        mime=(file.content_type if file is not None and file.content_type else "image/jpeg"),
         size_bytes=len(data),
         client_id=p.client_id,
     )
@@ -234,3 +242,38 @@ def evidence_image(
         media_type=e.mime,
         headers={"Cache-Control": "private, max-age=3600"},
     )
+
+
+# ---------------------------------------------------------------- chunked uploads
+
+
+def uploads_for(request: Request) -> UploadStore:
+    return UploadStore(request.app.state.settings.storage_path / "uploads")
+
+
+class UploadInitIn(BaseModel):
+    sha256: str = Field(pattern="^[0-9a-f]{64}$")
+    size: int = Field(gt=0)
+    total_chunks: int = Field(gt=0)
+
+
+@router.post("/uploads", status_code=201)
+def init_upload(
+    body: UploadInitIn, request: Request, user: User = Depends(require_roles(Role.assessor))
+) -> dict:
+    """Start (or resume) a chunked image upload."""
+    return uploads_for(request).init(user.id, body.sha256, body.size, body.total_chunks)
+
+
+@router.get("/uploads/{upload_id}")
+def upload_status(
+    upload_id: str, request: Request, user: User = Depends(require_roles(Role.assessor))
+) -> dict:
+    return uploads_for(request).status(upload_id, user.id)
+
+
+@router.put("/uploads/{upload_id}/chunks/{index}")
+async def put_chunk(
+    upload_id: str, index: int, request: Request, user: User = Depends(require_roles(Role.assessor))
+) -> dict:
+    return uploads_for(request).put_chunk(upload_id, user.id, index, await request.body())
