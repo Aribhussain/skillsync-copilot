@@ -36,10 +36,22 @@ test('reused product photo for another candidate is flagged for the assessor', a
   const product = page.getByTestId('evidence-product')
   await expect(product.getByTestId('flag-reused_image')).toBeVisible()
   await expect(product.getByTestId('flag-reused_image')).toHaveAttribute('data-severity', 'high')
-  await expect(product.getByTestId('flag-reused_image')).toContainText(`#${first.assessmentId}`)
+  // The flag names the EARLIEST copy: the first candidate's on a fresh database, or an older
+  // run's (the simulated sample photo is deterministic), never a later assessment.
+  const flagged = await product.getByTestId('flag-reused_image').textContent()
+  expect(referencedAssessment(flagged)).toBeLessThanOrEqual(first.assessmentId)
 
-  // The first candidate's evidence carries no reuse flag.
+  // The first candidate's evidence is never flagged as a copy of the later one.
   await page.goto(`/assessor/assessment/${first.assessmentId}`)
   await expect(page.getByTestId('evidence-product')).toBeVisible()
-  await expect(page.getByTestId('evidence-product').getByTestId('flag-reused_image')).toHaveCount(0)
+  const firstFlag = page.getByTestId('evidence-product').getByTestId('flag-reused_image')
+  if ((await firstFlag.count()) > 0) {
+    expect(referencedAssessment(await firstFlag.textContent())).toBeLessThan(first.assessmentId)
+  }
 })
+
+function referencedAssessment(text: string | null): number {
+  const m = /#(\d+)/.exec(text ?? '')
+  expect(m, `no assessment reference in: ${text}`).not.toBeNull()
+  return Number(m![1])
+}
