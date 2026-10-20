@@ -231,5 +231,37 @@
       "rubric_ambiguity": "Rubric is ambiguous",
       "other": "Other (add a note)"
     }
+  },
+  "qa": {
+    "auditOk": "Audit chain verified ({n} entries)",
+    "auditBroken": "Audit chain BROKEN",
+    "seed": "Seed golden packets",
+    "explainer": "Agreement is measured on hidden, pre-graded golden packets with Krippendorff's alpha (ordinal). 1 = perfect agreement, 0 = chance.",
+    "alphaBlind": "α blind (unassisted)",
+    "alphaFinal": "α final (after AI reveal)",
+    "alphaDecision": "α pass/fail decision",
+    "aiAgreement": "Blind score within ±1 of AI",
+    "units": "{units} golden units · {scores} scores",
+    "empty": "No golden-packet scores yet. Seed golden packets, then have assessors score them.",
+    "trend": "α over time (weekly)",
+    "blind": "blind",
+    "final": "final",
+    "heatmap": "Assessor × NOS drift (mean score − consensus)",
+    "meanDeviation": "mean deviation",
+    "lenient": "lenient +",
+    "severe": "severe −",
+    "centres": "Centre comparison (mean Calibration Index)",
+    "reasons": "Reason codes for large AI gaps",
+    "noReasons": "No reason codes recorded yet.",
+    "indexTitle": "Calibration Index per assessor",
+    "perPcTable": "α per PC (table)",
+    "assessor": "Assessor",
+    "centre": "Centre",
+    "index": "Index",
+    "bias": "Bias",
+    "drift": "Drift",
+    "privacy": "Individual indices are visible only to the assessor themselves and to QA.",
+    "myIndex": "My Calibration Index",
+    "myIndexNote": "Private — only you and the QA lead see this. 100 = matches the expert consensus."
   }
 }

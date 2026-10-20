@@ -3,11 +3,14 @@ import { onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import { type AssessmentCard, fetchQueue } from '../lib/assessor'
+import { fetchMyIndex } from '../lib/calibration'
 
 const { t } = useI18n()
 const queue = ref<AssessmentCard[]>([])
 const fromCache = ref(false)
 const error = ref('')
+
+const myIndex = ref<{ index: number | null; bias: number | null; n: number } | null>(null)
 
 onMounted(async () => {
   try {
@@ -17,6 +20,9 @@ onMounted(async () => {
   } catch (e) {
     error.value = String(e)
   }
+  fetchMyIndex()
+    .then((m) => (myIndex.value = m))
+    .catch(() => undefined)
 })
 </script>
 
@@ -25,6 +31,11 @@ onMounted(async () => {
     <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
       <h1 class="text-2xl font-bold">{{ t('home.assessorTitle') }}</h1>
       <span v-if="fromCache" class="chip bg-saffron-100">{{ t('assessor.offlineCopy') }}</span>
+    </div>
+    <div v-if="myIndex && myIndex.n" class="mb-3 rounded-xl bg-navy-50 p-3 text-sm" data-testid="my-index">
+      <b>{{ t('qa.myIndex') }}: {{ myIndex.index }}</b>
+      <span class="ml-2 text-navy-700">{{ t('qa.bias') }} {{ myIndex.bias! > 0 ? '+' : '' }}{{ myIndex.bias }} · n={{ myIndex.n }}</span>
+      <div class="text-xs text-navy-700">{{ t('qa.myIndexNote') }}</div>
     </div>
     <p v-if="error" class="rounded-lg bg-saffron-100 p-2 text-sm" role="alert">{{ error }}</p>
     <p v-if="!queue.length && !error" class="text-navy-700">{{ t('assessor.emptyQueue') }}</p>

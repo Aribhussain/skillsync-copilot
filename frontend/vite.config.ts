@@ -37,6 +37,10 @@ export default defineConfig({
       devOptions: { enabled: false },
     }),
   ],
+  // Pre-bundle lazily imported heavy deps so the dev server never re-optimises mid-navigation.
+  optimizeDeps: {
+    include: ['echarts/core', 'echarts/charts', 'echarts/components', 'echarts/renderers', 'vue-echarts', 'qrcode'],
+  },
   server: { port: 5173, strictPort: true },
   preview: { port: 4173, strictPort: true },
   test: {
