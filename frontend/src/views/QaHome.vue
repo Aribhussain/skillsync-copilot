@@ -7,6 +7,7 @@ import { computed, onMounted, ref } from 'vue'
 import VChart from 'vue-echarts'
 import { useI18n } from 'vue-i18n'
 
+import StudiesPanel from '../components/StudiesPanel.vue'
 import { type CalibrationSummary, fetchAuditVerify, fetchSummary, seedGolden } from '../lib/calibration'
 
 use([CanvasRenderer, LineChart, BarChart, HeatmapChart, GridComponent, TooltipComponent, LegendComponent, VisualMapComponent])
@@ -234,6 +235,8 @@ const reasonOption = computed(() => {
         <p class="mt-2 text-xs text-navy-700">{{ t('qa.privacy') }}</p>
       </section>
     </template>
+
+    <StudiesPanel />
   </div>
 </template>
 

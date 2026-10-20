@@ -315,5 +315,22 @@
     "status": "Status",
     "notFound": "Credential not found.",
     "mine": "My certificates"
+  },
+  "study": {
+    "title": "Consistency study",
+    "armOff": "Assistance OFF",
+    "armOn": "Assistance ON",
+    "offHint": "Score from the photo only. No rubric anchors, no AI.",
+    "onHint": "Same packets again, now with rubric anchors; the AI second opinion appears after each blind score.",
+    "finished": "All packets scored in both arms. Thank you!",
+    "next": "Next packet",
+    "invited": "You are invited to a consistency study",
+    "panelTitle": "Live consistency studies (real raters)",
+    "panelLead": "Raters score the same golden packets with assistance OFF, then ON. Alpha is computed from their real scores, not simulated.",
+    "namePlaceholder": "Study name, e.g. ITI Pune pilot",
+    "create": "Create study",
+    "name": "Study",
+    "scores": "Scores OFF / ON",
+    "realNote": "Real scores from real raters; small samples give wide uncertainty."
   }
 }

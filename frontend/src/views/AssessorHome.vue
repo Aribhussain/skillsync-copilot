@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 
 import { type AssessmentCard, fetchQueue } from '../lib/assessor'
 import { fetchMyIndex } from '../lib/calibration'
+import { listStudies, type Study } from '../lib/studies'
 
 const { t } = useI18n()
 const queue = ref<AssessmentCard[]>([])
@@ -23,7 +24,12 @@ onMounted(async () => {
   fetchMyIndex()
     .then((m) => (myIndex.value = m))
     .catch(() => undefined)
+  listStudies()
+    .then((s) => (studies.value = s))
+    .catch(() => undefined)
 })
+
+const studies = ref<Study[]>([])
 </script>
 
 <template>
@@ -36,6 +42,19 @@ onMounted(async () => {
       <b>{{ t('qa.myIndex') }}: {{ myIndex.index }}</b>
       <span class="ml-2 text-navy-700">{{ t('qa.bias') }} {{ myIndex.bias! > 0 ? '+' : '' }}{{ myIndex.bias }} · n={{ myIndex.n }}</span>
       <div class="text-xs text-navy-700">{{ t('qa.myIndexNote') }}</div>
+    </div>
+    <div v-if="studies.length" class="mb-3 rounded-xl border-2 border-dashed border-navy-700 p-3" data-testid="my-studies">
+      <div class="text-sm font-bold">🧪 {{ t('study.invited') }}</div>
+      <RouterLink
+        v-for="s in studies"
+        :key="s.id"
+        :to="`/assessor/studies/${s.id}`"
+        class="mt-1 flex justify-between text-sm underline"
+        :data-testid="`study-link-${s.id}`"
+      >
+        <span>{{ s.name }}</span>
+        <span>OFF {{ s.progress.off }}/{{ s.progress.per_arm }} · ON {{ s.progress.on }}/{{ s.progress.per_arm }}</span>
+      </RouterLink>
     </div>
     <p v-if="error" class="rounded-lg bg-saffron-100 p-2 text-sm" role="alert">{{ error }}</p>
     <p v-if="!queue.length && !error" class="text-navy-700">{{ t('assessor.emptyQueue') }}</p>

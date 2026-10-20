@@ -24,6 +24,7 @@ from app.api import (
     qps,
     scoring,
     speech,
+    studies,
 )
 from app.core.config import Settings, get_settings
 from app.core.db import make_engine, run_migrations
@@ -84,6 +85,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(calibration.router)
     app.include_router(profile.router)
     app.include_router(credentials.router)
+    app.include_router(studies.router)
     return app
 
 

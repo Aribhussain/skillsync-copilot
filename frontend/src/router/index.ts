@@ -55,6 +55,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../views/assessor/ProfileView.vue'),
     meta: { roles: ['assessor', 'qa_lead', 'admin'] },
   },
+  {
+    path: '/assessor/studies/:id',
+    component: () => import('../views/assessor/StudyView.vue'),
+    meta: { roles: ['assessor'] },
+  },
   { path: '/qa', component: () => import('../views/QaHome.vue'), meta: { roles: ['qa_lead', 'admin'] } },
   { path: '/:pathMatch(.*)*', redirect: '/login' },
 ]

@@ -7,6 +7,7 @@ from app.models.declaration import Declaration, QPEmbedding
 from app.models.evidence import DeviceKey, Evidence
 from app.models.lexicon import LexiconAddition
 from app.models.scoring import AIAnalysis, PCScore
+from app.models.study import Study, StudyScore
 from app.models.user import Role, User
 
 __all__ = [
@@ -22,5 +23,7 @@ __all__ = [
     "LexiconAddition",
     "QPEmbedding",
     "Role",
+    "Study",
+    "StudyScore",
     "User",
 ]
