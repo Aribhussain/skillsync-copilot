@@ -115,8 +115,8 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
           cache-dependency-path: backend/requirements*.txt
-      - name: Smoke-test deps (the script reuses backend test helpers)
-        run: pip install -r backend/requirements.txt
+      - name: Smoke-test deps (the script reuses backend test helpers and httpx)
+        run: pip install -r backend/requirements-dev.txt
       - run: docker compose up -d --build --wait
       - run: python scripts/smoke_full.py
       - name: Logs on failure
