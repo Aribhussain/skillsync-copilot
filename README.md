@@ -191,4 +191,4 @@ The project is under **MIT** ([LICENSE](LICENSE)). Every dependency is permissiv
 
 ## Team
 
-SIH 2026 · PS 26242. *Team name and members: add before submission.* Built by [@Aribhussain](https://github.com/Aribhussain) with Claude Code.
+SIH 2026 · PS 26242. *Team name: PIXEL TITANS .* Built by [@Aribhussain](https://github.com/Aribhussain) ,[@mdtabishgithub](https://github.com/mdtabishgithub) and Team.
