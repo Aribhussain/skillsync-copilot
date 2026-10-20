@@ -87,3 +87,29 @@ Each entry: date · decision · why.
 - **The e2e integrity spec assumed a fresh database.** The simulated sample photo is deterministic, so on a reused database the reuse flag correctly points at an older run's copy. The spec now asserts the rule itself: the flag names the earliest copy, never a later assessment.
 - **MySQL 8 / SQL Server: supported but not run live.** At the user's request, the suite was not run against the installed MySQL. `scripts/setup_db.py` creates the database and app user, then runs the migrations. The admin password comes from getpass (or an env var) and is never stored. The app password is generated and printed once, inside the `DATABASE_URL` line. What is tested: identifier validation, password quoting and masking, URL escaping, and the dry run (`tests/test_setup_db.py`), plus offline DDL for both dialects. What is not: a live connection, and dialect behaviour at runtime (e.g. the audit sealer's locking on MySQL).
 - **Cross-platform tasks:** `make` isn't available on Windows by default, so the root `package.json` mirrors the Makefile (`npm run setup | lite | test | full:up | full:smoke | full:down`). `scripts/dev.mjs` runs uvicorn and Vite together, starting Vite through Node directly with no shell.
+
+## 2026-10-20 · CI, demo seed, screenshots, docs and v1.0.0 (Phase 14)
+
+- **CI runs on GitHub Actions** (`.github/workflows/ci.yml`, actions v7):
+  - backend ruff + pytest;
+  - frontend eslint, vue-tsc, vitest and build;
+  - Playwright e2e against the dev servers, plus the offline e2e against the built PWA (Chromium is installed on the runner only);
+  - a Docker full-mode job that runs compose and the smoke test.
+
+  All four jobs are green on `main`. The first CI run caught two real problems that local runs had hidden.
+  - **A test race.** The scoring spec checked "outbox empty" before sealing had queued anything, then navigated away. Specs now wait for `sealed-all`, as the capture spec already did.
+  - **Brittle navigation.** `goBack()` after logout was unreliable, so the profile spec now opens the verify URL directly.
+- **Real layout bug found by the screenshots.** At 390 px the scoring and QA screens scrolled sideways (528 / 566 px wide): page-level grids had an auto column that grew to the NOS chip row's content. The fix is `grid-cols-1` (`minmax(0, 1fr)`) on the page grids. A new e2e test checks that no worker, assessor or QA screen scrolls sideways at phone width.
+- **Redis → Valkey (licence).** `redis:7-alpine` resolves to Redis 7.4.11, which is RSALv2/SSPLv1 (source-available, not permissive). Valkey 8.1 (BSD-3-Clause) speaks the same protocol, and the smoke test passes unchanged. Container licences were checked against the upstream repos: PostgreSQL and pgvector (PostgreSQL Licence), SeaweedFS (Apache-2.0), Valkey (BSD-3), nginx (BSD-2).
+- **Disclosed transitive licences:** `certifi` is MPL-2.0, an unmodified CA bundle pulled in by httpx and minio; matplotlib's licence is PSF-style and it is a dev dependency only.
+- **Evidence consent is now enforced on the server.** Uploads for a real worker need that worker's current `evidence_capture` consent. Otherwise the API returns 409 and audits `evidence.rejected` / `no_consent`. Golden and study packets have no worker and are unaffected. Before this, only the UI asked for photo consent.
+- **`scripts/seed_demo.py`** drives the real API in-process (FastAPI TestClient), so seeded rows carry real signatures and audit entries. It creates:
+  - 6 SYNTHETIC workers;
+  - assessments in every state (requested / in_progress with a reuse flag / scored / signed_off with a credential);
+  - scored golden packets.
+
+  `worker1` is left untouched for the live demo. The script is idempotent: a `demo.seeded` audit marker makes a second run a no-op, and `--reset` wipes the SQLite DB.
+- **Screenshots live in `frontend/e2e-shots/`,** not `scripts/screenshots.ts` as the brief said: Playwright resolves `@playwright/test` from `frontend/node_modules`. Run them with `npm run screenshots`. Screenshot 1 injects a **simulated** SpeechRecognition so the real voice UI can be shown headless; this is stated in the spec, the README and here.
+- **Fresh-clone check:** `npm run setup` and `npm run lite` work from a clean clone. On Windows, very long clone paths hit the 260-character limit inside the joblib test data. Setup now prints a clear message, and the README says to clone to a short path.
+- **API reference:** `docs/API.md` is generated from the live OpenAPI schema (62 operations). `/docs` stays the source of truth.
+

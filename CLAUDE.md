@@ -37,20 +37,15 @@ docs/       documentation, results/, screenshots/
 
 The full original brief is in [docs/BUILD_PROMPT.md](docs/BUILD_PROMPT.md); the session clarifications are at its end.
 
-**Done:** Phases 0–13 (tags v0.1.0, v0.3.0, v0.5.0, v0.8.0). Phase 13 added:
-- Docker full mode (`docker-compose.yml`): Postgres 16 + pgvector, SeaweedFS as the S3 store (MinIO is AGPL and no longer on Docker Hub), Redis, the API, a Celery worker, and nginx serving the PWA on :8080.
-- Env-switched storage and queue adapters, plus `PgVectorIndex`.
-- `scripts/smoke_full.py` and `npm run e2e:docker` (all passed on the live stack, which was then torn down).
-- The `pending` AI status with `/ai-refresh` polling, and two real bugs fixed (the Postgres seq identity, the auto-train defaults).
-- `scripts/setup_db.py` for MySQL / SQL Server: offline-tested only, by the user's choice.
-- A Makefile, plus root `package.json` scripts that work on Windows.
+**Done: all phases 0–14** (tags v0.1.0, v0.3.0, v0.5.0, v0.8.0, v1.0.0, with a GitHub release and screenshots). CI is green on `main`.
+- Phase 13 (Docker full mode, MySQL / SQL Server via `setup_db.py`) and Phase 14 (CI, `npm run seed`, `npm run screenshots`, README / DEMO_SCRIPT / API / PRIVACY docs) are recorded in docs/DECISIONS.md.
 
-**Resume at: Phase 14.**
-- CI `.github/workflows/ci.yml`: ruff, pytest, eslint, vue-tsc, vitest, build, Playwright (CI installs chromium), and e2e:pwa.
-- `scripts/seed_demo.py` (the Makefile `seed` target already points at it).
-- `scripts/screenshots.ts`: 4 screenshots at 1280×800 and 390×844 into `docs/screenshots`.
-- README (pitch, PS→module→code table, Mermaid, quick start, demo accounts, 5-minute demo, support-vs-replace, results, licences), `docs/DEMO_SCRIPT.md`, `docs/API.md`, `docs/PRIVACY.md`.
-- Tag `v1.0.0` and create a GitHub release with the screenshots.
+**If work resumes:** pick from the honest limitations in the README:
+- a worker-facing data access and erasure flow;
+- an external VC verifier check;
+- the Vosk offline speech adapter;
+- real-assessor runs of the live consistency study;
+- MySQL / SQL Server live runs.
 
 **Open issues / decisions to remember**
 - MySQL / SQL Server have not been run live: only the offline DDL and `setup_db.py` planning tests exist (user's choice). The Docker image has no torch, so the embedding re-rank is off in full mode.
@@ -105,4 +100,4 @@ docker compose down -v                       # -v also deletes the data volumes
 - [x] 11 Consistency study
 - [x] 12 Offline hardening + sync
 - [x] 13 Docker full mode / MySQL support
-- [ ] 14 CI, demo seed, screenshots, docs → v1.0.0
+- [x] 14 CI, demo seed, screenshots, docs → v1.0.0

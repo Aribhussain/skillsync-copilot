@@ -34,7 +34,7 @@ flowchart TB
 
   subgraph L4["L4 · Data & audit"]
     DB[("SQLite (default) | MySQL | SQL Server<br/>| Postgres+pgvector (Docker)")]
-    FS[("local storage/ | MinIO")]
+    FS[("local storage/ | S3 store (SeaweedFS)")]
     AL[("hash-chained audit ledger")]
     VI["VectorIndex<br/>numpy cosine | pgvector"]
   end
