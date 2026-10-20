@@ -62,7 +62,7 @@ async function saveOverride(pc: PlanPC) {
 </script>
 
 <template>
-  <div v-if="data && card" class="grid gap-4" data-testid="assessment-view">
+  <div v-if="data && card" class="grid grid-cols-1 gap-4" data-testid="assessment-view">
     <section class="card">
       <div class="flex flex-wrap items-start justify-between gap-2">
         <div>

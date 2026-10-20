@@ -127,7 +127,7 @@ const reasonOption = computed(() => {
 </script>
 
 <template>
-  <div class="grid gap-4" data-testid="qa-dashboard">
+  <div class="grid grid-cols-1 gap-4" data-testid="qa-dashboard">
     <section class="card">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <h1 class="text-2xl font-bold">{{ t('home.qaTitle') }}</h1>

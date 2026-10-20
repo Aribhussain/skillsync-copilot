@@ -58,7 +58,7 @@ const allDone = computed(() => task.value?.pcs?.every((p) => p.done) ?? false)
 </script>
 
 <template>
-  <div class="grid gap-4" data-testid="study-view">
+  <div class="grid grid-cols-1 gap-4" data-testid="study-view">
     <section class="card">
       <h1 class="text-2xl font-bold">{{ t('study.title') }}</h1>
       <p class="text-sm">

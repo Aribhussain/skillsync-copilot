@@ -48,7 +48,7 @@ onBeforeUnmount(() => unsubscribe?.())
 </script>
 
 <template>
-  <div v-if="plan" class="grid gap-4" data-testid="scoring-view">
+  <div v-if="plan" class="grid grid-cols-1 gap-4" data-testid="scoring-view">
     <section class="card">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <h1 class="text-2xl font-bold">{{ t('scoring.title') }}</h1>
@@ -69,6 +69,7 @@ onBeforeUnmount(() => unsubscribe?.())
           :key="n.nos_id"
           class="chip shrink-0 px-3 py-1.5"
           :class="nosFilter === n.nos_id ? 'bg-navy-900 text-white' : 'bg-navy-100'"
+          :data-testid="`nos-filter-${n.nos_id.replace('ASC/', '')}`"
           @click="nosFilter = n.nos_id"
         >
           {{ n.nos_id.replace('ASC/', '') }}

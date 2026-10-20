@@ -60,7 +60,7 @@ const BAR: Record<string, string> = { competent: 'bg-green-india-600', partial: 
 </script>
 
 <template>
-  <div v-if="profile" class="grid gap-4" data-testid="profile-view">
+  <div v-if="profile" class="grid grid-cols-1 gap-4" data-testid="profile-view">
     <section class="card">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <h1 class="text-2xl font-bold">{{ t('profile.title') }}</h1>
