@@ -27,4 +27,24 @@ test('competency profile: a GTAW gap gives Partial with a GTAW bridge module', a
   await expect(page.getByTestId('nos-row-ASC/N3124')).toHaveAttribute('data-status', 'gap')
   await expect(page.getByTestId('bridge-ASC/N3124')).toContainText('GTAW')
   await expect(page.getByTestId('nos-row-ASC/N3122')).toHaveAttribute('data-status', 'competent')
+
+  // human gate: sign off with password -> credential with QR -> public verify page
+  await page.getByTestId('signoff-confirm').check()
+  await page.getByTestId('signoff-password').fill('wrong-password')
+  await page.getByTestId('signoff-submit').click()
+  await expect(page.getByTestId('signoff-error')).toBeVisible()
+  await page.getByTestId('signoff-password').fill('assessor123')
+  await page.getByTestId('signoff-submit').click()
+  await expect(page.getByTestId('signed-off')).toBeVisible()
+  await expect(page.getByTestId('credential-qr')).toBeVisible()
+  await page.getByTestId('verify-link').click()
+  await expect(page.getByTestId('verify-status')).toHaveAttribute('data-valid', 'true')
+  await expect(page.getByTestId('verify-view')).toContainText('Ramesh Kumar')
+
+  // anyone can verify without logging in; the worker sees the certificate at home
+  await page.getByTestId('logout').click()
+  await page.goBack()
+  await expect(page.getByTestId('verify-status')).toHaveAttribute('data-valid', 'true')
+  await loginAs(page, 'worker1')
+  await expect(page.getByTestId('my-credentials')).toBeVisible()
 })

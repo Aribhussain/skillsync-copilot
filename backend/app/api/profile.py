@@ -9,6 +9,7 @@ from app.api.assessments import assessment_card, get_visible_assessment
 from app.core.db import get_session
 from app.core.deps import get_current_user
 from app.models.assessment import Assessment
+from app.models.credential import Credential
 from app.models.scoring import PCScore
 from app.models.user import Role, User
 from app.services.profile import build_profile
@@ -43,4 +44,11 @@ def competency_profile(
     a = get_visible_assessment(session, assessment_id, user)
     if user.role == Role.worker and a.status != "signed_off":
         raise HTTPException(403, "Your profile is available after the assessor signs off")
-    return {"assessment": assessment_card(session, a, user), **profile_for(session, a)}
+    cred = session.exec(select(Credential).where(Credential.assessment_id == a.id)).first()
+    return {
+        "assessment": assessment_card(session, a, user),
+        **profile_for(session, a),
+        "decision": a.decision,
+        "decision_justification": a.decision_justification,
+        "credential_id": cred.id if cred else None,
+    }

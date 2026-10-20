@@ -28,6 +28,11 @@ class Assessment(SQLModel, table=True):
     # display name when there is no worker account (e.g. calibration packets)
     candidate_label: str | None = Field(default=None, max_length=128)
     started_at: datetime | None = Field(default=None)
+    # set only by POST /assessments/{id}/signoff (assessor, password re-entered)
+    decision: str | None = Field(default=None, max_length=16)  # full | partial | gap
+    decision_justification: str | None = Field(default=None, max_length=1000)
+    signed_off_at: datetime | None = Field(default=None)
+    signed_off_by: int | None = Field(default=None, foreign_key="users.id")
     challenge_code: str | None = Field(default=None, max_length=12)
     centre: str | None = Field(default=None, max_length=128)
     # Golden packets are pre-graded calibration items. This flag is never exposed to assessors.

@@ -13,6 +13,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/', redirect: '/login' },
   { path: '/login', component: () => import('../views/LoginView.vue'), meta: { public: true } },
   { path: '/about', component: () => import('../views/AboutView.vue'), meta: { public: true } },
+  { path: '/verify/:id', component: () => import('../views/VerifyView.vue'), meta: { public: true } },
   { path: '/worker', component: () => import('../views/WorkerHome.vue'), meta: { roles: ['worker'] } },
   {
     path: '/worker/consent',

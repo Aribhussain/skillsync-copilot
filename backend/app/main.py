@@ -14,6 +14,7 @@ from app.api import (
     audit,
     auth,
     calibration,
+    credentials,
     declarations,
     evidence,
     health,
@@ -82,6 +83,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(scoring.router)
     app.include_router(calibration.router)
     app.include_router(profile.router)
+    app.include_router(credentials.router)
     return app
 
 

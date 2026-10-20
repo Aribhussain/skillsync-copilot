@@ -42,3 +42,21 @@ Each entry: date · decision · why.
   Exact copies (same SHA-256 in another assessment) are always flagged. All integrity results are **flags for assessor review; nothing is auto-rejected**. A guard test keeps the 12 bundled demo samples pairwise above the threshold (the closest pair is 8).
 - **OCR of the challenge code is optional.** pytesseract isn't installed, so a `ocr_skipped` info flag tells the assessor to confirm the code visually.
 - **Process note:** piping test output through `tail` hides failures, so checks now use `set -o pipefail` / `PIPESTATUS`. A repo-root `ruff.toml` makes `scripts/` and `ml/` lint the same way from any directory.
+
+## 2026-10-20 · Blind-first scoring, calibration, profile and credential (Phases 9–10)
+
+- **Shadow rater:** two RandomForests over 11 explainable OpenCV features, behind a `ShadowRater` interface. On synthetic data it scores 95% defect / 90% level accuracy on the hold-out and on a fresh seed. It's labelled everywhere as a demo trained on synthetic images, and the model file is a git-ignored build artefact that the server trains on first use.
+- **Blind-first lives in the API, not the UI.** The suggestion is computed and returned only in the response to the assessor's own blind score, and `GET /ai-suggestions` returns 403 for unscored PCs. Tests assert that no assessor-visible endpoint contains AI fields beforehand.
+- **Krippendorff's α is in-house and verified:** it matches the GPL reference implementation to < 1e-15 on 300 random matrices and on the canonical example. The reference ran only in a scratch venv and is not a dependency. With few raters and low consensus variance, α is sensitive: one lenient assessor (+1) drove ordinal α to about 0.1–0.35 in tests. That is the intended behaviour.
+- **Golden packets are SYNTHETIC.** Their consensus is derived from generator ground truth. They're seeded as ordinary-looking assessments whose evidence is genuinely signed by a per-assessor "demo seeder" device key.
+- **Audit ledger changed to "append, then seal"** after a real race under concurrent requests (`UNIQUE constraint failed: audit_ledger.seq`). Entries are written atomically with the business change (DB-assigned `seq`) and chained after commit by a serialised in-process sealer (`chain_index`, `prev_hash`, `hash`). Existing ledgers keep their hashes (`chain_index = seq`). Limitations: there's a millisecond-scale unsealed window, and a multi-process deployment would need a DB-level lock for the sealer (e.g. `SELECT … FOR UPDATE` on MySQL/Postgres).
+- **Competency profile:** each PC carries its own theory/practical/viva marks from the NQR file, and level fractions are 0 / 0.4 / 0.8 / 1.0. Full requires a ≥ 70% aggregate, every PC assessed and no critical PC below level 2. That's why the golden-path case (71.1% aggregate with a GTAW gap) comes out **Partial**.
+- **Sign-off is the only path to a decision.** It needs the assessor's re-entered password, every PC scored, every large-gap reason filled, and a justification if the decision differs from the recommendation. A Gap decision issues no credential.
+- **Verifiable credential:**
+  - The issuer is a `did:key` derived from a server Ed25519 key in `storage/keys/` (git-ignored).
+  - The proof follows the `eddsa-jcs-2022` construction. Canonicalisation is sorted-key compact JSON, which equals JCS for this document's value types (numbers are serialised as strings to avoid float-format differences).
+  - **Not yet checked with an external VC verifier.** base58btc is checked against the standard "Hello World!" vector, and the DID has the expected `z6Mk` prefix.
+- **SIDH export is a mock schema** (`skillsync.sidh-export.mock.v1`, `"mock": true`), not the official Skill India Digital Hub API.
+- **Frontend notes:**
+  - vue-echarts fills its parent, so charts sit in fixed-height wrappers.
+  - Vite now pre-bundles echarts and qrcode, because runtime discovery made the dev server re-optimise mid-navigation and hang the first dashboard load.

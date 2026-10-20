@@ -2,7 +2,9 @@
 import { onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import CredentialCard from '../components/CredentialCard.vue'
 import type { LocalDeclaration } from '../lib/db'
+import { myCredentials } from '../lib/profile'
 import { hasConsent, myDeclarations } from '../lib/worker'
 import { useAuthStore } from '../stores/auth'
 
@@ -11,9 +13,14 @@ const auth = useAuthStore()
 const consented = ref<boolean | null>(null)
 const items = ref<LocalDeclaration[]>([])
 
+const creds = ref<Awaited<ReturnType<typeof myCredentials>>>([])
+
 onMounted(async () => {
   consented.value = await hasConsent(auth.user!.username)
   items.value = await myDeclarations(auth.user!.username)
+  myCredentials()
+    .then((c) => (creds.value = c))
+    .catch(() => undefined)
 })
 
 function topTitle(d: LocalDeclaration): string {
@@ -38,6 +45,13 @@ function topTitle(d: LocalDeclaration): string {
       <RouterLink v-else-if="consented" to="/worker/declare" class="btn-saffron w-full text-lg sm:w-auto" data-testid="go-declare">
         🎤 {{ t('worker.declareCta') }}
       </RouterLink>
+    </section>
+
+    <section v-if="creds.length" class="card" data-testid="my-credentials">
+      <h2 class="mb-2 text-lg font-bold">{{ t('credential.mine') }}</h2>
+      <div class="grid gap-2">
+        <CredentialCard v-for="c in creds" :key="c.credential_id" :credential-id="c.credential_id" :title="c.title" :result="t(`profile.rec.${c.result}`)" />
+      </div>
     </section>
 
     <section class="card">

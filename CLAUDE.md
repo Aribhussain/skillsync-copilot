@@ -37,26 +37,13 @@ docs/       documentation, results/, screenshots/
 
 The full original brief is in [docs/BUILD_PROMPT.md](docs/BUILD_PROMPT.md); the session clarifications are at its end.
 
-**Done:** Phases 0–9 (tags v0.1.0, v0.3.0, v0.5.0), plus the first of the four Phase 10 commits:
-`a883a79 feat(calibration): golden packets, Krippendorff alpha and calibration index`.
+**Done:** Phases 0–10 (tags v0.1.0, v0.3.0, v0.5.0, v0.8.0). Phase 10 added calibration (golden packets, alpha, Calibration Index), the QA dashboard, the competency profile, and sign-off with a W3C VC, QR verify page, PDF and mock SIDH export. It also included the audit-ledger concurrency fix (append, then seal).
 
-**Resume at: Phase 10, commit 2 of 4.**
-1. `feat(dashboard)`: QA dashboard in `frontend/src/views/QaHome.vue`, built with vue-echarts 8 / echarts 6 (`import VChart from 'vue-echarts'` + `use()` from `echarts/core`). It reads `GET /calibration/summary` and `GET /audit/verify` (for the "chain verified" badge). Panels:
-   - KPI tiles: alpha blind, alpha final, alpha decision, AI agreement.
-   - Alpha trend line: blind vs final, one axis.
-   - Assessor × NOS heat-map: diverging scale with a grey midpoint (lenient vs severe).
-   - Centre comparison bars and reason-code bars.
-   - A table of assessor indices and a "Seed golden packets" button (`POST /calibration/golden/seed`).
+**Resume at: Phase 11, the consistency study.** It has two parts:
+- `scripts/simulate_study.py`: a SIMULATED crossover AB/BA design (30 packets × 8 raters with bias and noise; unassisted vs assisted = rubric anchors + blind-first AI reveal with partial adjustment). It reports alpha per PC and on the decision, decision flips and a time proxy, written to `docs/results/consistency_study.md` with PNG charts.
+- A live study mode: QA creates a study, raters score the same packets with assistance OFF then ON, and the dashboard computes alpha from the real scores.
 
-   Also show the assessor's own index (`GET /calibration/me`) on `AssessorHome`. Follow the dataviz skill: validate the palette with its script and add tooltips.
-2. `feat(profile)`: competency profiler. Level → fraction is {0: 0, 1: 0.4, 2: 0.8, 3: 1.0}. Each PC earns marks × fraction, using its own T/P/V marks. NOS results are ≥ 70% competent, 40–70% partial, < 40% gap. The overall result is Full only if the aggregate is ≥ 70% and no critical PC scored below 2; otherwise Partial or Gap. Gap NOS get their `bridge_module` from the QP JSON. Add an endpoint and a UI.
-3. `feat(credential)`: sign-off with password re-entry, refused if any `reason_required` score lacks a reason; never automatic. Then:
-   - An Ed25519 server key (git-ignored), a W3C VC 2.0 JSON with a `did:key` issuer, the public `/verify/{credential_id}` API and page, and a reportlab PDF with a QR code.
-   - `GET /export/sidh/{assessment_id}` (a mock schema, documented as such).
-
-   Tag `v0.8.0` after this commit.
-
-**Next phases after 10:** 11 consistency study → 12 offline hardening → 13 Docker full mode + MySQL `setup_db.py` (ask the user for the MySQL root password at runtime, or let them run it) → 14 CI, `seed_demo.py`, screenshots, README, `v1.0.0` release.
+**Next phases after 11:** 12 offline hardening → 13 Docker full mode + MySQL `setup_db.py` (ask the user for the MySQL root password at runtime, or let them run it) → 14 CI, `seed_demo.py`, screenshots, README, `v1.0.0` release.
 
 **Open issues / decisions to remember**
 - The `Makefile` doesn't exist yet (Phase 14), so the `make …` commands in this file are planned, not working. Use the manual commands below.
@@ -98,7 +85,7 @@ Planned `make setup / seed / lite-up / test` targets arrive in Phase 14.
 - [x] 7 Evidence plan + assessor checklist
 - [x] 8 Signed P-P-P capture + integrity → v0.5.0
 - [x] 9 Blind-first shadow rater
-- [ ] 10 Calibration, profile, sign-off, credential → v0.8.0
+- [x] 10 Calibration, profile, sign-off, credential → v0.8.0
 - [ ] 11 Consistency study
 - [ ] 12 Offline hardening + sync
 - [ ] 13 Docker full mode / MySQL support

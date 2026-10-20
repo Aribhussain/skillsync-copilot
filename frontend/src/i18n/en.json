@@ -283,5 +283,37 @@
       "gap": "Gap"
     },
     "bridgeModule": "Suggested bridge module"
+  },
+  "signoff": {
+    "title": "Assessor sign-off",
+    "lead": "Your decision is final for this assessment. The recommendation above only supports you. Nothing is submitted automatically.",
+    "notScored": "{n} PC(s) still to score",
+    "pendingReasons": "{n} large AI gap(s) still need a reason code",
+    "decision": "Your decision",
+    "recommended": "recommended",
+    "justification": "Why does your decision differ from the recommendation?",
+    "confirm": "I have reviewed the evidence, the integrity flags and the competency profile.",
+    "password": "Re-enter your password to sign",
+    "submit": "Sign off",
+    "done": "Signed off — decision: {d}",
+    "noCredential": "No credential is issued for a Gap decision; the assessment record and bridge plan are kept."
+  },
+  "credential": {
+    "issued": "Verifiable credential issued",
+    "verify": "Verify",
+    "pdf": "Competency profile (PDF)",
+    "qrAlt": "QR code to verify this credential",
+    "verifyTitle": "Credential verification",
+    "valid": "Valid — signature verified, trusted issuer",
+    "invalid": "NOT valid",
+    "holder": "Holder",
+    "qualification": "Qualification",
+    "result": "Result",
+    "issuedOn": "Issued",
+    "signature": "Signature",
+    "issuer": "Issuer",
+    "status": "Status",
+    "notFound": "Credential not found.",
+    "mine": "My certificates"
   }
 }

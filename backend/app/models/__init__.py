@@ -2,6 +2,7 @@
 
 from app.models.assessment import Assessment
 from app.models.audit import AuditEntry, ConsentRecord
+from app.models.credential import Credential
 from app.models.declaration import Declaration, QPEmbedding
 from app.models.evidence import DeviceKey, Evidence
 from app.models.lexicon import LexiconAddition
@@ -14,6 +15,7 @@ __all__ = [
     "Assessment",
     "AuditEntry",
     "ConsentRecord",
+    "Credential",
     "Declaration",
     "DeviceKey",
     "Evidence",
