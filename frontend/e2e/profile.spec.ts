@@ -42,8 +42,9 @@ test('competency profile: a GTAW gap gives Partial with a GTAW bridge module', a
   await expect(page.getByTestId('verify-view')).toContainText('Ramesh Kumar')
 
   // anyone can verify without logging in; the worker sees the certificate at home
+  const verifyUrl = page.url()
   await page.getByTestId('logout').click()
-  await page.goBack()
+  await page.goto(verifyUrl)
   await expect(page.getByTestId('verify-status')).toHaveAttribute('data-valid', 'true')
   await loginAs(page, 'worker1')
   await expect(page.getByTestId('my-credentials')).toBeVisible()

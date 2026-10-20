@@ -21,6 +21,7 @@ test('blind-first: AI appears only after the blind score; a big gap forces a rea
   await page.getByTestId('simulate-shot').click()
   await page.getByTestId('accept-shot').click()
   await page.getByTestId('seal-all').click()
+  await expect(page.getByTestId('sealed-all')).toBeVisible()
   await expect(page.getByTestId('outbox-count')).toHaveAttribute('data-count', '0', { timeout: 20_000 })
 
   await page.goto(`/assessor/assessment/${assessmentId}`)
