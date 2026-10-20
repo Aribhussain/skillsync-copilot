@@ -6,7 +6,7 @@ import { db, newClientId } from './db'
 import { enqueue, registerHandler } from './sync'
 
 export interface Reveal {
-  status: 'ok' | 'awaiting_photo' | 'none' | null
+  status: 'ok' | 'pending' | 'awaiting_photo' | 'none' | null
   level: number | null
   confidence: number | null
   explanation: string | null
@@ -92,6 +92,14 @@ registerHandler('score', async (item) => {
 
 export async function pendingScore(assessmentId: number, pcId: string): Promise<number | undefined> {
   return (await db.kv.get(`pending-score.${assessmentId}.${pcId}`))?.value as number | undefined
+}
+
+/** Re-check the AI opinion for an already blind-scored PC whose analysis was still running
+ *  (full mode: Celery) or whose photo had not synced. The server keeps blind-first. */
+export async function refreshAi(assessmentId: number, pcId: string): Promise<{ score: ScoreRow; ai: Reveal }> {
+  return api<{ score: ScoreRow; ai: Reveal }>(`/assessments/${assessmentId}/scores/${encodeURIComponent(pcId)}/ai-refresh`, {
+    method: 'POST',
+  })
 }
 
 export async function reviseScore(

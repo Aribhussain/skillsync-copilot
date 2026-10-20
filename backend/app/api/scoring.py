@@ -20,6 +20,7 @@ from app.core.db import get_session
 from app.core.deps import require_roles
 from app.core.security import utcnow
 from app.models.assessment import Assessment
+from app.models.evidence import Evidence
 from app.models.scoring import PCScore
 from app.models.user import Role, User
 from app.services import audit
@@ -112,16 +113,8 @@ def submit_blind_score(
         {"assessment_id": a.id, "pc_id": body.pc_id, "score": body.score},
     )
     # --- reveal (strictly after the blind score has been written)
-    sug = suggestion_for(request.app.state.rater, pc, latest_analysis(session, a.id))
-    s.ai_status = sug["status"]
-    s.ai_level = sug.get("level")
-    s.ai_confidence = sug.get("confidence")
-    s.ai_explanation = sug.get("explanation")
-    s.ai_model_version = sug.get("model_version")
-    s.revealed_at = utcnow()
-    if s.ai_level is not None:
-        s.gap = s.blind_score - s.ai_level
-        s.reason_required = abs(s.gap) >= settings.ai_gap_threshold
+    sug = _suggestion(session, request, a, pc)
+    _apply_suggestion(s, sug, settings.ai_gap_threshold)
     session.add(s)
     audit.record(
         session,
@@ -132,6 +125,69 @@ def submit_blind_score(
     _update_status(session, a, len(pcs), user)
     session.commit()
     session.refresh(s)
+    return {"score": score_view(s), "ai": _reveal_payload(s, sug)}
+
+
+def _suggestion(session: Session, request: Request, a: Assessment, pc: dict) -> dict:
+    """The AI suggestion for one PC. In full mode the analysis runs on a Celery worker, so a
+    product photo can be synced while its analysis is still running: that is `pending`,
+    not `awaiting_photo`, and the client polls /ai-refresh until it resolves."""
+    sug = suggestion_for(request.app.state.rater, pc, latest_analysis(session, a.id))
+    if sug["status"] == "awaiting_photo":
+        has_photo = session.exec(
+            select(Evidence.id).where(Evidence.assessment_id == a.id, Evidence.shot == "product")
+        ).first()
+        if has_photo is not None:
+            sug = {**sug, "status": "pending", "explanation": "Product photo synced; AI analysis running"}
+    return sug
+
+
+def _apply_suggestion(s: PCScore, sug: dict, gap_threshold: int) -> None:
+    s.ai_status = sug["status"]
+    s.ai_level = sug.get("level")
+    s.ai_confidence = sug.get("confidence")
+    s.ai_explanation = sug.get("explanation")
+    s.ai_model_version = sug.get("model_version")
+    s.revealed_at = utcnow()
+    if s.ai_level is not None:
+        s.gap = s.blind_score - s.ai_level
+        s.reason_required = abs(s.gap) >= gap_threshold
+
+
+@router.post("/{assessment_id}/scores/{pc_id}/ai-refresh")
+def refresh_ai(
+    assessment_id: int,
+    pc_id: str,
+    request: Request,
+    session: Session = Depends(get_session),
+    user: User = Depends(require_roles(Role.assessor)),
+) -> dict:
+    """Re-check the AI opinion for a PC this assessor has ALREADY blind-scored, when it was
+    `pending` or `awaiting_photo` at lock time. Blind-first still holds: no score, no AI."""
+    a, pcs = _assessor_assessment(session, assessment_id, user)
+    pc = pcs.get(pc_id)
+    if not pc:
+        raise HTTPException(404, "PC not in this qualification")
+    s = _my_score(session, a.id, pc_id, user)
+    if not s:
+        raise HTTPException(
+            403, "Blind-first: submit your own score for this PC before seeing the AI suggestion"
+        )
+    if s.ai_status not in ("pending", "awaiting_photo"):
+        return {"score": score_view(s), "ai": _reveal_payload(s)}
+    sug = _suggestion(session, request, a, pc)
+    if sug["status"] != s.ai_status:
+        _apply_suggestion(s, sug, request.app.state.settings.ai_gap_threshold)
+        session.add(s)
+        if s.ai_status == "ok":
+            audit.record(
+                session,
+                user.username,
+                "ai.revealed",
+                {"assessment_id": a.id, "pc_id": pc_id, "ai_level": s.ai_level, "gap": s.gap, "late": True},
+            )
+        session.commit()
+        session.refresh(s)
     return {"score": score_view(s), "ai": _reveal_payload(s, sug)}
 
 

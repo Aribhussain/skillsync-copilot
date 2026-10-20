@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import type { PlanPC, Rubric } from '../lib/assessor'
 import { ROUTE_ICON } from '../lib/evidencePlan'
-import { REASON_CODES, type Reveal, reviseScore, type ScoreRow, submitBlindScore } from '../lib/scoring'
+import { REASON_CODES, refreshAi, type Reveal, reviseScore, type ScoreRow, submitBlindScore } from '../lib/scoring'
 import RubricAnchors from './RubricAnchors.vue'
 
 const props = defineProps<{
@@ -106,6 +106,36 @@ async function saveReview() {
   }
 }
 
+// Full mode analyses photos on a worker, so the AI opinion can arrive a moment after the lock.
+const POLL_MS = 1500
+const POLL_MAX = 40
+let pollTimer: ReturnType<typeof setTimeout> | undefined
+const polls = ref(0)
+async function recheckAi() {
+  try {
+    const r = await refreshAi(props.assessmentId, props.pc.pc_id)
+    reveal.value = r.ai
+    if (r.ai.status === 'ok') {
+      finalScore.value = r.score.final_score
+      saved.value = !r.ai.reason_required
+      emit('scored')
+    }
+  } catch {
+    // offline or transient: the next poll (or a manual re-check) tries again
+  }
+}
+function schedulePoll() {
+  clearTimeout(pollTimer)
+  if (reveal.value?.status !== 'pending' || polls.value >= POLL_MAX) return
+  pollTimer = setTimeout(async () => {
+    polls.value += 1
+    await recheckAi()
+    schedulePoll()
+  }, POLL_MS)
+}
+watch(() => reveal.value?.status, schedulePoll, { immediate: true })
+onBeforeUnmount(() => clearTimeout(pollTimer))
+
 const levelText = (lvl: number) => {
   const d = props.rubric.scale.find((s) => s.level === lvl)
   return d ? (locale.value === 'hi' ? d.hi : d.en) : ''
@@ -162,7 +192,16 @@ const levelText = (lvl: number) => {
           <span v-if="reveal.gap" class="chip bg-white" :data-testid="`gap-${pc.pc_id}`">{{ t('scoring.gap') }} {{ reveal.gap > 0 ? '+' : '' }}{{ reveal.gap }}</span>
         </template>
       </div>
-      <p class="mt-1 text-xs">{{ reveal.explanation }}</p>
+      <p v-if="reveal.status === 'pending'" class="mt-1 text-xs" :data-testid="`ai-pending-${pc.pc_id}`">⏳ {{ t('scoring.aiPending') }}</p>
+      <p v-else class="mt-1 text-xs">{{ reveal.explanation }}</p>
+      <button
+        v-if="reveal.status === 'awaiting_photo' || (reveal.status === 'pending' && polls >= POLL_MAX)"
+        class="chip mt-1 bg-white px-3 text-navy-900 underline"
+        :data-testid="`ai-recheck-${pc.pc_id}`"
+        @click="recheckAi"
+      >
+        {{ t('scoring.recheck') }}
+      </button>
       <p v-if="reveal.model_label" class="text-[10px] text-navy-700">{{ reveal.model_label }}</p>
 
       <div v-if="reveal.reason_required" class="mt-2 grid gap-2 rounded-lg bg-white p-2" :data-testid="`reason-box-${pc.pc_id}`">

@@ -216,6 +216,8 @@
     "blindNote": "Your blind score is final and is kept in the audit ledger.",
     "yourBlind": "Your blind score",
     "aiSays": "AI suggests",
+    "aiPending": "AI analysis of the product photo is running…",
+    "recheck": "Check again",
     "gap": "gap",
     "queued": "saved on device — the AI opinion appears after sync.",
     "reasonRequired": "Big gap to the AI suggestion: please give a reason (you may also revise your final score).",

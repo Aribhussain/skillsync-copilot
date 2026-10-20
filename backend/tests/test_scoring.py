@@ -135,3 +135,37 @@ def test_status_becomes_scored_when_every_pc_is_scored(client, auth):
     for pc in iter_pcs(load_corpus()[WELDING]):
         client.post(f"/assessments/{a['id']}/scores", json={"pc_id": pc["id"], "score": 2}, headers=h)
     assert client.get(f"/assessments/{a['id']}", headers=h).json()["status"] == "scored"
+
+
+def test_pending_analysis_resolves_via_ai_refresh(client, auth):
+    """Full mode: the photo is synced but the Celery analysis has not run yet."""
+    from sqlmodel import Session, delete, select
+
+    from app.models.evidence import Evidence
+    from app.models.scoring import AIAnalysis
+    from app.services.ai_service import analyse_evidence
+
+    a, _, h = _with_product_photo(client, auth)
+    st = client.app.state
+    with Session(st.engine) as s:
+        s.exec(delete(AIAnalysis).where(AIAnalysis.assessment_id == a["id"]))
+        s.commit()
+        ev_id = s.exec(select(Evidence.id).where(Evidence.assessment_id == a["id"])).first()
+
+    url = f"/assessments/{a['id']}/scores/{IMAGE_PC}/ai-refresh"
+    assert client.post(url, headers=h).status_code == 403  # blind-first: no score yet
+
+    r = client.post(f"/assessments/{a['id']}/scores", json={"pc_id": IMAGE_PC, "score": 3}, headers=h).json()
+    assert r["ai"]["status"] == "pending" and r["ai"]["level"] is None
+    assert client.post(url, headers=h).json()["ai"]["status"] == "pending"  # still running
+
+    analyse_evidence(st.engine, st.storage, st.rater, ev_id)  # the worker finishes
+    ai = client.post(url, headers=h).json()["ai"]
+    assert ai["status"] == "ok" and ai["level"] <= 1
+    assert ai["gap"] == 3 - ai["level"] and ai["reason_required"] is True
+    mine = next(
+        x for x in client.get(f"/assessments/{a['id']}/scores", headers=h).json() if x["pc_id"] == IMAGE_PC
+    )
+    assert mine["ai_status"] == "ok" and mine["blind_score"] == 3  # the blind score never moves
+    entries = client.get("/audit/entries?action=ai.revealed&limit=5", headers=auth("admin")).json()
+    assert any(e["action"] == "ai.revealed" and e["payload"].get("late") for e in entries)
