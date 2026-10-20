@@ -25,6 +25,7 @@ from app.core.deps import get_current_user, require_roles
 from app.models.evidence import DeviceKey, Evidence
 from app.models.user import Role, User
 from app.services import audit
+from app.services.consent import has_consent
 from app.services.integrity import check_evidence
 from app.services.signing import load_public_key, verify_packet
 from app.services.tasks import dispatch_evidence_analysis
@@ -115,6 +116,13 @@ async def upload_evidence(
         raise HTTPException(422, f"Invalid packet: {exc}") from exc
     if p.assessment_id != assessment_id:
         raise HTTPException(422, "Packet is for a different assessment")
+    # DPDP: photos of a worker need that worker's own, current evidence_capture consent.
+    if a.worker_id is not None and not has_consent(session, a.worker_id, "evidence_capture"):
+        audit.record(
+            session, user.username, "evidence.rejected", {"assessment_id": a.id, "reason": "no_consent"}
+        )
+        session.commit()
+        raise HTTPException(409, "The worker has not consented to evidence capture (or has withdrawn it)")
 
     if upload_id:
         data = uploads_for(request).assemble(upload_id, user.id)

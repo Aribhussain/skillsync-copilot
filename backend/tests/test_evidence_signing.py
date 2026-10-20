@@ -113,3 +113,21 @@ def test_device_id_cannot_be_hijacked(client, auth):
 def test_workers_cannot_see_evidence(client, auth):
     a, assessor = started_assessment(client, auth)
     assert client.get(f"/assessments/{a['id']}/evidence", headers=auth("worker1")).status_code == 403
+
+
+def test_evidence_needs_the_workers_evidence_capture_consent(client, auth):
+    a, assessor = started_assessment(client, auth)
+    h = auth(assessor)
+    dev = Device()
+    dev.register(client, h)
+    # the worker withdraws photo consent after requesting the assessment
+    w = auth("worker1")
+    r = client.post("/consents", json={"purposes": ["evidence_capture"], "granted": False}, headers=w)
+    assert r.status_code == 201, r.text
+    r = dev.upload(client, h, a, "product", jpeg_bytes(seed=77))
+    assert r.status_code == 409 and "consent" in r.json()["detail"]
+    entries = client.get("/audit/entries?action=evidence.rejected", headers=auth("admin")).json()
+    assert entries[0]["payload"]["reason"] == "no_consent"
+    # consent given again: the same capture is accepted
+    client.post("/consents", json={"purposes": ["evidence_capture"]}, headers=w)
+    assert dev.upload(client, h, a, "product", jpeg_bytes(seed=77)).status_code == 201
