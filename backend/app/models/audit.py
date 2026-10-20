@@ -9,22 +9,26 @@ from app.core.security import utcnow
 
 
 class AuditEntry(SQLModel, table=True):
-    """Append-only, hash-chained ledger row.
+    """Append-only, hash-chained ledger row ("append, then seal").
 
-    hash = sha256(seq | ts | actor | action | payload_hash | prev_hash). `ts` is
-    stored as an ISO string so the hash recomputes identically on every database.
+    `seq` is assigned by the database when the entry is written in the business
+    transaction. After commit, a serialised sealer gives each entry its `chain_index`,
+    `prev_hash` and
+    hash = sha256(chain_index | ts | actor | action | payload_hash | prev_hash).
+    `ts` is stored as an ISO string so the hash recomputes identically on every database.
     """
 
     __tablename__ = "audit_ledger"
 
-    seq: int = Field(primary_key=True, sa_column_kwargs={"autoincrement": False})
+    seq: int | None = Field(default=None, primary_key=True)
+    chain_index: int | None = Field(default=None, unique=True, index=True)
     ts: str = Field(max_length=32)
     actor: str = Field(max_length=64, index=True)
     action: str = Field(max_length=64, index=True)
     payload: dict = Field(default_factory=dict, sa_column=Column(JSON, nullable=False))
     payload_hash: str = Field(max_length=64)
-    prev_hash: str = Field(max_length=64)
-    hash: str = Field(max_length=64, unique=True)
+    prev_hash: str | None = Field(default=None, max_length=64)
+    hash: str | None = Field(default=None, max_length=64, unique=True)
 
 
 class ConsentRecord(SQLModel, table=True):
