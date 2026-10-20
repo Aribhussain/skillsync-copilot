@@ -238,7 +238,7 @@ def load_rater(path: Path = MODEL_PATH, train_if_missing: bool = True) -> DemoFo
             bundle = joblib.load(path)
         elif train_if_missing:
             log.warning("Shadow-rater model missing; training the demo model on synthetic data")
-            bundle = train(per_class=60)
+            bundle = train()  # same defaults as ml/train_shadow_rater.py (documented results)
             path.parent.mkdir(parents=True, exist_ok=True)
             joblib.dump(bundle, path)
         else:
