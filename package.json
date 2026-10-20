@@ -7,10 +7,11 @@
   "scripts": {
     "setup": "node scripts/setup.mjs",
     "lite": "node scripts/dev.mjs",
+    "seed": "node scripts/py.mjs scripts/seed_demo.py",
     "full:up": "docker compose up -d --build --wait",
-    "full:smoke": "node -e \"require('child_process').execFileSync(require('path').join('backend','.venv',process.platform==='win32'?'Scripts/python.exe':'bin/python'),['scripts/smoke_full.py'],{stdio:'inherit'})\"",
+    "full:smoke": "node scripts/py.mjs scripts/smoke_full.py",
     "full:down": "docker compose down",
-    "test:backend": "cd backend && node -e \"require('child_process').execFileSync(require('path').join('.venv',process.platform==='win32'?'Scripts/python.exe':'bin/python'),['-m','pytest','-q'],{stdio:'inherit'})\"",
+    "test:backend": "cd backend && node ../scripts/py.mjs -m pytest -q",
     "test:frontend": "cd frontend && npx vue-tsc -b && npx eslint . && npx vitest run",
     "test:e2e": "cd frontend && npx playwright test",
     "test": "npm run test:backend && npm run test:frontend"

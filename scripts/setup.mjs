@@ -10,7 +10,16 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const isWin = process.platform === 'win32'
 const run = (cmd, args, cwd = root, env = {}) => {
   console.log(`[setup] ${cmd} ${args.join(' ')}`)
-  execFileSync(cmd, args, { cwd, stdio: 'inherit', shell: isWin, env: { ...process.env, ...env } })
+  try {
+    execFileSync(cmd, args, { cwd, stdio: 'inherit', shell: isWin, env: { ...process.env, ...env } })
+  } catch {
+    console.error(`\n[setup] failed: ${cmd} ${args.join(' ')}`)
+    if (isWin && root.length > 60) {
+      console.error('[setup] Windows limits paths to 260 characters and some Python packages nest deeply.')
+      console.error('[setup] Clone to a short path (e.g. C:/dev/skillsync) or enable long paths, then retry.')
+    }
+    process.exit(1)
+  }
 }
 
 const venv = join(root, 'backend', '.venv')
