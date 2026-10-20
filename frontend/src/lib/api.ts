@@ -1,6 +1,10 @@
 /** Thin fetch wrapper: base URL from VITE_API_BASE, JWT from localStorage, typed errors. */
 
-export const API_BASE: string = (import.meta.env.VITE_API_BASE as string | undefined) ?? 'http://localhost:8000'
+// Default: the API on port 8000 of whatever host served the page, so a phone opening
+// http://<pc-ip>:5173 talks to http://<pc-ip>:8000 instead of its own localhost.
+const defaultApi =
+  typeof location !== 'undefined' && location.hostname ? `${location.protocol}//${location.hostname}:8000` : 'http://localhost:8000'
+export const API_BASE: string = (import.meta.env.VITE_API_BASE as string | undefined) ?? defaultApi
 
 const TOKEN_KEY = 'skillsync.token'
 
