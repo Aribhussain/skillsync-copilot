@@ -17,6 +17,5 @@ Captured on 2026-10-19 on the primary development machine.
 
 ## VS Code extensions
 
-Already installed: `ms-python.python`, `ms-python.vscode-pylance`, `dbaeumer.vscode-eslint`, `esbenp.prettier-vscode`, `bradlc.vscode-tailwindcss`, `eamodio.gitlens`.
-
-Installed during setup: `Vue.volar`, `charliermarsh.ruff`, `ms-azuretools.vscode-docker`, `ms-playwright.playwright`, `humao.rest-client`, `mtxr.sqltools`, `mtxr.sqltools-driver-sqlite`, `yzhang.markdown-all-in-one`, `bierner.markdown-mermaid`.
+Required: `ms-python.python`, `ms-python.vscode-pylance`, `dbaeumer.vscode-eslint`, `esbenp.prettier-vscode`, `bradlc.vscode-tailwindcss`, `eamodio.gitlens`.
+ `Vue.volar`, `charliermarsh.ruff`, `ms-azuretools.vscode-docker`, `ms-playwright.playwright`, `humao.rest-client`, `mtxr.sqltools`, `mtxr.sqltools-driver-sqlite`, `yzhang.markdown-all-in-one`, `bierner.markdown-mermaid`.
